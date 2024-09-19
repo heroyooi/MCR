@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퍼블리싱 - 컴포넌트 가이드</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+  <style>
+    .component-menu{position:fixed;right:10px;top:10px;padding:10px;background-color:#fff;border:1px solid #ddd;box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);border-radius:5px;z-index:1;}
+    .component-menu li{font-size:12px;margin-top:10px;cursor:pointer;}
+    .component-menu li:first-child{margin-top:0;}
+    .component-menu li.on{color:#1b64c8;font-weight:500;}
+    .component-menu .component-list{margin-bottom:10px;}
+    .component-menu .btn-base a{font-size:12px;padding:5px;}
+    
+    .component #header{position:relative;}
+    .component #header .h-inner{height:50px;}
+    .component #header #gnb{display:none;}
+    .component #header .h-right{display:none;}
+    .component #header .m-btn-search{display:block !important;}
+    .component #header .only-mobile.flex{display:flex !important;}
+
+    .ex_wrp{max-width:790px;margin:0 auto;font-family:'Montserrat', 'Noto Sans KR', sans-serif;}
+    .ex_wrp pre{display:none;}
+    .ex_wrp pre.guide{display:block;}
+    .ex_wrp h2{font-size:24px;}
+    .ex_wrp h2 span{font-size:16px;}
+    .ex_wrp .section{margin-top:50px;position: relative;}
+    .ex_wrp h3{font-size:18px;padding:0 0 10px;}
+    .ex_wrp h3 button{display:inline-block;background-color:#333;color:#fff;padding:5px;border-radius:3px;font-size:12px;}
+    .ex_wrp .code-area{padding:20px;background-color:#eee;margin-top:30px;}
+    .ex_wrp .code-area.ver_white{background-color:#fff;border:1px solid #ddd;}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="h-inner hide-750">
+        <div class="h-left">
+          <h1><a href="#">Made Coupon</a></h1>
+          <ul id="gnb">
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">상품권교환소</a></li>
+            <li><a href="#">마일리지충전소</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .h-left -->
+        <div class="h-right hide-750">
+          <div class="search-form">
+            <input type="text" placeholder="상품명, 브랜드 검색" />
+            <a href="#" class="btn-search">검색</a>
+          </div>
+          <a href="#" class="btn-join">로그인/회원가입</a>
+        </div><!-- .h-right -->
+      </div><!-- .h-inner -->
+      <div class="h-inner only-mobile show-750 flex">
+        <a href="#" class="m-btn-back">뒤로 가기</a>
+        <h2 class="sub-tit">컴포넌트</h2>
+        <a href="#" class="m-btn-home">홈</a>
+      </div>
+      <div class="m-search-area">
+        <div class="input-wrap">
+          <input type="text" class="input-base" placeholder="상품명, 브랜드명을 검색해 주세요" value="스타벅스" />
+          <a href="#" class="btn-delete">삭제</a>
+          <a href="#" class="btn-search">검색</a>
+        </div>
+      </div>
+    </div><!-- #header -->
+    
+    <div id="container" class="ex_wrp component">
+      <div class="content-wrap">
+        <h2 class="con-tit hide-750">컴포넌트</h2>
+
+        <div class="section">
+          <h2>모바일 헤더 <span>- 750px 이하에서 보아야 정확합니다.</span></h2>
+          <div class="code-area">
+            <h3>타입1 - 로고 포함형 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div id="header">
+  <div class="h-inner">
+    <div class="h-left">
+      <h1><a href="#">Made Coupon</a></h1>
+      <ul id="gnb">
+        <li><a href="#">선물하기</a></li>
+        <li><a href="#">상품권교환소</a></li>
+        <li><a href="#">마일리지충전소</a></li>
+        <li><a href="#">이벤트</a></li>
+      </ul>
+    </div><!-- .h-left -->
+    <div class="h-right hide-750">
+      <div class="search-form">
+        <input type="text" placeholder="상품명, 브랜드 검색" />
+        <a href="#" class="btn-search">검색</a>
+      </div>
+      <a href="#" class="btn-join">로그인/회원가입</a>
+    </div><!-- .h-right -->
+  </div><!-- .h-inner -->
+  <a href="#" class="m-btn-search show-750">검색</a>
+  <div class="m-search-area">
+    <div class="input-wrap">
+      <input type="text" class="input-base" placeholder="상품명, 브랜드명을 검색해 주세요" value="스타벅스" />
+      <a href="#" class="btn-delete">삭제</a>
+      <a href="#" class="btn-search">검색</a>
+    </div>
+  </div>
+</div><!-- #header --></div>
+<pre class="language-html"></pre>
+          </div>
+          <div class="code-area">
+            <h3>타입2 - 기본형 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div id="header">
+  <div class="h-inner only-mobile show-750 flex">
+    <a href="#" class="m-btn-back">뒤로 가기</a>
+    <h2 class="sub-tit">컴포넌트</h2>
+    <a href="#" class="m-btn-home">홈</a>
+  </div>
+</div><!-- #header --></div>
+<pre class="language-html"></pre>
+          </div>
+
+          <div class="code-area">
+            <h3>타입3 - 검색형 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div id="header">
+  <div class="h-inner only-mobile show-750 flex">
+    <a href="#" class="m-btn-back">뒤로 가기</a>
+    <h2 class="sub-tit">구매내역</h2>
+    <a href="#" class="m-btn-search">검색</a>
+  </div>
+  <div class="m-search-area">
+    <div class="input-wrap">
+      <input type="text" class="input-base" placeholder="상품명, 브랜드명을 검색해 주세요" value="스타벅스" />
+      <a href="#" class="btn-delete">삭제</a>
+      <a href="#" class="btn-search">검색</a>
+    </div>
+  </div>
+</div><!-- #header --></div>
+<pre class="language-html"></pre>
+          </div>
+        </div><!-- .section -->
+        
+        <div class="section">
+          <h2>버튼</h2>
+          <div class="code-area">
+            <h3>타입1 - 기본형 <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="btn-base tp1"><a href="#">상품권 지갑</a></span>
+<span class="btn-base tp1 green"><a href="#">로그인</a></span></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area">
+            <h3>타입1 - 색상 reverse <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="btn-base tp1 reverse"><a href="#">상품권 지갑</a></span>
+<span class="btn-base tp1 green reverse"><a href="#">로그인</a></span></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area ver_white">
+            <h3>타입1 - 비활성화 <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="btn-base tp1 green disabled"><a href="#">본인인증</a></span></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area">
+            <h3>타입2 <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="btn-base tp2"><a href="#">로그아웃</a></span></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area">
+            <h3>모바일 하단 픽스 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div class="fix-btn-area">
+  <span class="btn-base tp1 green"><a href="#">본인인증</a></span>
+</div></div>
+<pre class="language-html"></pre>
+
+          </div>
+        </div><!-- .section -->
+
+        <div class="section">
+          <h2>체크박스</h2>
+          <div class="code-area">
+            <h3>타입1 <button>코드 보기</button></h3>
+            
+<div class="code-box"><ul class="chk-list">
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="chk-auto" />
+      <label for="chk-auto">자동 로그인</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base">
+      <input type="checkbox" id="chk-save" />
+      <label for="chk-save">아이디 저장</label>
+    </span>
+  </li>
+</ul></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area">
+            <h3>타입2 <button>코드 보기</button></h3>
+            
+<div class="code-box"><ul class="chk-list vertical">
+  <li>
+    <span class="chk-base tp2">
+      <input type="checkbox" id="chk-1" />
+      <label for="chk-1"><em>필수</em> 서비스 이용 동의</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base tp2">
+      <input type="checkbox" id="chk-2" />
+      <label for="chk-2"><em>필수</em> 개인정보 수집 및 이용 동의</label>
+    </span>
+  </li>
+  <li>
+    <span class="chk-base tp2">
+      <input type="checkbox" id="chk-3" />
+      <label for="chk-3"><em>필수</em> 만 14세 이상 이용자</label>
+    </span>
+  </li>
+</ul></div>
+<pre class="language-html"></pre>
+
+          </div>
+        </div><!-- .section -->
+
+        <div class="section">
+          <h2>인풋</h2>
+          <div class="code-area">
+            <h3>기본형 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div class="input-wrap">
+  <input type="email" class="input-base" placeholder="이메일 아이디를 입력해 주세요." />
+  <a href="#" class="btn-delete">삭제</a>
+</div></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area">
+            <h3>기본형 - 유효성 검사 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div class="input-wrap">
+  <input type="email" class="input-base error" placeholder="이메일 아이디를 입력해 주세요." />
+  <a href="#" class="btn-delete">삭제</a>
+</div>
+<p class="valid error">아이디를 입력해 주세요.</p></div>
+<pre class="language-html"></pre>
+
+          </div>
+        </div><!-- .section -->
+
+        <div class="section">
+          <h2>셀렉트박스</h2>
+          <div class="code-area ver_white">
+            <h3>시스템 셀렉트박스 <button>코드 보기</button></h3>
+<div class="code-box"><select>
+  <option value="0" selected>선택</option>
+  <option value="1">값1</option>
+  <option value="2">값2</option>
+  <option value="3">값3</option>
+</select></div>
+<pre class="language-html"></pre>
+          </div>
+
+          <div class="code-area ver_white">
+            <h3>디자인 셀렉트박스 <button>코드 보기</button></h3>
+<div class="code-box"><div class="select-ui">
+  <a href="#">선택</a>
+  <ul>
+    <li><a href="#">사용방법</a></li>
+    <li><a href="#">결제</a></li>
+    <li><a href="#">발송문의</a></li>
+    <li><a href="#">판매문의</a></li>
+    <li><a href="#">기타</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+          </div>
+      </div><!-- .section -->
+
+        <div class="section">
+        <h2>탭</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><ul class="tab-base">
+  <li class="on"><a href="#">1주일</a></li>
+  <li><a href="#">1개월</a></li>
+  <li><a href="#">3개월</a></li>
+  <li><a href="#">기간조회</a></li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+        <div class="component-menu">
+          <ul class="component-list"></ul>
+          <span class="btn-base tp1"><a href="#">닫기</a></span><br />
+        </div>
+
+
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div id="footer">
+      <div class="f-inner">
+        <ul class="menu">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <div class="address-area">
+          <dl class="address">
+            <dt>메이드쿠폰 사업자 정보</dt>
+            <dd>
+              <ul>
+                <li>
+                  <span class="label">회사명</span>
+                  <span class="value">㈜엔버</span>
+                </li>
+                <li>
+                  <span class="label">대표이사</span>
+                  <span class="value">이광용</span>
+                </li>
+                <li>
+                  <span class="label">사업자등록번호</span>
+                  <span class="value">465 88 00127</span>
+                </li>
+                <li>
+                  <span class="label">통신판매업</span>
+                  <span class="value">제 2016 서울광진 1141 호</span>
+                </li>
+                <li>
+                  <span class="label">개인정보관리책임자</span>
+                  <span class="value">전준상</span>
+                </li>
+                <li>
+                  <span class="label">주소</span>
+                  <span class="value">서울 강남구 봉은사로 47 길 12 진현빌딩 2 동 401 호</span>
+                </li>
+              </ul>
+              <p class="copy">Copyright ⓒ 메이드쿠폰 MadeCoupon All RightsReserved</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div><!-- #footer -->
+
+    <div class="fm-wrap">
+      <ul>
+        <li class="menu"><a href="#"></a></li>
+        <li class="home"><a href="#"></a></li>
+        <li class="my"><a href="#"></a></li>
+        <li class="gift"><a href="#"></a></li>
+      </ul>
+    </div><!-- .fm-wrap -->
+
+    <button class="btn-top">위로 가기</button>
+
+    <div class="menu-dimm"></div>
+    <div class="menu-wrap">
+      <div class="m-header">
+        <h1>메이드쿠폰 메뉴</h1>
+        <a class="btn-close" href="#">닫기</a>
+      </div>
+      <div class="m-container">
+        <ul>
+          <li class="menu-1"><a href="#"><span>선물하기</span></a></li>
+          <li class="menu-2"><a href="#"><span>상품권 보관소</span></a></li>
+          <li class="menu-3"><a href="#"><span>상품권 지갑</span></a></li>
+          <li class="menu-4"><a href="#"><span>마일리지 충전소</span></a></li>
+          <li class="menu-5"><a href="#"><span>마일리지 선물하기</span></a></li>
+          <li class="menu-6"><a href="#"><span>마이페이지</span></a></li>
+          <li class="menu-7"><a href="#"><span>공지사항</span></a></li>
+          <li class="menu-8"><a href="#"><span>1:1 문의</span></a></li>
+          <li class="menu-9"><a href="#"><span>이벤트</span></a></li>
+        </ul>
+      </div>
+    </div><!-- .menu-wrap -->
+  </div><!-- #wrapper -->
+
+  <script>
+    var compMenu = $('.component-menu');
+    var compSection = $('.component .section');
+    var compPosition = [];
+
+    compSection.each(function(){
+      compMenu.find('ul').append('<li>' + $(this).find('h2').text() + '</li>');
+      compPosition.push($(this).position().top)
+    });
+    compMenu.on('click', 'li', function(){
+      $('html, body').animate({ scrollTop: compSection.eq($(this).index()).position().top }, 300);
+    });
+
+    $(window).on('load scroll', function(){
+      var scTop = $(this).scrollTop();
+      var scBottom = scTop >= $(document).height() - $(window).height();
+      for (var i = 0; i < compPosition.length; i++) {
+        if (scBottom) {
+          compMenu.find('li').eq(compPosition.length - 1).addClass('on');
+          compMenu.find('li').eq(compPosition.length - 1).siblings().removeClass('on');
+        } else {
+          if (scTop >= compPosition[i] - 10 && scTop < compPosition[i + 1]) {
+            compMenu.find('li').eq(i).addClass('on')
+            compMenu.find('li').eq(i).siblings().removeClass('on');
+          }
+        }
+      }
+    });
+
+    compMenu.find('.btn-base a').on('click', function(e){
+      e.preventDefault();
+      if ($(this).text() === '닫기') {
+        $(this).text('열기');
+        compMenu.find('.component-list').hide();
+      } else {
+        $(this).text('닫기');
+        compMenu.find('.component-list').show();
+      }
+      
+    });
+
+    setTimeout(function(){
+      // $(window).scrollTop(compSection.eq(14).position().top);
+      compMenu.find('.btn-base a').click();
+    }, 150);
+  </script>
+  <script src="js/prism.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>퍼블리싱 - 코딩맵</title>
+  <link rel="stylesheet" type="text/css" href="./_guide/guide.css" />
+	<script type="text/javascript" src="./_guide/dtree.js"></script>
+</head>
+<body>
+  <div class="guide-wrapper">
+    <div id="content_guide_list">
+      <h1>퍼블리싱 진행표</h1>
+      <h2>진행 표시</h2>
+      <ul>
+  			<li><span style="color:#aeaeae;">■ 작업전</span></li>
+  			<li><span style="color:green;">■ 작업중</span></li>
+  			<li><span style="color:#5727ff;">■ 완료</span></li>
+  			<li><span style="color:#37b4e7;">■ 신규</span></li>
+  			<li><span style="color:#f55;">■ 수정</span></li>
+      </ul>
+      <span id="t_title"></span>
+    </div>
+
+		<div class="schedule">
+			<p class="tit">프로젝트 일정</p>
+			<ul>
+				<li>- 9/9(월) - 시작</li>
+				<li>- 1차 전달 : 9/19(목)</li>
+				<li>- 2차 전달 : 9/23(월)</li>
+				<li>- 3차 전달 : 9/30(월)</li>
+				<li>- 4차 전달 : 10/3(목)</li>
+				<li class="exp">- 해외 출국 : 10/4(금) ~ 10/10(목)</li>
+				<li>- 마지막 일정 : 10/11(금) ~ 10/15(화)</li>
+			</ul>
+		</div>
+
+    <div class="dtree">
+  		<div class="area_btn">
+  			<a href="javascript: b.openAll();"><img src="./_guide/img/btn_expand.gif" alt="Expand All" /></a>
+  			<a href="javascript: b.closeAll();"><img src="./_guide/img/btn_collapse.gif" alt="Collapse All" /></a>
+  		</div>
+  		<script type="text/javascript">
+			//<![CDATA[
+			b = new dTree('b');
+
+			b.add(0, -1, 'MadeCoupon 반응형');
+
+			b.add(1, 0, '1. 메인' );
+			b.add(1.011, 1, '1-1) 메인','main.html', '완료', '_blank');
+			b.add(1.012, 1, '1-2) 메인 - 메뉴','main.html?sample=menu', '완료', '_blank');
+
+			b.add(2, 0, '2. 로그인/회원' );
+			b.add(2.011, 2, '1-1) 로그인','login.html', '완료', '_blank');
+			b.add(2.012, 2, '1-2) 로그인 - 유효성 검사','login.html?sample=validation', '완료', '_blank');
+			b.add(2.021, 2, '2-1) 약관동의','join.html', '완료', '_blank');
+			b.add(2.022, 2, '2-2) 서비스 이용 약관','join_detail_01.html', '완료', '_blank');
+			b.add(2.023, 2, '2-3) 본인인증','join_detail_02.html', '완료', '_blank');
+			b.add(2.024, 2, '2-4) 가입정보확인','join_detail_03.html', '완료', '_blank');
+			b.add(2.031, 2, '3-1) 회원정보입력','join_form.html', '완료', '_blank');
+			b.add(2.032, 2, '3-2) 회원정보입력 - 유효성 검사','join_form.html?sample=validation', '완료', '_blank');
+			b.add(2.033, 2, '3-3) 회원정보입력 - 비밀번호 입력','join_form.html?sample=password', '완료', '_blank');
+			b.add(2.034, 2, '3-4) 회원정보입력 - 비밀번호 조건 만족','join_form.html?sample=complete', '완료', '_blank');
+			b.add(2.035, 2, '3-5) 가입 완료','join_detail_04.html', '완료', '_blank');
+			b.add(2.041, 2, '4-1) 아이디 찾기','find_id_01.html', '완료', '_blank');
+			b.add(2.042, 2, '4-2) 아이디 찾기 - 가입 정보 확인','find_id_02.html', '완료', '_blank');
+			b.add(2.043, 2, '4-3) 비밀번호 찾기','find_pw_01.html', '완료', '_blank');
+			b.add(2.044, 2, '4-4) 비밀번호 재설정','find_pw_02.html', '완료', '_blank');
+
+			b.add(3, 0, '3. 구매내역' );
+			b.add(3.01, 3, '1) 검색 결과','search_list.html', '완료', '_blank');
+			b.add(3.02, 3, '2) 검색 결과 - 결과없음','search_list.html?sample=nodata', '완료', '_blank');
+			b.add(3.03, 3, '3) 검색 결과 - 투데이 팝업','search_list.html?sample=nodata&popup=today', '완료', '_blank');
+
+			b.add(4, 0, '4. 상품권 지갑' );
+			b.add(4.01, 4, '1) 상품권 보관소','archive.html', '작업전', '_blank');
+			b.add(4.021, 4, '2-1) 문화상품권 보관','archive_01.html', '작업전', '_blank');
+			b.add(4.022, 4, '2-2) 문화상품권 보관 - 조건 만족','archive_01.html?sample=complete', '작업전', '_blank');
+			b.add(4.031, 4, '3-1) 틴캐시 보관','archive_02.html', '작업전', '_blank');
+			b.add(4.032, 4, '3-2) 틴캐시 보관 - 조건 만족','archive_02.html?sample=complete', '작업전', '_blank');
+
+			b.add(5, 0, '5. 마일리지' );
+			b.add(5.01, 5, '1) 마일리지 충전소 - 신용카드','charge.html', '작업전', '_blank');
+			b.add(5.021, 5, '2-1) 마일리지 충전소 - 메이드 쿠폰','charge_01.html', '작업전', '_blank');
+			b.add(5.022, 5, '2-2) 마일리지 충전소 - 메이드 쿠폰','charge_01.html?sample=complete', '작업전', '_blank');
+			b.add(5.031, 5, '3-1) 마일리지 충전소 - 충전 완료','charge_02_success.html', '작업전', '_blank');
+			b.add(5.032, 5, '3-2) 마일리지 충전소 - 충전 실패','charge_02_fail.html', '작업전', '_blank');
+			b.add(5.033, 5, '3-3) 마일리지 충전소 - 충전 실패 - 사유 포함','charge_02_fail.html?sample=reason', '작업전', '_blank');
+			b.add(5.041, 5, '4-1) 상품권 지갑','charge_03.html', '작업전', '_blank');
+			b.add(5.042, 5, '4-2) 상품권 지갑 - 휴대폰 인증','charge_03.html', '작업전', '_blank');
+
+			b.add(6, 0, '6. 선물하기' );
+			b.add(6.011, 6, '1-1) 선물하기','gift.html', '작업전', '_blank');
+			b.add(6.012, 6, '1-2) 선물하기','gift.html?sample=menu', '작업전', '_blank');
+			b.add(6.021, 6, '2-1) 상품정보','gift_detail.html', '작업전', '_blank');
+			b.add(6.031, 6, '3-1) 선물하기','gift_order.html', '작업전', '_blank');
+			b.add(6.032, 6, '3-2) 선물하기 - 번호 추가','gift_order.html?sample=addNumber', '작업전', '_blank');
+			b.add(6.04, 6, '4) MMS 배너 변경하기','gift_order_img.html', '작업전', '_blank');
+			b.add(6.05, 6, '5) 구매 완료','gift_order_success.html', '작업전', '_blank');
+			b.add(6.06, 6, '6) 구매 실패','gift_order_fail.html', '작업전', '_blank');
+
+			b.add(7, 0, '7. 마이페이지' );
+			b.add(7.01, 7, '1) 마이페이지','mypage.html', '완료', '_blank');
+			b.add(7.021, 7, '2-1) 구매내역','mypage_01.html', '작업전', '_blank');
+			b.add(7.022, 7, '2-2) 구매내역 - 내역 없음','mypage_01.html?sample=nodata', '작업전', '_blank');
+			b.add(7.023, 7, '2-3) 구매내역 - 구매정보','mypage_01_1.html', '작업전', '_blank');
+			b.add(7.031, 7, '3-1) 마일리지','mypage_03.html', '작업전', '_blank');
+			b.add(7.032, 7, '3-2) 마일리지 - 내역 없음','mypage_03_1.html', '작업전', '_blank');
+			b.add(7.033, 7, '3-3) 마일리지 - 기간조회 - 달력','mypage_03_1.html?sample=calendar', '완료', '_blank');
+
+			b.add(8, 0, '8. 마일리지 선물하기' );
+			b.add(8.01, 8, '1) 마일리지 선물하기','gift_charge.html', '작업전', '_blank');
+			b.add(8.021, 8, '2-1) 1:1 문의 - 문의내역','qna.html', '작업전', '_blank');
+			b.add(8.022, 8, '2-2) 1:1 문의 - 내역없음','qna.html?sample=nodata', '작업전', '_blank');
+			b.add(8.023, 8, '2-3) 1:1 문의 - 문의하기','qna_01.html', '작업전', '_blank');
+			b.add(8.03, 8, '3) 고객센터','cs.html', '작업전', '_blank');
+			b.add(8.04, 8, '4) 공지사항','notice.html', '작업전', '_blank');
+			b.add(8.05, 8, '5) 기업 대량 발송 문의','send.html', '작업전', '_blank');
+
+			b.add(9, 0, '9. 기타' );
+			b.add(9.011, 9, '1-1) 비밀번호 재확인','password_modify_01.html', '작업전', '_blank');
+			b.add(9.012, 9, '1-2) 회원 정보 확인','password_modify_02.html', '작업전', '_blank');
+			b.add(9.013, 9, '1-3) 비밀번호 변경','password_modify_03.html', '작업전', '_blank');
+			b.add(9.02, 9, '2) 회원 탈퇴','member_out.html', '작업전', '_blank');
+			b.add(9.031, 9, '3-1) 이벤트','event_01.html', '작업전', '_blank');
+			b.add(9.032, 9, '3-2) 이벤트 상세','event_02.html', '작업전', '_blank');
+
+			b.add(10, 0, '10. 컴포넌트');  
+			b.add(10.01, 10, '1) 컴포넌트 가이드', 'component.html', '작업중', '_blank');
+
+			document.write(b);
+			//]]>
+  		</script>
+  	</div>
+  </div>
+</body>
+</html>
