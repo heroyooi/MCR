@@ -156,7 +156,7 @@ body.bg{background-color:#F2F9FF;}
   #container{padding-top:50px;}
   #container.ver_search{padding-top:100px;}
   #container.ver_tab{padding-top:90px;}
-  .content-wrap{padding:40px 16px 50px;min-height:initial;}
+  .content-wrap{padding:40px 16px 50px;min-height:initial;overflow:hidden;}
   .content-wrap.main{padding:30px 16px 50px;}
   #container.ver_search .content-wrap{padding-top:16px;}
   #wrapper.ver_mypage .content-wrap{padding-top:20px;}
