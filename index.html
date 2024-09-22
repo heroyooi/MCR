@@ -68,41 +68,42 @@
 			b.add(3.02, 3, '2) 검색 결과 - 결과없음','search_list.html?sample=nodata', '완료', '_blank');
 			b.add(3.03, 3, '3) 검색 결과 - 투데이 팝업','search_list.html?sample=nodata&popup=today', '완료', '_blank');
 
-			b.add(4, 0, '4. 상품권 지갑' );
-			b.add(4.01, 4, '1) 상품권 보관소','archive.html', '작업전', '_blank');
-			b.add(4.021, 4, '2-1) 문화상품권 보관','archive_01.html', '작업전', '_blank');
-			b.add(4.022, 4, '2-2) 문화상품권 보관 - 조건 만족','archive_01.html?sample=complete', '작업전', '_blank');
-			b.add(4.031, 4, '3-1) 틴캐시 보관','archive_02.html', '작업전', '_blank');
-			b.add(4.032, 4, '3-2) 틴캐시 보관 - 조건 만족','archive_02.html?sample=complete', '작업전', '_blank');
+			b.add(4, 0, '4. 상품권 보관' );
+			b.add(4.01, 4, '1) 상품권 보관소','archive.html', '완료', '_blank');
+			b.add(4.021, 4, '2-1) 문화상품권 보관','archive_01.html', '완료', '_blank');
+			b.add(4.022, 4, '2-2) 문화상품권 보관 - 조건 만족','archive_01.html?sample=complete', '완료', '_blank');
+			b.add(4.031, 4, '3-1) 틴캐시 보관','archive_02.html', '완료', '_blank');
+			b.add(4.032, 4, '3-2) 틴캐시 보관 - 조건 만족','archive_02.html?sample=complete', '완료', '_blank');
 
 			b.add(5, 0, '5. 마일리지' );
-			b.add(5.01, 5, '1) 마일리지 충전소 - 신용카드','charge.html', '작업전', '_blank');
-			b.add(5.021, 5, '2-1) 마일리지 충전소 - 메이드 쿠폰','charge_01.html', '작업전', '_blank');
-			b.add(5.022, 5, '2-2) 마일리지 충전소 - 메이드 쿠폰','charge_01.html?sample=complete', '작업전', '_blank');
-			b.add(5.031, 5, '3-1) 마일리지 충전소 - 충전 완료','charge_02_success.html', '작업전', '_blank');
-			b.add(5.032, 5, '3-2) 마일리지 충전소 - 충전 실패','charge_02_fail.html', '작업전', '_blank');
-			b.add(5.033, 5, '3-3) 마일리지 충전소 - 충전 실패 - 사유 포함','charge_02_fail.html?sample=reason', '작업전', '_blank');
-			b.add(5.041, 5, '4-1) 상품권 지갑','charge_03.html', '작업전', '_blank');
-			b.add(5.042, 5, '4-2) 상품권 지갑 - 휴대폰 인증','charge_03.html', '작업전', '_blank');
+			b.add(5.01, 5, '1) 마일리지 충전소 - 신용카드','charge.html?payment=credit', '완료', '_blank');
+			b.add(5.021, 5, '2-1) 마일리지 충전소 - 메이드 쿠폰','charge.html?payment=coupon', '완료', '_blank');
+			b.add(5.022, 5, '2-2) 마일리지 충전소 - 메이드 쿠폰 - 쿠폰 조회 완료','charge.html?payment=coupon&sample=complete', '완료', '_blank');
+			b.add(5.031, 5, '3-1) 마일리지 충전소 - 충전 완료','charge_02.html', '완료', '_blank');
+			b.add(5.032, 5, '3-2) 마일리지 충전소 - 충전 실패','charge_02.html?sample=fail', '완료', '_blank');
+			b.add(5.033, 5, '3-3) 마일리지 충전소 - 충전 실패 - 사유 포함','charge_02.html?sample=failReason', '완료', '_blank');
+			b.add(5.041, 5, '4-1) 상품권 지갑','charge_03.html', '완료', '_blank');
+			b.add(5.042, 5, '4-2) 상품권 지갑 - 휴대폰 인증','charge_03_2.html', '완료', '_blank');
 
 			b.add(6, 0, '6. 선물하기' );
-			b.add(6.011, 6, '1-1) 선물하기','gift.html', '작업전', '_blank');
-			b.add(6.012, 6, '1-2) 선물하기','gift.html?sample=menu', '작업전', '_blank');
-			b.add(6.021, 6, '2-1) 상품정보','gift_detail.html', '작업전', '_blank');
-			b.add(6.031, 6, '3-1) 선물하기','gift_order.html', '작업전', '_blank');
-			b.add(6.032, 6, '3-2) 선물하기 - 번호 추가','gift_order.html?sample=addNumber', '작업전', '_blank');
-			b.add(6.04, 6, '4) MMS 배너 변경하기','gift_order_img.html', '작업전', '_blank');
-			b.add(6.05, 6, '5) 구매 완료','gift_order_success.html', '작업전', '_blank');
-			b.add(6.06, 6, '6) 구매 실패','gift_order_fail.html', '작업전', '_blank');
+			b.add(6.011, 6, '1-1) 선물하기','gift.html', '완료', '_blank');
+			b.add(6.012, 6, '1-2) 선물하기 - 브랜드 메뉴 활성화','gift.html?sample=brandMenu', '완료', '_blank');
+			b.add(6.021, 6, '2-1) 상품정보','gift_detail.html', '완료', '_blank');
+			b.add(6.031, 6, '3-1) 선물하기 - MMS 배너 꾸미기 이미지 확인 필요!','gift_order.html', '완료', '_blank');
+			b.add(6.032, 6, '3-2) 선물하기 - 번호 추가','gift_order.html?sample=addNumber', '완료', '_blank');
+			b.add(6.033, 6, '3-3) 선물하기 - 번호 추가 - 툴팁(최대 10명까지 추가 가능)','gift_order.html?sample=addLimit', '완료', '_blank');
+			b.add(6.034, 6, '3-4) 선물하기 - MMS 배너 변경하기 팝업','gift_order.html?popup=changeMMS', '완료', '_blank');
+			b.add(6.04, 6, '4) 구매 완료','gift_order_success.html', '완료', '_blank');
+			b.add(6.05, 6, '5) 구매 실패','gift_order_fail.html', '완료', '_blank');
 
 			b.add(7, 0, '7. 마이페이지' );
 			b.add(7.01, 7, '1) 마이페이지','mypage.html', '완료', '_blank');
-			b.add(7.021, 7, '2-1) 구매내역','mypage_01.html', '작업전', '_blank');
-			b.add(7.022, 7, '2-2) 구매내역 - 내역 없음','mypage_01.html?sample=nodata', '작업전', '_blank');
-			b.add(7.023, 7, '2-3) 구매내역 - 구매정보','mypage_01_1.html', '작업전', '_blank');
-			b.add(7.031, 7, '3-1) 마일리지','mypage_03.html', '작업전', '_blank');
-			b.add(7.032, 7, '3-2) 마일리지 - 내역 없음','mypage_03_1.html', '작업전', '_blank');
-			b.add(7.033, 7, '3-3) 마일리지 - 기간조회 - 달력','mypage_03_1.html?sample=calendar', '작업중', '_blank');
+			b.add(7.021, 7, '2-1) 구매내역','mypage_01.html', '완료', '_blank');
+			b.add(7.022, 7, '2-2) 구매내역 - 내역 없음','mypage_01.html?sample=nodata', '완료', '_blank');
+			b.add(7.023, 7, '2-3) 구매내역 - 구매정보','mypage_01_1.html', '완료', '_blank');
+			b.add(7.031, 7, '3-1) 마일리지','mypage_03.html', '작업중', '_blank');
+			b.add(7.032, 7, '3-2) 마일리지 - 내역 없음','mypage_03_1.html?sample=nodata', '완료', '_blank');
+			b.add(7.033, 7, '3-3) 마일리지 - 기간조회 - 달력','mypage_03_1.html?sample=calendar', '완료', '_blank');
 
 			b.add(8, 0, '8. 마일리지 선물하기' );
 			b.add(8.01, 8, '1) 마일리지 선물하기','gift_charge.html', '작업전', '_blank');
@@ -123,6 +124,11 @@
 
 			b.add(10, 0, '10. 컴포넌트');  
 			b.add(10.01, 10, '1) 컴포넌트 가이드', 'component.html', '작업중', '_blank');
+			b.add(10.021, 10, '2-1) 모달 - 검색어를 입력해 주세요', 'modal.html?popup=alert1', '완료', '_blank');
+			b.add(10.022, 10, '2-2) 모달 - 투버튼', 'modal.html?popup=alert4', '완료', '_blank');
+			b.add(10.023, 10, '2-3) 모달 - 오늘 하루 그만 보기 - fadeIn', 'modal.html?popup=today', '완료', '_blank');
+			b.add(10.024, 10, '2-4) 모달 - 오늘 하루 그만 보기 - slideUp', 'modal.html?popup=today2', '완료', '_blank');
+			b.add(10.025, 10, '2-5) 모달 - 개인정보 수집 및 이용 동의', 'modal.html?popup=privacy', '완료', '_blank');
 
 			document.write(b);
 			//]]>

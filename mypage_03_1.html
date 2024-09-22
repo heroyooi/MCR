@@ -32,7 +32,8 @@
             <input type="text" placeholder="상품명, 브랜드 검색" />
             <a href="#" class="btn-search">검색</a>
           </div>
-          <a href="#" class="btn-join">로그인/회원가입</a>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
         </div><!-- .h-right -->
       </div><!-- .h-inner -->
       <div class="h-inner only-mobile show-750 flex">
@@ -51,21 +52,21 @@
         </ul>
         <div class="datepicker-area">
           <div class="input-wrap input-datepicker">
-            <span class="s-datepicker" id="startDate">
+            <span class="s-datepicker" id="startDate_mo">
               <input type="text" class="input-base" readonly />
             </span>
             <span class="bridge"></span>
-            <span class="s-datepicker" id="endDate">
+            <span class="s-datepicker" id="endDate_mo">
               <input type="text" class="input-base" readonly />
             </span>
           </div>
         </div>
-        <div class="datepicker-container" id="datepicker-container1">
-          <div id="datepicker1"></div>
+        <div class="datepicker-container" id="datepicker-container1_mo">
+          <div id="datepicker1_mo"></div>
           <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
         </div>
-        <div class="datepicker-container" id="datepicker-container2">
-          <div id="datepicker2"></div>
+        <div class="datepicker-container" id="datepicker-container2_mo">
+          <div id="datepicker2_mo"></div>
           <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
         </div>
       </div><!-- .tab-top -->
@@ -78,6 +79,29 @@
           <li><a href="#">3개월</a></li>
           <li><a href="#">기간조회</a></li>
         </ul>
+        <div class="datepicker-area hide-750">
+          <div class="input-wrap input-datepicker">
+            <span class="s-datepicker" id="startDate_pc">
+              <input type="text" class="input-base" readonly />
+            </span>
+            <span class="bridge"></span>
+            <span class="s-datepicker" id="endDate_pc">
+              <input type="text" class="input-base" readonly />
+            </span>
+          </div>
+        </div>
+        <div class="datepicker-container hide-750" id="datepicker-container1_pc">
+          <div id="datepicker1_pc"></div>
+          <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
+        </div>
+        <div class="datepicker-container hide-750" id="datepicker-container2_pc">
+          <div id="datepicker2_pc"></div>
+          <span class="btn-base tp2 gray"><a href="#">닫기</a></span>
+        </div>
+
+        <div class="no-data type_2" style="display: none;">
+          <p>마일리지 내역이 없습니다.</p>
+        </div>
       </div><!-- .content-wrap -->
     </div><!-- #container -->
 
@@ -186,7 +210,9 @@
       monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
       showOtherMonths: true,
     });
-    $("#datepicker1").datepicker({
+    
+    // 모바일 - 데이트피커
+    $("#datepicker1_mo").datepicker({
       beforeShow: function(input, inst) {
         // 달력이 처음 표시될 때 월과 년도를 'yyyy.mm' 형식으로 표시
         var currentDate = $(this).datepicker("getDate") || new Date(); // 현재 선택된 날짜 또는 오늘 날짜
@@ -195,32 +221,69 @@
         updateCalendarTitle(inst, year, month);
       },
       onSelect: function(dateText, inst) {
-        $('#startDate .input-base').val(dateText);
-        $('#datepicker-container1').removeClass('on');
+        $('#startDate_mo .input-base, #startDate_pc .input-base').val(dateText);
+        $('#datepicker-container1_mo').removeClass('on');
         $('.tab-dimm').hide();
       },
     });
-    $("#datepicker2").datepicker({
+    $("#datepicker2_mo").datepicker({
       onSelect: function(dateText, inst) {
-        $('#endDate .input-base').val(dateText);
-        $('#datepicker-container2').removeClass('on');
+        $('#endDate_mo .input-base, #endDate_pc .input-base').val(dateText);
+        $('#datepicker-container2_mo').removeClass('on');
         $('.tab-dimm').hide();
       },
     });
 
-    $('.s-datepicker#startDate').on('click', function(){
-      $('#datepicker-container2').removeClass('on');
-      $('#datepicker-container1').addClass('on');
+    $('#startDate_mo').on('click', function(){
+      $('#datepicker-container2_mo').removeClass('on');
+      $('#datepicker-container1_mo').addClass('on');
       $('.tab-dimm').show();
       $(this).find('.input-base').focus();
     });
-    $('.s-datepicker#endDate').on('click', function(){
-      $('#datepicker-container1').removeClass('on');
-      $('#datepicker-container2').addClass('on');
+    $('#endDate_mo').on('click', function(){
+      $('#datepicker-container1_mo').removeClass('on');
+      $('#datepicker-container2_mo').addClass('on');
       $('.tab-dimm').show();
       $(this).find('.input-base').focus();
     });
 
+    // PC - 데이트피커
+    $("#datepicker1_pc").datepicker({
+      beforeShow: function(input, inst) {
+        // 달력이 처음 표시될 때 월과 년도를 'yyyy.mm' 형식으로 표시
+        var currentDate = $(this).datepicker("getDate") || new Date(); // 현재 선택된 날짜 또는 오늘 날짜
+        var year = currentDate.getFullYear();
+        var month = currentDate.getMonth() + 1;
+        updateCalendarTitle(inst, year, month);
+      },
+      onSelect: function(dateText, inst) {
+        $('#startDate_pc .input-base, #startDate_mo .input-base').val(dateText);
+        $('#datepicker-container1_pc').removeClass('on');
+        $('.tab-dimm').hide();
+      },
+    });
+    $("#datepicker2_pc").datepicker({
+      onSelect: function(dateText, inst) {
+        $('#endDate_pc .input-base, #endDate_mo .input-base').val(dateText);
+        $('#datepicker-container2_pc').removeClass('on');
+        $('.tab-dimm').hide();
+      },
+    });
+
+    $('#startDate_pc').on('click', function(){
+      $('#datepicker-container2_pc').removeClass('on');
+      $('#datepicker-container1_pc').addClass('on');
+      // $('.tab-dimm').show();
+      $(this).find('.input-base').focus();
+    });
+    $('#endDate_pc').on('click', function(){
+      $('#datepicker-container1_pc').removeClass('on');
+      $('#datepicker-container2_pc').addClass('on');
+      // $('.tab-dimm').show();
+      $(this).find('.input-base').focus();
+    });
+
+    // 공통 - 데이트피커
     $('.datepicker-container > .btn-base').on('click', function(e){
       $(this).closest('.datepicker-container').removeClass('on');
       $('.tab-dimm').hide();
@@ -236,6 +299,12 @@
       setTimeout(() => {
         if (Qsample === 'menu') {
           $('.fm-wrap li.menu a').click();
+        } else if (Qsample === 'nodata') {
+          $('#startDate_pc .input-base, #startDate_mo .input-base').val('2024.06.02');
+          $('#endDate_pc .input-base, #endDate_mo .input-base').val('2024.06.09');
+          $('.no-data').show();
+        } else if (Qsample === 'calendar') {
+          $('#startDate_pc, #startDate_mo').click();
         }
       }, 250);
     }

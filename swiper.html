@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Swiper Example</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.js"></script><!-- 4.3.5 -->
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="container" class="ex_wrp">
+      <h2>Swiper Example</h2>
+
+<pre class="language-html guide">
+<code><link rel="stylesheet" href="css/swiper.css">
+<script src="js/swiper.js"></script></code>
+</pre>      
+      
+      <div class="code-area">
+        <h3>Horizon Swiper <button>코드 보기</button></h3>
+
+<div class="code-box"><div class="swiper-ex1 swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+  </div>
+  <div class="swiper-controller">
+    <span class="swiper-autoplayer stop"></span>
+    <span class="swiper-pagination"></span>
+  </div>
+</div></div>
+
+<script>var bannerEx1 = new Swiper('.swiper-ex1', {
+  pagination: {
+    el: '.swiper-ex1.swiper-container .swiper-pagination',
+    type: 'fraction',
+  },
+  effect: 'coverflow',
+  coverflow: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows : true
+  },
+  autoplay: {
+    delay: 3000,
+  },
+  loop: true,
+});
+$('.swiper-ex1').find('.swiper-autoplayer').on('click', function(){
+  if ($(this).hasClass('stop')) {
+    $(this).removeClass('stop');
+    $(this).addClass('start');
+    bannerEx1.autoplay.stop();
+  } else {
+    $(this).removeClass('start');
+    $(this).addClass('stop');
+    bannerEx1.autoplay.start();
+  }
+});</script>
+
+<style>.swiper-controller{position:absolute;right:20px;bottom:20px;z-index:1;font-size:0;}
+.swiper-controller > span{display:inline-block;vertical-align:middle;}
+.swiper-controller .swiper-autoplayer{width:30px;height:30px;border-radius:100px;position:relative;background:rgba(0, 0, 0, 0.6);}
+.swiper-controller .swiper-autoplayer:before{content:'';display:block;width:30px;height:30px;}
+.swiper-controller .swiper-autoplayer.stop:before{background:url(../images/icons/Icon_BannerSlide_Pause.svg) 50% 50% no-repeat;background-size:11px auto;}
+.swiper-controller .swiper-autoplayer.start:before{background:url(../images/icons/Icon_BannerSlide_Play.svg) 50% 50% no-repeat;background-size:11px auto;}
+.swiper-controller .swiper-pagination{position:relative;bottom:initial;width:auto;margin-left:10px;background:rgba(0, 0, 0, 0.6);border-radius:100px;color:#fff;color:rgba(255, 255, 255, 0.7);padding:8px 10px;font-size:14px;}
+.swiper-controller .swiper-pagination .swiper-pagination-current{color:rgba(255, 255, 255, 1);font-weight:700;}</style>
+<pre class="language-html direct"><code><div class="swiper-ex1 swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+  </div>
+  <div class="swiper-controller">
+    <span class="swiper-autoplayer stop"></span>
+    <span class="swiper-pagination"></span>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div>
+
+      <div class="code-area">
+        <h3>Horizon Swiper II - renderBullet <button>코드 보기</button></h3>
+<div class="code-box"><div class="swiper-ex2 swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+  </div>
+  <span class="swiper-pagination"></span>
+</div></div>
+<script>new Swiper('.swiper-ex2', {
+  pagination: {
+    el: '.swiper-ex2 .swiper-pagination',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+
+    // type: 'fraction',
+    // formatFractionCurrent: function(number) {
+    //   console.log(number);
+    //   return number;
+    // }
+  }
+});</script>
+<style>.swiper-ex2 .swiper-pagination-bullet{width:20px;height:20px;line-height:18px;font-size:12px;color:#fff;}
+.swiper-ex2 .swiper-pagination-bullet-active{background-color:#000;}</style>
+<pre class="language-html direct"><code><div class="swiper-ex2 swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/750x578" alt=""></a></div>
+  </div>
+  <span class="swiper-pagination"></span>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div>
+
+      <div class="code-area">
+        <h3>Horizon Swiper III - 고정된 너비값 <button>코드 보기</button></h3>
+<div class="code-box"><div class="card-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+  </div>
+</div></div>
+<script>var cardSwiper = new Swiper('.card-swiper', {
+  slidesPerView: 'auto',
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+});</script>
+<style>.card-swiper.swiper-container .swiper-slide{width:250px;margin-right:10px;border-radius:5px;overflow:hidden;}
+.card-swiper.swiper-container .swiper-slide:last-child{margin-right:0;}</style>
+<pre class="language-html direct"><code><div class="card-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div>
+
+
+      <div class="code-area"></div>
+        <h3>Horizon Swiper III - 고정된 너비값 <button>코드 보기</button></h3>
+<div class="code-box"><div class="card2-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+  </div>
+</div></div>
+<script>function initializeSwiper() {
+  var swiperOptions;
+
+  if (window.matchMedia('(max-width: 750px)').matches) {
+    swiperOptions = {
+      slidesPerView: 'auto',
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+    };
+  } else {
+    swiperOptions = {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+    };
+  }
+
+  // 기존 Swiper 인스턴스가 있으면 삭제
+  if (typeof window.card2Swiper !== 'undefined') {
+    window.card2Swiper.destroy(true, true);
+  }
+
+  // 새로운 Swiper 인스턴스 생성
+  window.card2Swiper = new Swiper('.card2-swiper', swiperOptions);
+}
+
+// 초기화 및 리스너 설정
+initializeSwiper();
+window.addEventListener('resize', initializeSwiper);</script>
+<style>
+@media screen and (max-width: 750px) {
+  .card2-swiper.swiper-container .swiper-slide{width:154px;margin-right:10px;border-radius:5px;overflow:hidden;}
+  .card2-swiper.swiper-container .swiper-slide:last-child{margin-right:0;}
+}
+</style>
+<pre class="language-html direct"><code><div class="card-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+    <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/500x190" alt=""></a></div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div>
+
+      <div class="code-area">
+        <h3>Horizon Swiper III - 고정된 너비값 + 해쉬태그 <button>코드 보기</button></h3>
+<div class="code-box"><div class="hashtag-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#">#공기청정기1</a></div>
+    <div class="swiper-slide"><a href="#">#필터1</a></div>
+    <div class="swiper-slide on"><a href="#">#세탁기1</a></div>
+    <div class="swiper-slide"><a href="#">#냉장고1</a></div>
+    <div class="swiper-slide"><a href="#">#에어컨1</a></div>
+    <div class="swiper-slide"><a href="#">#건조기1</a></div>
+    <div class="swiper-slide"><a href="#">#가습기1</a></div>
+    <div class="swiper-slide"><a href="#">#공기청정기2</a></div>
+    <div class="swiper-slide"><a href="#">#필터2</a></div>
+    <div class="swiper-slide"><a href="#">#세탁기2</a></div>
+    <div class="swiper-slide"><a href="#">#냉장고2</a></div>
+    <div class="swiper-slide"><a href="#">#에어컨2</a></div>
+    <div class="swiper-slide"><a href="#">#건조기2</a></div>
+    <div class="swiper-slide"><a href="#">#가습기2</a></div>
+  </div>
+</div></div>
+<script>var hashtagSwiper = new Swiper('.hashtag-swiper', {
+  slidesPerView: 'auto',
+  observer: true,
+  observeParents: true,
+  observeSlideChildren: true,
+});
+var hashtagSlide = $('.hashtag-swiper .swiper-slide a');
+var activeIndex = $('.hashtag-swiper .swiper-slide.on').index();
+if (activeIndex) {
+  hashtagSwiper.slideTo(activeIndex, 0)
+}
+hashtagSlide.on('click', function(e){
+  e.preventDefault();
+  $(this).closest('.swiper-slide').addClass('on');
+  $(this).closest('.swiper-slide').siblings().removeClass('on');
+  hashtagSwiper.slideTo(hashtagSlide.index(this))
+});</script>
+<style>.hashtag-swiper.swiper-container .swiper-slide{width:auto;margin-right:10px;}
+.hashtag-swiper.swiper-container .swiper-slide a{display:block;padding:10px;border:1px solid rgba(0, 0, 0, 0.1);border-radius:5px;transition:background-color 0.2s, color 0.2s;}
+.hashtag-swiper.swiper-container .swiper-slide.on a{background-color:#333;color:#fff;}
+.hashtag-swiper.swiper-container .swiper-slide:last-child{margin-right:0;}</style>
+<pre class="language-html direct"><code><div class="hashtag-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><a href="#">#공기청정기1</a></div>
+    <div class="swiper-slide"><a href="#">#필터1</a></div>
+    <div class="swiper-slide on"><a href="#">#세탁기1</a></div>
+    <div class="swiper-slide"><a href="#">#냉장고1</a></div>
+    <div class="swiper-slide"><a href="#">#에어컨1</a></div>
+    <div class="swiper-slide"><a href="#">#건조기1</a></div>
+    <div class="swiper-slide"><a href="#">#가습기1</a></div>
+    <div class="swiper-slide"><a href="#">#공기청정기2</a></div>
+    <div class="swiper-slide"><a href="#">#필터2</a></div>
+    <div class="swiper-slide"><a href="#">#세탁기2</a></div>
+    <div class="swiper-slide"><a href="#">#냉장고2</a></div>
+    <div class="swiper-slide"><a href="#">#에어컨2</a></div>
+    <div class="swiper-slide"><a href="#">#건조기2</a></div>
+    <div class="swiper-slide"><a href="#">#가습기2</a></div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div>
+
+      <div class="code-area">
+        <h3>Vertical Swiper - News <button>코드 보기</button></h3>
+<div class="code-box"><div class="main-news-swiper-wrap">
+  <div class="main-news-swiper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 1</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 2</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 3</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 4</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+    </div>              
+  </div>
+  <span class="s-button-prev"></span>
+  <span class="s-button-next"></span>
+</div></div>
+<script>var newsSwiper = new Swiper('.main-news-swiper', {
+  slidesPerView: 'auto',
+  autoplay: {
+    delay: 2400,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+    // reverseDirection: true
+  },
+  autoHeight: true,
+  direction: 'vertical',
+  loop: true,
+  simulateTouch: false,
+  allowTouchMove: false,
+  navigation: {
+    nextEl: '.main-news-swiper-wrap .s-button-next',
+    prevEl: '.main-news-swiper-wrap .s-button-prev',
+  },
+});
+setTimeout(function(){
+  newsSwiper.update(true);
+}, 50);</script>
+<style>.main-news-swiper-wrap{padding-right:37px;position:relative;}
+.main-news-swiper .con, .main-news-swiper .date{font-size:16px;line-height:24px;}
+.main-news-swiper .con{display:block;width:100%;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;padding-right:82px;}
+.main-news-swiper .date{position:absolute;right:0;top:0;font-family:'Roboto';}
+.main-news-swiper-wrap .s-button-prev, .main-news-swiper-wrap .s-button-next{display:block;width:12px;height:7px;position:absolute;right:0;cursor:pointer;}
+.main-news-swiper-wrap .s-button-prev{top:0;background:url(../images/icons/btn-arrow-up.png) 0 0 no-repeat;;background-size:auto 7px;}
+.main-news-swiper-wrap .s-button-next{bottom:0;background:url(../images/icons/btn-arrow-down.png) 0 0 no-repeat;;background-size:auto 7px;}</style>
+<pre class="language-html direct"><code><div class="main-news-swiper-wrap">
+  <div class="main-news-swiper swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 1</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 2</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 3</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="#">
+          <span class="con">취업·대학진학 지원을 통해 직업계고등학교 청년들의 경제적·사회적 자립 지원을 목적으로 설립된 휴먼터치랩이 오픈하였습니다. 4</span>
+          <span class="date">2021-10-17</span>
+        </a>
+      </div>
+    </div>              
+  </div>
+  <span class="s-button-prev"></span>
+  <span class="s-button-next"></span>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div>
+
+      <div class="code-area">
+        <h3>Horizon Swiper - slideChange <button>코드 보기</button></h3>
+<div class="code-box"><div class="top-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구)</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구) 2</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구) 3</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구) 4</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+  </div>
+  <div class="swiper-controller">
+    <span class="swiper-pagination"></span>
+    <ul class="pager">
+      <li class="on"><span>01</span></li>
+      <li><span>02</span></li>
+      <li><span>03</span></li>
+      <li><span>04</span></li>
+    </ul>
+  </div>
+</div></div>
+<script>var topSwiper = new Swiper('.top-swiper', {
+  pagination: {
+    el: '.top-swiper.swiper-container .swiper-pagination',
+  },
+  loop: false,
+});;
+topSwiper.on('slideChange', function(){
+  $('.top-swiper .pager li').eq(this.activeIndex).addClass('on');
+  $('.top-swiper .pager li').eq(this.activeIndex).siblings().removeClass('on');
+});
+$('.top-swiper .pager li').on('click', function(){
+  var index = $('.top-swiper .pager li').index(this);
+  topSwiper.slideTo(index);
+});</script>
+<style>.top-swiper{background-color:#01579b}
+.top-swiper .swiper-slide{text-align:center;padding:40px 0 70px;}
+.top-swiper .tit{font-size:20px;font-weight:bold;line-height:1.7;color:#fff;;letter-spacing:-0.4px;}
+.top-swiper .con{margin-top:4px;font-size:16px;line-height:1.5;color:#e2e0e0;}
+.top-swiper .swiper-controller{position:absolute;left:0;bottom:20px;}
+.top-swiper .swiper-controller .swiper-pagination{display:none;}
+.top-swiper .swiper-controller .pager li{display:inline-block;font-size:14px;font-weight:bold;line-height:26px;color:#fff;position:relative;vertical-align:middle;color:#c1c1c1;}
+.top-swiper .swiper-controller .pager li:after{content:'';display:none;vertical-align:middle;width:80px;height:2px;background-color:#999;position:absolute;right:6px;top:50%;margin-top:-1px;}
+.top-swiper .swiper-controller .pager li.on{color:#fff;padding-right:92px;}
+.top-swiper .swiper-controller .pager li.on:after{display:inline-block;}
+.top-swiper .swiper-controller .pager li:last-child.on{padding-left:92px;padding-right:0;}
+.top-swiper .swiper-controller .pager li:last-child:after{right:initial;left:6px;}
+.top-swiper .swiper-controller .pager li span{display:inline-block;width:45px;text-align:center;cursor:pointer;}</style>
+<pre class="language-html direct"><code><div class="top-swiper swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구)</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구) 2</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구) 3</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+    <div class="swiper-slide">
+      <p class="tit">KT 네트워크 장애로 인한 사이트 <br class="mbr" />접속 불가 현상 안내(복구) 4</p>
+      <p class="con">KT 네트워크 장애로  2021.10.25(월) 11시 경부터 12시 50분 경까지 사이트 접속이 불가하였습니다.<br />현재 순차적으로 복구되고 있는 점 안내드립니다.<br />네트워크 불안정 현상이 있을 수 있으니, 이용자분들의 양해부탁 드립니다.</p>
+    </div>
+  </div>
+  <div class="swiper-controller">
+    <span class="swiper-pagination"></span>
+    <ul class="pager">
+      <li class="on"><span>01</span></li>
+      <li><span>02</span></li>
+      <li><span>03</span></li>
+      <li><span>04</span></li>
+    </ul>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div><!-- .code-area -->
+
+      <div class="code-area">
+        <h3>Swiper Menu <button>코드 보기</button></h3>
+<div class="code-box"><div class="tec_topmenu_wrap">
+  <div class="tec_topmenu_inner">
+    <div class="tec_topmenu_swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="javascript:void(0);">커리큘럼</a></div>
+        <div class="swiper-slide on"><a href="javascript:void(0);">개설강좌</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">선생님 새소식</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">학습 Q&amp;A</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">학습자료실</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">선생님 캐스트</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">수강후기</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">기획전</a></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+<script>var tecTopmenu = undefined;
+function initTopmenuSwiper() {
+  if ($(window).width() <= 768 && tecTopmenu === undefined)  {
+    tecTopmenu = new Swiper('.tec_topmenu_swiper', {
+      slidesPerView: 'auto',
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+      on: {
+        init: function(){
+          $('.tec_topmenu_wrap').addClass('active');
+        }
+      },
+    });
+    var tecTopmenu_index = $('.tec_topmenu_swiper .swiper-slide.on').index();
+    if (tecTopmenu_index) {
+      tecTopmenu.slideTo(tecTopmenu_index, 0)
+    }
+  } else if ($(window).width() > 768 && tecTopmenu != undefined) {
+    tecTopmenu.destroy();
+    tecTopmenu = undefined;
+  }
+}
+
+$(window).on('load resize', function(){
+    initTopmenuSwiper();    
+});</script>
+<style>.tec_topmenu_wrap{position:relative;}
+.tec_topmenu_inner{padding:20px 0;background-color:#f8fafa;text-align:center;}
+.tec_topmenu_wrap .swiper-wrapper{justify-content:center;}
+.tec_topmenu_swiper.swiper-container{overflow:inherit;}
+.tec_topmenu_swiper .swiper-slide{width:auto;margin-right:35px;}
+.tec_topmenu_swiper .swiper-slide:last-child{margin-right:0;}
+.tec_topmenu_swiper .swiper-slide > a{font-size:15px;font-weight:700;color:#333;transition:color 0.2s;}
+.tec_topmenu_swiper .swiper-slide.on > a, .tec_topmenu_swiper .swiper-slide > a:hover{color:#0c998d;}
+.tec_topmenu_swiper .swiper-slide.on > a{text-decoration:underline;}
+
+@media screen and (max-width: 768px) {
+  .tec_topmenu_inner{padding:15px 35px;}
+  .tec_topmenu_wrap .tec_topmenu_inner{opacity:0;transition:opacity 0.2s;}
+  .tec_topmenu_wrap.active .tec_topmenu_inner{opacity:1;}
+  .tec_topmenu_wrap .swiper-wrapper{justify-content:flex-start;}
+  .tec_topmenu_swiper .swiper-slide > a{font-size:13px;}
+}</style>
+<pre class="language-html direct"><code><div class="tec_topmenu_wrap">
+  <div class="tec_topmenu_inner">
+    <div class="tec_topmenu_swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="javascript:void(0);">커리큘럼</a></div>
+        <div class="swiper-slide on"><a href="javascript:void(0);">개설강좌</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">선생님 새소식</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">학습 Q&amp;A</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">학습자료실</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">선생님 캐스트</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">수강후기</a></div>
+        <div class="swiper-slide"><a href="javascript:void(0);">기획전</a></div>
+      </div>
+    </div>
+  </div>
+</div></code></pre>
+<pre class="language-javascript"></pre>
+<pre class="language-css"></pre>
+      </div><!-- .code-area -->
+
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+
+  <script src="js/prism.js"></script>
+</body>
+</html>

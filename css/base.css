@@ -47,6 +47,11 @@ input[type=number]{-moz-appearance:textfield;}/* Firefox */
 :-ms-input-placeholder{color:#bbb;font-size:12px;}
 :-moz-placeholder{color:#bbb;font-size:12px;}
 
+textarea::-webkit-input-placeholder{font-size:16px;}
+textarea::-moz-placeholder{font-size:16px;}
+textarea:-ms-input-placeholder{font-size:16px;}
+textarea:-moz-placeholder{font-size:16px;}
+
 /* base - a */
 a{color:#333}
 a,a:link{text-decoration:none;}
@@ -62,10 +67,14 @@ body,input,select,textarea,button{font:14px/1 "Pretendard", "Malgun Gothic", "ë§
 .mb0{margin-bottom:0 !important;}
 .mb15{margin-bottom:15px !important;}
 .mt10{margin-top:10px !important;}
+.mt16{margin-top:16px !important;}
 .mt20{margin-top:20px !important;}
 .mt30{margin-top:30px !important;}
 .mt36{margin-top:36px !important;}
 .mt40{margin-top:40px !important;}
+.mt47{margin-top:47px !important;}
+.mt50{margin-top:50px !important;}
+.mt60{margin-top:60px !important;}
 
 .hide{position:absolute;left:-9999px;font-size:0;width:0;height:0;text-indent:-9999px;overflow:hidden;}
 

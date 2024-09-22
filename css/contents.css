@@ -10,6 +10,16 @@
 .sub-tit dt{font-size:16px;font-weight:600;color:#333;}
 .sub-tit dt span{color:#bbb;font-weight:500;}
 .sub-tit dd{font-size:12px;font-weight:500;line-height:1.6;color:#72767a;margin-top:10px;}
+.b-tit{font-size:20px;font-weight:600;color:#333;line-height:1.2;padding:20px 0;}
+
+.intro{font-size:22px;font-weight:600;line-height:1.4;}
+.intro span{font-weight:400;}
+.logo + .intro{margin-top:6px;}
+
+.info-area li{font-size:12px;line-height:1.6;color:#72767a;text-indent:-10px;padding-left:10px;}
+.info-area li span{color:#26C48C;}
+.info-area.tp2 li{font-weight:500;}
+.info-area.tp2 li span{color:#4289F0;}
 
 /* main */
 .top-visual-wrap{position: relative;overflow:hidden;}
@@ -36,6 +46,8 @@
 .product-info .price .discount, .product-info .price .current{font-size:16px;font-weight:700;}
 .product-info .price .discount{color:#4289f0;}
 .product-info .price .before{font-size:12px;font-weight:500;color:#bbb;text-decoration:line-through;}
+.product-info .price .count{display:inline-block;font-size:12px;font-weight:600;color:#4289f0;padding:4px 6px;border-radius:4px;background-color:#F2F9FF;margin-left:5px;}
+.product-info .price .count em{font-family:'Montserrat';font-weight:600;}
 
 .product-swiper dt{border-radius:8px;border:1px solid #ebebeb;overflow:hidden;background:#ffffff url(../img/common/ic_thumb.svg) 50% 50% no-repeat;position: relative;padding:0 0 99% 0;}
 .product-swiper dt img{width:100%;position: absolute;}
@@ -117,8 +129,8 @@
 .login-area .sns-login dd{display:flex;justify-content:center;gap:0 40px;padding-top:20px;}
 
 /* join */
-.join-area .logo{font-size:16px;color:#26c48c;font-family:'Montserrat';font-weight:700;}
-.join-area .intro{font-size:22px;font-weight:600;line-height:1.4;margin-top:6px;}
+.join-area .logo,
+.charge-area .logo{font-size:16px;color:#26c48c;font-family:'Montserrat';font-weight:700;}
 .join-area .chk-list.vertical{padding:30px 0;border-top:1px solid #EBEBEB;border-bottom:1px solid #EBEBEB;margin-top:26px;}
 .term-area .b-tit{font-size:16px;font-weight:700;color:#26c48c;padding-bottom:16px;border-bottom:1px solid #EBEBEB;}
 .term-area ul{margin-top:16px;}
@@ -146,12 +158,192 @@
 .join-title .ico.id img{width:14px;}
 .join-title .ico.password img{width:20px;}
 .join-title .txt{font-size:20px;font-weight:600;}
-.info-area{padding-top:40px;margin-top:40px;border-top:1px solid #EBEBEB;}
-.info-area li{font-size:12px;line-height:1.6;color:#72767a;text-indent:-10px;padding-left:10px;}
+.join-area .info-area{padding-top:40px;margin-top:40px;border-top:1px solid #EBEBEB;}
+
+/* archive */
+.archive-list li{margin-top:10px;}
+.archive-list li:first-child{margin-top:0;}
+.archive-list li a{display:flex;align-items:center;padding:12px 16px;justify-content:space-between;background-color:#fff;border-radius:8px;}
+.archive-list li a .al{display:flex;align-items:center;gap:0 12px;}
+
+/* charge */
+.my-charge{padding:20px;border-radius:8px;background-color:#4289f0;text-align:center;}
+.my-charge span{display:block;line-height:1.4;color:#fff;}
+.my-charge .label{font-size:16px;font-weight:500;}
+.my-charge .total{font-size:22px;font-weight:600;margin-top:10px;}
+.my-charge .total em{font-size:30px;font-family:'Montserrat';font-weight:700;}
+.my-charge .btn{display:inline-block;padding:8px 15px;font-size:12px;color:#fff;font-weight:500;border:1px solid #D0E8FF;border-radius:50px;margin-top:20px;}
+.tip-list li{font-size:14px;font-weight:500;padding-left:24px;position: relative;line-height:1.4;}
+.tip-list li::before{content:'';display:inline-block;width:20px;height:20px;background:url(../img/common/ic_tip.svg) 0 0 no-repeat;position:absolute;left:0;top:0;}
+.tip-list li em{font-weight:inherit;color:#4289f0;}
+.section-area{padding:40px 0;border-top:1px solid #ebebeb; }
+.section-area .s-tit{font-size:20px;font-weight:600;line-height:1.2;margin-bottom:20px;}
+.section-area .s-tit span{font-weight:400;}
+.total-area{padding:20px;background-color:#f2f9ff;border-radius:8px;}
+.total-area > dt, .total-area > dd li{display:flex;justify-content:space-between;align-items:center;}
+.total-area > dt{padding-bottom:20px;margin-bottom:20px;border-bottom:1px solid #ebebeb;}
+.total-area > dt .label{font-size:20px;font-weight:600;}
+.total-area > dt .price{font-size:16px;font-weight:500;color:#4289F0;}
+.total-area > dt .price em{font-size:22px;font-weight:700;font-family:'Montserrat';}
+.total-area > dd li{font-size:14px;font-weight:500;line-height:1.4;margin-top:7px;}
+.total-area > dd li:first-child{margin-top:0;}
+.total-area > dd li .label{color:#72767a;}
+
+.result-area{padding:80px 0;}
+.result-area span{font-size:16px;font-weight:500;text-align:center;display:block;line-height:1.4;}
+.result-area span::before{content:'';display:block;width:38px;height:38px;background-position:50% 50%;background-repeat:no-repeat;margin:0 auto 18px;}
+.result-area.success span::before{background-image:url(../img/common/ic_success.png);}
+.result-area.fail span::before{background-image:url(../img/common/ic_fail.png);}
+
+.reason-con{padding:20px;border-radius:8px;background-color:#f5f5f5;}
+.reason-con dt{font-size:16px;font-weight:600;padding-bottom:10px;margin-bottom:10px;border-bottom:1px solid #ebebeb;}
+.reason-con dd{font-size:12px;font-weight:500;line-height:1.6;color:#72767a;}
+.reason-total{padding:20px;background-color:#f5f5f5;border-radius:8px;margin-top:10px;}
+.reason-total:first-child{margin-top:0;}
+.reason-total li{display:flex;justify-content:space-between;margin-top:6px;}
+.reason-total li:first-child{margin-top:0;}
+.reason-total li span{font-size:14px;line-height:1.4;}
+.reason-total li .label{color:#72767a;font-weight:500;}
+.reason-total li .result{color:#333;font-weight:600;}
+.reason-total li .result em{font-weight:600;font-family:'Montserrat';}
+.reason-total li .result.product{color:#4289F0;}
+.certify-area{display:inline-block;padding:4px 8px;background: rgba(219, 30, 41, 0.05);border-radius:100px;margin-top:20px;}
+.certify-area .time{display:flex;font-size:12px;font-weight:500;color:#fc4852;align-items:center;gap:0 6px;}
+.certify-area .time::before{content:'';display:block;width:16px;height:16px;background:url(../img/common/ic_certify.svg) 0 0 no-repeat;}
+
+/* gift */
+.brand-top{overflow:hidden;margin:0 auto;max-width:1080px;padding:25px 40px;position: relative;z-index:3;background-color:#fff;}
+.brand-swiper.swiper-container{overflow:inherit;}
+.brand-swiper.swiper-container .swiper-slide{width:70px;margin-right:14px;border-radius:5px;overflow:hidden;}
+.brand-swiper.swiper-container .swiper-slide dt{width:70px;height:70px;background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;border-radius:35px;}
+.brand-swiper.swiper-container .swiper-slide dd{font-size:14px;font-weight:500;line-height:1.4;margin-top:10px;text-align:center;}
+.brand-swiper.swiper-container .swiper-slide:last-child{margin-right:0;}
+
+/* gift - 상품정보 */
+.gift-visual{max-width:1000px;margin:0 auto;}
+.gift-visual img{width:100%;}
+.gift-visual .swiper-container-horizontal > .swiper-pagination-bullets{bottom:16px;width:auto;right:16px;left:initial;}
+.gift-visual .swiper-pagination-bullet{width:10px;height:10px;background-color:#fff;opacity:1;}
+.gift-visual .swiper-pagination-bullet-active{background-color:#333;}
+.gift-detail{padding:16px;}
+.gift-detail .gift-inner{border-bottom:1px solid #EBEBEB;padding-bottom:16px;}
+.gift-detail .brand{font-size:14px;font-weight:500;line-height:1.4;color:#72767a;}
+.gift-detail .name{display:block;margin-top:5px;font-size:20px;font-weight:600;line-height:24px;}
+.gift-detail .price{display:flex;margin-top:24px;align-items:center;}
+.gift-detail .price .discount{font-size:20px;font-weight:500;color:#4289f0;font-family:"Montserrat";}
+.gift-detail .price .before{font-size:12px;color:#bbb;font-weight:500;text-decoration:line-through;margin-left:16px;}
+.gift-detail .price .before strong{font-family:"Montserrat";}
+.gift-detail .price .current{font-size:20px;font-weight:600;color:#333;font-weight:600;margin-left:5px;}
+.gift-detail .price .current strong{font-weight:700;font-family:"Montserrat";}
+.gift-detail .gift-period{padding-top:16px;display:flex;gap:0 10px;font-size:12px;font-weight:500;}
+.gift-detail .gift-period .label{color:#333;display:flex;gap:0 4px;align-items:center;}
+.gift-detail .gift-period .label::before{content:'';display:block;width:12px;height:12px;background:url(../img/common/ic_calendar_blue.svg) 50% 50% no-repeat;}
+.gift-detail .gift-period .value{color:#72767a;}
+.gift-line{background-color:#F2F9FF;height:10px;}
+.gift-tab-area .tab-base > li{width:50%;}
+.gift-tab-area .panel-base > li{padding:20px 16px;}
+.gift-tab-area .panel-base > li img{width:100%;}
+
+/* gift - 선물하기 */
+.top-mileage{display:flex;justify-content:space-between;background-color:#F2F9FF;padding:16px 20px;align-items:center;max-width:1000px;margin:0 auto;}
+.top-mileage .label{font-size:16px;font-weight:500;}
+.top-mileage .info{display:flex;gap:0 20px;align-items:center;}
+.top-mileage .info .price{font-size:16px;font-weight:700;color:#4289f0;}
+.top-mileage .info .price em{font-weight:700;font-family:"Montserrat";}
+.top-mileage .info .btn{display:block;padding:9px 22px;background-color:#4289F0;border-radius:30px;font-size:12px;font-weight:500;color:#fff;}
+.order-form > li{padding:40px 0;border-top:1px solid #EBEBEB;}
+.order-form > li:first-child{padding-top:0;border-top:0;}
+.order-form > li:last-child{padding-bottom:0;}
+.order-form > li .label-area{display:flex;justify-content:space-between;align-items:center;}
+.order-form > li .label-area .label{font-size:20px;font-weight:600;}
+.order-form > li .label-area .logo{font-size:16px;font-weight:700;color:#24c48c;}
+.order-form > li .label-area .price{font-size:18px;font-weight:500;display:flex;gap:0 10px;align-items:center;}
+.order-form > li .label-area .price i.arrow{content:'';display:block;width:22px;height:22px;background:url(../img/common/ic_more_arrow.svg) 50% 50% no-repeat;transform:rotate(180deg);transition:transform 0.2s;}
+.order-form > li .label-area .price span em{font-weight:700;font-family:"Montserrat";}
+.order-form > li .label-area .total{font-size:14px;font-weight:500;color:#bbb;line-height:1.4;}
+.order-form > li .label-area .total em{color:#333;}
+.order-form > li .label-area.type_logo{flex-direction:column;align-items:flex-start;gap:6px 0;}
+.order-form > li .con-area{margin-top:20px;}
+.order-form > li .con-area .product-list{margin-top:0;}
+.order-form > li .gift-info > .con-area{display:none;}
+.order-form > li .gift-info.on .label-area .price i.arrow{transform:rotate(0deg);}
+.order-form > li .gift-info.on > .con-area{display:block;}
+.order-form > li .mms-area{margin-top:20px;text-align:center;border:5px solid #d53f41;width:343px;cursor:pointer;}
+.order-form > li .mms-area img{width:100%;}
+.order-form > li .mms-area .mms-banner{cursor:pointer;}
+.order-form > li .mms-area .mms-product{padding:20px;}
+.order-form > li .mms-area .mms-product dt{width:120px;margin:0 auto;}
+.order-form > li .mms-area .mms-product dd{display:flex;align-items:center;gap:0 10px;margin-top:20px;}
+.order-form > li .mms-area .mms-product dd .thumb{width:70px;flex-shrink:0;}
+.order-form > li .mms-area .mms-product dd ul{flex-grow:1;}
+.order-form > li .mms-area .mms-product dd li{font-size:14px;line-height:1.4;margin-top:6px;text-align:left;font-weight:600;}
+.order-form > li .mms-area .mms-product dd li:first-child{margin-top:0;}
+.order-form > li .mms-area .mms-barcode{padding:0 20px 4px;max-width:256px;margin:0 auto;}
+.order-form > li .mms-area .mms-period{background-color:#d53f41;display:flex;align-items:center;gap:0 25px;padding:15px 20px;}
+.order-form > li .mms-area .mms-period .logo{flex-shrink:0;}
+.order-form > li .mms-area .mms-period .info{flex-grow:1;}
+.order-form > li .mms-area .mms-period .info li{text-align:left;font-size:14px;font-weight:600;color:#fff;line-height:1.4;margin-top:2px;}
+.order-form > li .mms-area .mms-period .info li:first-child{margin-top:0;}
+
+.result-list > li{padding:20px;margin-top:10px;border-radius:8px;font-size:14px;font-weight:500;line-height:1.4;}
+.result-list > li:first-child{margin-top:0;}
+.result-list > li.type-1{background-color:#f5f5f5;}
+.result-list > li.type-2, .result-list > li.type-3{background-color:#F2F9FF;}
+.result-list > li li{margin-top:6px;}
+.result-list > li li:first-child{margin-top:0;}
+.result-list > li .result-item{display:flex;justify-content:space-between;}
+.result-list > li .result-item .label{color:#72767a;}
+.result-list > li .result-item .result{color:#333;}
+.result-list > li .result-item .result.price{font-weight:600;}
+.result-list > li .result-item .result em{font-family:"Montserrat";font-weight:inherit;}
+.result-list > li .result-item .result .tiny{color:#72767a;font-weight:500;}
+.result-list > li.type-2 .result-item .label,
+.result-list > li.type-3 .result-item .label{color:#333;}
+.result-list > li.type-2 .result-item .result,
+.result-list > li.type-3 .result-item .result{color:#4289F0;}
+.result-list > li.type-3 .result-item .label{font-size:20px;font-weight:600;}
+.result-list > li.type-3 .result-item .result{font-size:16px;font-weight:700;}
+.result-list > li.type-3 .result-item .result.price em{font-size:22px;}
+
+.mms-prev-img, .mms-next-img .mms-img{background-color:#f5f5f5;}
+.mms-next-img{padding-top:40px;margin-top:40px;border-top:1px solid #ebebeb;display:flex;flex-wrap:wrap;gap:10px;}
+.mms-next-img .mms-img{width:calc(50% - 5px);cursor:pointer;}
+.mms-prev-img img, .mms-next-img .mms-img img{width:100%;}
+
+/* order */
+.order-result .product-list > li{width:100%;border-bottom:1px solid #EBEBEB;padding-bottom:30px;}
+.product-list li .order-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;font-weight:500;}
+.product-list li .order-top .date{font-size:14px;color:#72767a;}
+.product-list li .order-top .code{font-size:12px;color:#bbb;}
+.inquiry-area{padding:14px 20px;border:1px solid #EBEBEB;border-radius:8px;text-align:center;font-size:14px;font-weight:500;color:#72767a;line-height:1.4;margin-top:20px;}
+
+.mileage-list{}
+.mileage-list > li{background-color:#fff;border-radius:8px;margin-top:10px;}
+.mileage-list > li:first-child{margin-top:0;}
+.mileage-list > li .mile-info-area{padding:20px;}
+.mileage-list > li .mile-info-area .mile-top{display:flex;justify-content:space-between;align-items:center;}
+.mileage-list > li .mile-info-area .mile-top .label{display:flex;gap:0 10px;font-size:14px;font-weight:500;color:#333;align-items:center;}
+.mileage-list > li .mile-info-area .mile-top .label::before{content:'';display:block;width:20px;height:20px;}
+.mileage-list > li .mile-info-area .mile-top .price{font-family:"Montserrat";font-size:16px;font-weight:600;}
+.mileage-list > li .mile-info-area .mile-top.use .label::before{background:url(../img/common/ic_use.svg) 50% 50% no-repeat;}
+.mileage-list > li .mile-info-area .mile-top.use .price{color:#bbb;}
+.mileage-list > li .mile-info-area .mile-top.exchange .label::before{background:url(../img/common/ic_exchange.svg) 50% 50% no-repeat;}
+.mileage-list > li .mile-info-area .mile-top.exchange .price{color:#26C48C;}
+.mileage-list > li .mile-info-area .mile-info{margin-top:10px;}
+.mileage-list > li .mile-info-area .mile-info .date{font-family:"Montserrat";font-size:12px;font-weight:600;color:#bbb;}
+.mileage-list > li .mile-info-area .mile-info .result-list{margin-top:20px;display:none;}
+.mileage-list > li.on .mile-info-area .mile-info .result-list{display:block;}
+.mileage-list > li .mile-info-area .mile-info .s-info{display:block;padding:8px 16px;border:1px solid #ebebeb;border-radius:8px;font-size:14px;font-weight:500;line-height:1.4;color:#333;margin-top:6px;}
+.mileage-list > li .mile-btn-area{text-align:center;border-top:1px solid #EBEBEB;}
+.mileage-list > li .mile-btn-area a{display:block;padding:10px;text-align:center;}
+.mileage-list > li .mile-btn-area a span{display:flex;align-items:center;gap:0 4px;justify-content:center;}
+.mileage-list > li .mile-btn-area a span::after{content:'';display:block;width:22px;height:22px;background:url(../img/common/ic_arrow_gray.svg) 50% 50% no-repeat;transition:transform 0.2s;}
+.mileage-list > li.on .mile-btn-area a span::after{transform:rotate(180deg);}
 
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
+  .brand-top{padding:25px 20px;}
 }
 
 @media screen and (max-width: 950px) {
@@ -192,23 +384,11 @@
   .search-paging.on{bottom:80px;}
 
   .no-data{padding:54px 0;}
+  .no-data.type_2{padding:80px 0;}
   .no-data p{font-size:16px;}
   .no-data p::before{width:36px;height:36px;background-size:cover;margin-bottom:20px;}
 
   /* mypage */
-  .content-area{display:block;}
-  .content-area .left-area{width:100%;}
-  .content-area .left-area, .content-area .right-area{padding-bottom:0;}
-  .content-area .right-area{margin-top:20px;}
-  .content-area .area-line{display:none;}
-  .left-area .my-top{background-color:#4289F0;position: relative;}
-  .left-area .my-top .user-area{flex-direction:column-reverse;align-items:flex-start;}
-  .left-area .my-top .user-area .msg{color:#fff;}
-  .left-area .my-top .user-area .user{color:#fff;font-size:22px;font-weight:600;margin-top:5px;}
-  .left-area .my-top .btn-base.wallet{position: absolute;right:20px;top:20px;}
-  .left-area .my-top .info-area{background-color: #356ec0;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;}
-  .left-area .my-top .info-area .label{color:#d0e8ff;}
-  .left-area .my-top .info-area .price{color:#fff;font-weight:700;margin-top:0;}
   .menu-list > li.mypage-1 > a > span::before{background-image:url(../img/mypage/ic_mypage_m1.svg);}
   .menu-list > li.mypage-2 > a > span::before{background-image:url(../img/mypage/ic_mypage_m2.svg);}
   .menu-list > li.mypage-3 > a > span::before{background-image:url(../img/mypage/ic_mypage_m3.svg);}
@@ -222,4 +402,7 @@
   .menu-list > li.mypage-6{border-radius:0 0 8px 8px;border-bottom:0;}
 
   .right-area .btn-base.logout{margin-top:20px;}
+  .brand-top{padding:25px 16px;}
+
+  .order-result .product-list{margin-top:0;}
 }

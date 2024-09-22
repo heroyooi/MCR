@@ -29,6 +29,8 @@
     .component #header .m-btn-search{display:block !important;}
     .component #header .only-mobile.flex{display:flex !important;}
 
+    .component .fix-btn-area{position: static;}
+
     .ex_wrp{max-width:790px;margin:0 auto;font-family:'Montserrat', 'Noto Sans KR', sans-serif;}
     .ex_wrp pre{display:none;}
     .ex_wrp pre.guide{display:block;}
@@ -59,7 +61,8 @@
             <input type="text" placeholder="상품명, 브랜드 검색" />
             <a href="#" class="btn-search">검색</a>
           </div>
-          <a href="#" class="btn-join">로그인/회원가입</a>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
         </div><!-- .h-right -->
       </div><!-- .h-inner -->
       <div class="h-inner only-mobile show-750 flex">
@@ -79,75 +82,6 @@
     <div id="container" class="ex_wrp component">
       <div class="content-wrap">
         <h2 class="con-tit hide-750">컴포넌트</h2>
-
-        <div class="section">
-          <h2>모바일 헤더 <span>- 750px 이하에서 보아야 정확합니다.</span></h2>
-          <div class="code-area">
-            <h3>타입1 - 로고 포함형 <button>코드 보기</button></h3>
-            
-<div class="code-box"><div id="header">
-  <div class="h-inner">
-    <div class="h-left">
-      <h1><a href="#">Made Coupon</a></h1>
-      <ul id="gnb">
-        <li><a href="#">선물하기</a></li>
-        <li><a href="#">상품권교환소</a></li>
-        <li><a href="#">마일리지충전소</a></li>
-        <li><a href="#">이벤트</a></li>
-      </ul>
-    </div><!-- .h-left -->
-    <div class="h-right hide-750">
-      <div class="search-form">
-        <input type="text" placeholder="상품명, 브랜드 검색" />
-        <a href="#" class="btn-search">검색</a>
-      </div>
-      <a href="#" class="btn-join">로그인/회원가입</a>
-    </div><!-- .h-right -->
-  </div><!-- .h-inner -->
-  <a href="#" class="m-btn-search show-750">검색</a>
-  <div class="m-search-area">
-    <div class="input-wrap">
-      <input type="text" class="input-base" placeholder="상품명, 브랜드명을 검색해 주세요" value="스타벅스" />
-      <a href="#" class="btn-delete">삭제</a>
-      <a href="#" class="btn-search">검색</a>
-    </div>
-  </div>
-</div><!-- #header --></div>
-<pre class="language-html"></pre>
-          </div>
-          <div class="code-area">
-            <h3>타입2 - 기본형 <button>코드 보기</button></h3>
-            
-<div class="code-box"><div id="header">
-  <div class="h-inner only-mobile show-750 flex">
-    <a href="#" class="m-btn-back">뒤로 가기</a>
-    <h2 class="sub-tit">컴포넌트</h2>
-    <a href="#" class="m-btn-home">홈</a>
-  </div>
-</div><!-- #header --></div>
-<pre class="language-html"></pre>
-          </div>
-
-          <div class="code-area">
-            <h3>타입3 - 검색형 <button>코드 보기</button></h3>
-            
-<div class="code-box"><div id="header">
-  <div class="h-inner only-mobile show-750 flex">
-    <a href="#" class="m-btn-back">뒤로 가기</a>
-    <h2 class="sub-tit">구매내역</h2>
-    <a href="#" class="m-btn-search">검색</a>
-  </div>
-  <div class="m-search-area">
-    <div class="input-wrap">
-      <input type="text" class="input-base" placeholder="상품명, 브랜드명을 검색해 주세요" value="스타벅스" />
-      <a href="#" class="btn-delete">삭제</a>
-      <a href="#" class="btn-search">검색</a>
-    </div>
-  </div>
-</div><!-- #header --></div>
-<pre class="language-html"></pre>
-          </div>
-        </div><!-- .section -->
         
         <div class="section">
           <h2>버튼</h2>
@@ -185,11 +119,48 @@
 
           </div>
 
+          <div class="code-area ver_white">
+            <h3>타입3 <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="btn-base tp3"><a href="#">상품권 지갑</a></span></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area ver_white">
+            <h3>타입4 <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="btn-base tp4"><a href="#">연락처</a></span></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area ver_white">
+            <h3>텍스트 버튼 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div class="btn-text-area">
+  <a href="#" class="btn-text">+ 번호 추가하기</a>
+</div></div>
+<pre class="language-html"></pre>
+
+          </div>
+
           <div class="code-area">
             <h3>모바일 하단 픽스 <button>코드 보기</button></h3>
             
 <div class="code-box"><div class="fix-btn-area">
   <span class="btn-base tp1 green"><a href="#">본인인증</a></span>
+</div></div>
+<pre class="language-html"></pre>
+
+          </div>
+
+          <div class="code-area">
+            <h3>모바일 하단 픽스 - 멀티 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div class="fix-btn-area multi">
+  <span class="btn-base tp1 green reverse"><a href="#">충전 내역 가기</a></span>
+  <span class="btn-base tp1 green"><a href="#">계속 충전하기</a></span>
 </div></div>
 <pre class="language-html"></pre>
 
@@ -248,6 +219,20 @@
         </div><!-- .section -->
 
         <div class="section">
+          <h2>라디오 버튼</h2>
+          <div class="code-area">
+            <h3>타입1 <button>코드 보기</button></h3>
+            
+<div class="code-box"><span class="radio-base">
+  <input type="radio" id="radio-ex1-1" name="radio-ex1" />
+  <label for="radio-ex1-1">직접입력</label>
+</span></div>
+<pre class="language-html"></pre>
+
+          </div>
+        </div><!-- .section -->
+
+        <div class="section">
           <h2>인풋</h2>
           <div class="code-area">
             <h3>기본형 <button>코드 보기</button></h3>
@@ -271,7 +256,32 @@
 <pre class="language-html"></pre>
 
           </div>
+
+          <div class="code-area">
+            <h3>단위 포함 <button>코드 보기</button></h3>
+            
+<div class="code-box"><div class="input-wrap input-unit mt10">
+  <input type="number" class="input-base" placeholder="충전 금액 입력">
+  <span class="unit">원</span>
+</div></div>
+<pre class="language-html"></pre>
+
+          </div>
         </div><!-- .section -->
+
+        <div class="section">
+          <h2>텍스트에리어</h2>
+          <div class="code-area ver_white">
+            <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="textarea-base">
+  <textarea placeholder="홍길동 님이 선물을 보내셨습니다. ^^"></textarea>
+  <div class="tx-count-area">
+    <span class="tx-count"><em>0</em>/100</span>
+  </div>
+</div></div>
+<pre class="language-html"></pre>
+          </div>
+      </div><!-- .section -->
 
         <div class="section">
           <h2>셀렉트박스</h2>
@@ -311,6 +321,19 @@
   <li><a href="#">1개월</a></li>
   <li><a href="#">3개월</a></li>
   <li><a href="#">기간조회</a></li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>버튼형 <button>코드 보기</button></h3>
+<div class="code-box"><ul class="tab-btn" id="tab_charge">
+  <li><a href="#"><em>5,000</em>원</a></li>
+  <li><a href="#"><em>10,000</em>원</a></li>
+  <li><a href="#"><em>30,000</em>원</a></li>
+  <li><a href="#"><em>50,000</em>원</a></li>
+  <li class="on"><a href="#"><em>100,000</em>원</a></li>
+  <li><a href="#"><em>300,000</em>원</a></li>
 </ul></div>
 <pre class="language-html"></pre>
         </div>
