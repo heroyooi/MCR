@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Made Coupon</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="h-inner hide-750">
+        <div class="h-left">
+          <h1><a href="#">Made Coupon</a></h1>
+          <ul id="gnb">
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">상품권교환소</a></li>
+            <li><a href="#">마일리지충전소</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .h-left -->
+        <div class="h-right hide-750">
+          <div class="search-form">
+            <input type="text" placeholder="상품명, 브랜드 검색" />
+            <a href="#" class="btn-search">검색</a>
+          </div>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
+        </div><!-- .h-right -->
+      </div><!-- .h-inner -->
+      <div class="h-inner only-mobile show-750 flex">
+        <a href="#" class="m-btn-back">뒤로 가기</a>
+        <h2 class="sub-tit">마일리지 충전소</h2>
+        <a href="#" class="m-btn-home">홈</a>
+      </div>
+    </div><!-- #header -->
+      
+    <div id="container">
+      <div class="content-wrap">
+        <h2 class="con-tit hide-750">마일리지 충전소</h2>
+        <div class="charge-area">
+          <div class="my-charge">
+            <span class="label">보유 마일리지</span>
+            <span class="total"><em>47,000</em>원</span>
+            <a href="#" class="btn">상품권 지갑</a>
+          </div>
+          <ul class="tip-list mt20">
+            <li>상품권 지갑에 <em>50,000</em>원이 보관되어 있어요.</li>
+          </ul>
+
+          <div class="section-area mt40">
+            <p class="s-tit">선물 받는 회원 검색</p>
+            <div class="input-wrap input-btn">
+              <input type="text" class="input-base" placeholder="회원 아이디를 입력하세요.">
+              <span class="btn-base"><a href="#">회원검색</a></span>
+            </div>
+          </div>
+
+          <div class="section-area">
+            <p class="s-tit">선물할 마일리지</p>
+            <ul class="tab-btn" id="tab_charge">
+              <li><a href="#"><em>5,000</em>원</a></li>
+              <li class="on"><a href="#"><em>10,000</em>원</a></li>
+              <li><a href="#"><em>30,000</em>원</a></li>
+              <li><a href="#"><em>50,000</em>원</a></li>
+              <li><a href="#"><em>100,000</em>원</a></li>
+              <li><a href="#"><em>300,000</em>원</a></li>
+            </ul>
+            <span class="radio-base mt20">
+              <input type="radio" id="radio-direct-1" name="radio-direct" />
+              <label for="radio-direct-1">직접입력</label>
+            </span>
+            <div class="input-wrap input-unit mt10">
+              <input type="number" class="input-base" placeholder="선물할 마일리지 입력">
+              <span class="unit">원</span>
+            </div>
+          </div><!-- .section-area -->
+          <div class="section-area" id="total_credit">
+            <dl class="total-area">
+              <dt>
+                <span class="label">총 선물할 마일리지</span>
+                <span class="price"><em>10,300</em>원</span>
+              </dt>
+            </dl>
+            <dl class="sub-tit mt30">
+              <dt>유의사항</dt>
+              <dd>
+                <ul class="info-area tp2">
+                  <li>선물할 마일리지 금액 확인 하였으며, 선물 후 취소 및 환불이 불가 합니다.</li>
+                </ul>
+              </dd>
+            </dl>
+          </div><!-- .section-area -->
+
+          <div class="mt20">
+            <span class="chk-base">
+              <input type="checkbox" id="chk-agree" />
+              <label for="chk-agree">유의사항을 확인했습니다.</label>
+            </span>
+          </div>
+          <span class="btn-base tp1 green mt30" id="btnCharge"><a href="#"><em>10,000</em>원 선물하기</a></span>
+        </div><!-- .charge-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div id="footer">
+      <div class="f-inner">
+        <ul class="menu">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <div class="address-area">
+          <dl class="address">
+            <dt>메이드쿠폰 사업자 정보</dt>
+            <dd>
+              <ul>
+                <li>
+                  <span class="label">회사명</span>
+                  <span class="value">㈜엔버</span>
+                </li>
+                <li>
+                  <span class="label">대표이사</span>
+                  <span class="value">이광용</span>
+                </li>
+                <li>
+                  <span class="label">사업자등록번호</span>
+                  <span class="value">465 88 00127</span>
+                </li>
+                <li>
+                  <span class="label">통신판매업</span>
+                  <span class="value">제 2016 서울광진 1141 호</span>
+                </li>
+                <li>
+                  <span class="label">개인정보관리책임자</span>
+                  <span class="value">전준상</span>
+                </li>
+                <li>
+                  <span class="label">주소</span>
+                  <span class="value">서울 강남구 봉은사로 47 길 12 진현빌딩 2 동 401 호</span>
+                </li>
+              </ul>
+              <p class="copy">Copyright ⓒ 메이드쿠폰 MadeCoupon All RightsReserved</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div><!-- #footer -->
+
+    <div class="fm-wrap">
+      <ul>
+        <li class="menu"><a href="#"></a></li>
+        <li class="home"><a href="#"></a></li>
+        <li class="my"><a href="#"></a></li>
+        <li class="gift"><a href="#"></a></li>
+      </ul>
+    </div><!-- .fm-wrap -->
+
+    <button class="btn-top">위로 가기</button>
+
+    <div class="menu-dimm"></div>
+    <div class="menu-wrap">
+      <div class="m-header">
+        <h1>메이드쿠폰 메뉴</h1>
+        <a class="btn-close" href="#">닫기</a>
+      </div>
+      <div class="m-container">
+        <ul>
+          <li class="menu-1"><a href="#"><span>선물하기</span></a></li>
+          <li class="menu-2"><a href="#"><span>상품권 보관소</span></a></li>
+          <li class="menu-3"><a href="#"><span>상품권 지갑</span></a></li>
+          <li class="menu-4"><a href="#"><span>마일리지 충전소</span></a></li>
+          <li class="menu-5"><a href="#"><span>마일리지 선물하기</span></a></li>
+          <li class="menu-6"><a href="#"><span>마이페이지</span></a></li>
+          <li class="menu-7"><a href="#"><span>공지사항</span></a></li>
+          <li class="menu-8"><a href="#"><span>1:1 문의</span></a></li>
+          <li class="menu-9"><a href="#"><span>이벤트</span></a></li>
+        </ul>
+      </div>
+    </div><!-- .menu-wrap -->
+  </div><!-- #wrapper -->
+
+  <script>
+    var Qsample = $.urlParam('sample');
+    if (Qsample) {
+      setTimeout(() => {
+        if (Qsample === 'menu') {
+          $('.fm-wrap li.menu a').click();
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>

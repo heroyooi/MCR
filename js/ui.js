@@ -147,13 +147,15 @@ var GUI = window.GUI || (function(){
       }
 
       if ($fix_btn.length) {
-        if ($fix_btn.hasClass('multi')) {
-          $wrapper.addClass('ver_fix_btn');
-        }
-        if ($fix_btn.find('.btn-base').length == 1) {
-          $wrapper.addClass('ver_fix_btn');
-        } else if ($fix_btn.find('.btn-base').length == 2) {
-          $wrapper.addClass('ver_fix_btn btn_2');
+        if (!$fix_btn.hasClass('no_fixed')) {
+          if ($fix_btn.hasClass('multi')) {
+            $wrapper.addClass('ver_fix_btn');
+          }
+          if ($fix_btn.find('.btn-base').length == 1) {
+            $wrapper.addClass('ver_fix_btn');
+          } else if ($fix_btn.find('.btn-base').length == 2) {
+            $wrapper.addClass('ver_fix_btn btn_2');
+          }
         }
       }
 
