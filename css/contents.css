@@ -110,6 +110,7 @@
 .menu-list > li.mypage-4 > a > span::before{background-image:url(../img/mypage/ic_mypage_4.png);}
 .menu-list > li.mypage-5 > a > span::before{background-image:url(../img/mypage/ic_mypage_5.png);}
 .menu-list > li.mypage-6 > a > span::before{background-image:url(../img/mypage/ic_mypage_6.png);}
+.menu-list > li.mypage-7 > a > span::before{background-image:url(../img/mypage/ic_mypage_7.svg);}
 
 .right-area .contact-info{margin-top:20px;}
 .right-area .contact-info .tit{font-size:14px;font-weight:600;line-height:1.4;}
