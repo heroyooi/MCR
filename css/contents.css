@@ -468,7 +468,7 @@
   .menu-list > li.mypage-6 > a > span::before{background-image:url(../img/mypage/ic_mypage_m6.svg);}
 
   .menu-list > li.mypage-1{border-radius:8px 8px 0 0;}
-  .menu-list > li.mypage-3{border-radius:0 0 8px 8px;border-bottom:0;}
+  .menu-list > li.mypage-7{border-radius:0 0 8px 8px;border-bottom:0;}
   .menu-list > li.mypage-4{border-radius:8px 8px 0 0;margin-top:20px;}
   .menu-list > li.mypage-6{border-radius:0 0 8px 8px;border-bottom:0;}
 
