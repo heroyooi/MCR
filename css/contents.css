@@ -110,7 +110,7 @@
 .menu-list > li.mypage-4 > a > span::before{background-image:url(../img/mypage/ic_mypage_4.png);}
 .menu-list > li.mypage-5 > a > span::before{background-image:url(../img/mypage/ic_mypage_5.png);}
 .menu-list > li.mypage-6 > a > span::before{background-image:url(../img/mypage/ic_mypage_6.png);}
-.menu-list > li.mypage-7 > a > span::before{background-image:url(../img/mypage/ic_mypage_7.svg);}
+.menu-list > li.mypage-7 > a > span::before{background-image:url(../img/mypage/ic_mypage_7.png);}
 
 .right-area .contact-info{margin-top:20px;}
 .right-area .contact-info .tit{font-size:14px;font-weight:600;line-height:1.4;}
@@ -466,6 +466,7 @@
   .menu-list > li.mypage-4 > a > span::before{background-image:url(../img/mypage/ic_mypage_m4.svg);}
   .menu-list > li.mypage-5 > a > span::before{background-image:url(../img/mypage/ic_mypage_m5.svg);}
   .menu-list > li.mypage-6 > a > span::before{background-image:url(../img/mypage/ic_mypage_m6.svg);}
+  .menu-list > li.mypage-7 > a > span::before{background-image:url(../img/mypage/ic_mypage_m7.png);background-size:cover;}
 
   .menu-list > li.mypage-1{border-radius:8px 8px 0 0;}
   .menu-list > li.mypage-7{border-radius:0 0 8px 8px;border-bottom:0;}
