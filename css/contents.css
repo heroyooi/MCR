@@ -72,7 +72,7 @@
 .product-swiper dd.product-info .name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;word-wrap:break-word;height:44px;line-height:22px;white-space:initial;}
 
 .main-recently-area{position: relative;}
-.main-recently.product-box{position: absolute;top:-40px;}
+.main-recently.product-box{position: absolute;top:-40px;left:0;right:0;}
 .main-recently.product-box .tit::before{background:url(../img/main/ic_crown.svg) 50% 50% no-repeat;}
 
 .main-banner-area, .main-product-area, .main-promo-area, .main-slide-area{margin-top:80px;}
