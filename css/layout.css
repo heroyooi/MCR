@@ -181,6 +181,7 @@ body.bg{background-color:#F2F9FF;}
   #container.ver_search{padding-top:100px;}
   #container.ver_search.ver_brand{padding-top:50px;}
   #container.ver_tab{padding-top:90px;}
+  
   .content-wrap{padding:40px 16px 50px;min-height:initial;overflow:hidden;}
   .content-wrap.main{padding:30px 16px 50px;}
   .content-wrap.detail,
@@ -202,6 +203,7 @@ body.bg{background-color:#F2F9FF;}
   #wrapper.ver_fix_btn.btn_2{padding-bottom:162px;}
   #wrapper.ver_fix_btn.btn_2 .btn-top{bottom:170px;}
   #wrapper.ver_fix_btn .fm-wrap{display:none;}
+  #wrapper.ver_fix_btn.ver_fix_chk{padding-bottom:147px;}
 
   .content-area{display:block;}
   .content-area .left-area{width:100%;}

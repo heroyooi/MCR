@@ -156,6 +156,9 @@ var GUI = window.GUI || (function(){
           } else if ($fix_btn.find('.btn-base').length == 2) {
             $wrapper.addClass('ver_fix_btn btn_2');
           }
+          if ($('.fix-chk-area').length && $('.fix-chk-area').hasClass('type_2')) {
+            $wrapper.addClass('ver_fix_btn ver_fix_chk');
+          }
         }
       }
 
