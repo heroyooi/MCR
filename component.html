@@ -388,6 +388,131 @@
         </div>
       </div><!-- .section -->
 
+
+
+      <div class="section">
+        <h2>게임 머신</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box">  <div class="machine">
+    <div class="slot-window">
+      <ul class="slot-track" id="slot-track"></ul>
+    </div>
+  </div>
+
+  <button id="start-btn">🎰 랜덤 뽑기 시작</button>
+  <p id="chances">잔여 14회</p></div>
+<style>
+.machine {
+  background: #a1efd3;
+  padding: 30px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.slot-window {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 16px;
+  background: white;
+  position: relative;
+}
+
+.slot-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.slot-track li {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-track img {
+  max-height: 80%;
+  max-width: 80%;
+}
+</style>
+<script>
+let remainingChances = 14;
+const slotHeight = 150;
+const spinRounds = 3;
+
+// 사용할 브랜드 이미지 리스트
+const brands = [
+  'img/gift/category_1.svg',
+  'img/gift/category_2.svg',
+  'img/gift/category_3.svg',
+  'img/gift/category_4.svg',
+  'img/gift/category_5.svg',
+];
+
+// ✅ 설정 옵션
+const config = {
+  direction: 'up',   // 'up' 또는 'down'
+  mode: 'fixed',    // 'random' 또는 'fixed'
+  fixedIndex: 2      // mode가 'fixed'일 때 당첨 인덱스
+};
+
+// 슬롯 아이템 채우기
+const $track = $('#slot-track');
+$track.empty();
+const repeatCount = 10;
+for (let i = 0; i < brands.length * repeatCount; i++) {
+  const img = brands[i % brands.length];
+  $track.append(`<li><img src="${img}" alt="brand" /></li>`);
+}
+
+$('#start-btn').on('click', function () {
+  if (remainingChances <= 0) {
+    alert('뽑기 횟수가 모두 소진되었습니다.');
+    return;
+  }
+
+  remainingChances--;
+  $('#chances').text(`잔여 ${remainingChances}회`);
+
+  const totalItems = $('#slot-track li').length;
+  const baseIndex = config.mode === 'fixed'
+    ? config.fixedIndex
+    : Math.floor(Math.random() * brands.length);
+  const stopIndex = (brands.length * spinRounds) + baseIndex;
+  const targetY = config.direction === 'up'
+    ? -1 * stopIndex * slotHeight
+    : stopIndex * slotHeight;
+
+  $track.css({
+    transform: 'translateY(0)',
+    transition: 'none'
+  });
+
+  setTimeout(() => {
+    $track.css({
+      transform: `translateY(${targetY}px)`,
+      transition: 'transform 2s cubic-bezier(0.33, 1, 0.68, 1)'
+    });
+  }, 50);
+
+  setTimeout(() => {
+    const selectedIndex = baseIndex % brands.length;
+    console.log('🎯 당첨:', brands[selectedIndex]);
+  }, 2100);
+});
+</script>
+<pre class="language-html"></pre>
+<pre class="language-css"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+
+
         <div class="component-menu">
           <ul class="component-list"></ul>
           <span class="btn-base tp1"><a href="#">닫기</a></span><br />
