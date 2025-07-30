@@ -25,13 +25,17 @@ body.bg{background-color:#F2F9FF;}
 #header .h-right{display:flex;gap:0 20px;align-items:center;}
 #header .btn-join{font-size:14px;font-weight:500;color:#72767A;}
 #header .btn-mypage{font-size:0;width:40px;height:40px;background:url(../img/common/ic_mypage.png) 50% 50% no-repeat;}
+#header .btn-alarm{font-size:0;width:28px;height:28px;background:url(../img/common/teenyicons_bell.svg) 50% 50% no-repeat;}
+#header .btn-alarm.on{background-image:url(../img/common/teenyicons_bell_noti.svg);}
 #header .search-form{width:200px;height:40px;border-radius:50px;background-color:#f5f5f5;align-items:center;padding:13px 14px;position: relative;}
 #header .search-form input{font-size:12px;border:0;background-color:transparent;padding-right:24px;width:100%;}
 #header .search-form .btn-search{display:inline-block;width:24px;height:24px;background:url(../img/common/ic_search.svg) 50% 50% no-repeat;font-size:0;position: absolute;right:14px;top:8px;}
-.m-btn-search, .m-btn-back, .m-btn-home{display:inline-block;width:28px;height:28px;background-position:50% 50%;background-repeat:no-repeat;font-size:0;}
+.m-btn-search, .m-btn-back, .m-btn-home, .m-btn-alarm{display:inline-block;width:28px;height:28px;background-position:50% 50%;background-repeat:no-repeat;font-size:0;}
 .m-btn-search{background-image:url(../img/common/ic_search_m.svg);position:absolute;right:16px;top:11px;}
 .m-btn-back{background-image:url(../img/common/ic_arrow_back.svg);}
 .m-btn-home{background-image:url(../img/common/ic_home_m.svg);}
+.m-btn-alarm{background-image:url(../img/common/teenyicons_bell.svg);position:absolute;right:54px;top:11px;}
+.m-btn-alarm.on{background-image:url(../img/common/teenyicons_bell_noti.svg);}
 .m-search-area{position:absolute;left:0;top:0;right:0;height:50px;background-color:#fff;display:flex;padding:3px 16px;align-items:center;display:none;}
 
 #header .h-inner.only-mobile{align-items:center;justify-content:space-between;}

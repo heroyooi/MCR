@@ -31,6 +31,9 @@
 .fix-btn-area.multi .btn-base{margin-top:0;}
 .fix-reason-area{margin-top:30px;}
 
+.btn-base-wrap{display:flex;gap:5px;}
+.btn-base-wrap .btn{display:inline-block;font-size:12px;font-weight:500;color:#333;padding:4px 10px;border:1px solid #72767A;border-radius:4px; line-height:18px;}
+
 /* input */
 .input-base{width:100%;padding:16px 14px;border:1px solid #EBEBEB;border-radius:8px;}
 .input-base:focus{border-color:#26C48C;}
