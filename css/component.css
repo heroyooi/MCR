@@ -251,10 +251,13 @@
 
 .cs-popup-dimm{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0, 0, 0, 0.75);z-index:9;display:none;}
 .cs-popup-wrap{position:fixed;right:0;top:0;width:100%;max-width:1000px;height:100%;z-index:10;transform:translateX(100%);transition:transform 0.2s, opacity 0.2s;background:#fff;opacity:0;}
+.cs-popup-wrap.bg_blue{background-color: #F2F9FF;}
 .cs-popup-wrap.on, .cs-popup-wrap.active{transform:translateX(0);opacity:1;}
 .cs-popup-wrap .popup-header{position:relative;height:50px;display:flex;padding:0 16px;align-items:center;}
 .cs-popup-wrap .popup-header h1{font-size:22px;font-weight:600;}
 .cs-popup-wrap .popup-header .btn-close{display:inline-block;width:28px;height:28px;background:url(../img/common/ic_close.svg) 50% 50% no-repeat;position: absolute;right:16px;top:11px;font-size:0;}
+.cs-popup-wrap .popup-header .tip-area{display:inline-block;padding:5px 15px;border:1px solid #D0E8FF;border-radius:50px;}
+.cs-popup-wrap .popup-header .tip-area a{color:#4289F0;font-size:12px;}
 .cs-popup-wrap .popup-content{padding:20px 16px;overflow-y:auto;}
 .cs-popup-wrap .sub-tit{font-size:20px;font-weight:600;line-height:1.2;margin-bottom:20px;}
 
@@ -295,6 +298,23 @@ select{width:100%;height:50px;line-height:50px;border:1px solid #ebebeb;padding:
 /* modal page */
 .modal-area .btn-base{margin-top:10px;}
 .modal-area .btn-base:first-child{margin-top:0;}
+
+/* pin */
+.cs-popup-wrap#changePassword .popup-content{padding:0;height:auto !important;}
+.pin-wrapper{text-align: center;padding-top: 86px;}
+.pin-wrapper .tit{font-size:22px;font-weight:600;color:#333;line-height:1.4;}
+.pin-wrapper .con{font-size:14px;font-weight:500;color:#333;line-height:1.4;margin-top: 10px;}
+.pin-wrapper .pin-dots {margin-top: 50px;}
+.pin-wrapper .pin-dots span {display: inline-block;width: 16px;height: 16px;margin: 0 7.5px;border-radius: 50%;background: #D9D9D9;}
+.pin-wrapper .pin-dots span.filled { background: #4289F0;}
+.pin-wrapper .error-message {font-size:12px;font-weight:500;color:#fc4852;margin-top:20px;line-height:1.4;}
+.pin-wrapper .keypad-area {background-color: #fff;position: absolute;left:0;bottom:0;width:100%;padding:40px 0;}
+.pin-wrapper .keypad-area .keypad {background-color: #fff;margin: 0 auto;max-width: 330px;display: flex;flex-direction: column;}
+.pin-wrapper .keypad-area .keypad .row {display: flex;justify-content: space-between;}
+.pin-wrapper .keypad-area .keypad button {flex: 1;padding: 12px 0;font-size: 22px;font-family:'Montserrat';line-height:1.4;}
+.pin-wrapper .keypad-area .keypad .clear{font-size:14px;font-family:'Pretendard';color:#72767a;}
+.pin-wrapper .keypad-area .keypad .back{}
+.pin-wrapper .keypad-area .btn-reset{position: absolute;left:50%;top:-52px;transform:translateX(-50%);font-size:14px;color:#72767a;text-decoration: underline;}
 
 /* font */
 .clp-fs104 {font-size:104px;}

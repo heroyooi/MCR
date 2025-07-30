@@ -102,14 +102,18 @@ body.bg{background-color:#F2F9FF;}
 .fm-wrap li.on.my a:before{background-image:url(../img/common/ic_my_on.svg);}
 .fm-wrap li.on.gift a:before{background-image:url(../img/common/ic_gift_on.svg);}
 
+.fm-wrap.inc-starmenu{bottom:0;}
 .fm-wrap.inc-starmenu li{width:20%;}
 .fm-wrap.inc-starmenu li:nth-child(2){margin-right:20%;}
-.fm-wrap.inc-starmenu .btn-starmenu{position:absolute;left:50%;margin-left:-30px;bottom:-10px;border:6px solid #fff;border-radius:50%;overflow:hidden;} 
-.fm-wrap.inc-starmenu.on .btn-starmenu{bottom:10px;}
+.fm-wrap.inc-starmenu .btn-starmenu{position:absolute;left:50%;margin-left:-30px;bottom:10px;border:6px solid #fff;border-radius:50%;overflow:hidden;} 
 .fm-wrap.inc-starmenu .btn-starmenu .starmenu{width:50px;height:50px;background:#26C48C url(../img/common/ic_starmenu.svg) 12px 50% no-repeat;display:block;}
 
 .btn-top{position:fixed;right:50px;bottom:50px;width:50px;height:50px;font-size:0;display:none;z-index:1;background:url(../img/common/ic_top.svg) 50% 50% no-repeat;}
 .btn-top.on{display:block;}
+.btn-payment{position: fixed;right:50px;bottom:50px;padding:7px 20px;background-color: #fff;z-index:1;border-radius:30px;border:1px solid #D9D9D9;font-size:16px;color:#333;line-height:1.4;}
+.btn-payment span{display:flex;align-items: center;gap:0 15px;}
+.btn-payment span::after{content:'';display:block;width:24px;height:24px;background:url('../img/common/ic_payment.svg') 50% 50% no-repeat;}
+.btn-payment.on{bottom:115px;}
 
 .search-top{display:flex;justify-content:space-between;height:40px;align-items:center;position: relative;width:100%;z-index:1;}
 .search-top .result{font-size:16px;font-weight:500;line-height:1.4;color:#000;}
@@ -164,7 +168,7 @@ body.bg{background-color:#F2F9FF;}
 /* .cate-list li dt img{max-width:34px;max-height:38px;} */
 .cate-list li dd{margin-top:10px;font-size:14px;font-weight:600;color:#333;text-align:center;}
 
-#container.ver_promotion{background: linear-gradient(180deg, #26C48C 0%, var(--key_opa, #B5FADC) 100%);min-height:calc(100vh - 80px);}
+#container.ver_promotion{min-height:calc(100vh - 80px);}
 
 @media screen and (max-width: 1080px) {
   #wrapper::before, #wrapper::after{display:none;}
@@ -213,6 +217,7 @@ body.bg{background-color:#F2F9FF;}
 
   .fm-wrap{display:block;}
   .btn-top{right:16px;bottom:70px;width:34px;height:34px;background-size:cover;}
+  .btn-payment{right:16px;bottom:70px;}
 
   #wrapper.ver_main #footer{display:block;}
   #wrapper.ver_fix_btn{padding-bottom:92px;}

@@ -510,7 +510,7 @@
 .splash_area.ver_green .tit, .splash_area.ver_green .con{color:#ffffff;}
 
 /* promotion */
-.promo-detail-area{padding:100px 40px 0;text-align:center;max-width:750px;margin:0 auto;}
+.promo-detail-area{padding:100px 40px 74px;text-align:center;max-width:750px;margin:0 auto;background: linear-gradient(180deg, #26C48C 0%, var(--key_opa, #B5FADC) 100%);}
 .promo-top .label{display:inline-block;padding:6px 30px;background-color: #fff;font-weight:700;color:#26c48c;border-radius:160px;line-height:1.4;white-space: nowrap;}
 .promo-top .title{margin-top:22px;}
 .promo-top .title span{display:block;}
@@ -537,22 +537,47 @@
 .promo-sub-con{margin-top:46px;line-height:1.4;}
 
 .promo-ad-area{position: relative;max-width:750px;margin:0 auto;}
-.promo-ad-area.ver_white{margin-top:74px;}
-.promo-ad-area .promo-ad-content{border-radius:40px 40px 0 0;position: relative;padding:60px 30px;}
+.promo-ad-area.ver_white{}
+.promo-ad-area .promo-ad-content{border-radius:40px 40px 0 0;position: relative;}
 .promo-ad-area::before{content:'';display:block;width:100%;height:40px;position: absolute;left:0;top:0;width:100%;}
+.promo-ad-area.ver_white::before{background-color: #B5FADC;}
 .promo-ad-area.ver_green::before{background-color: #fff;}
 .promo-ad-area.ver_black::before{background-color: #26C48C;}
-.promo-ad-area.ver_white .promo-ad-content{background-color: #fff;}
-.promo-ad-area.ver_green .promo-ad-content{background-color: #26C48C;}
-.promo-ad-area.ver_black .promo-ad-content{background-color: #333;}
+.promo-ad-area.ver_white .promo-ad-content{background-color: #fff;padding:60px 30px 100px;}
+.promo-ad-area.ver_green .promo-ad-content{background-color: #26C48C;padding:60px 30px 0;}
+.promo-ad-area.ver_black .promo-ad-content{background-color: #333;padding:112px 38px 100px;}
 
-.gift-item-area{border:1px solid #ebebeb;border-radius:16px;}
-.gift-item{display:flex;align-items: center;padding:32px 0;border-bottom:1px solid #ebebeb;}
-.gift-item .bridge{flex-shrink: 0;font-weight:600;color:#d9d9d9;}
-.gift-item dl{flex-grow:1;text-align:center;}
-.gift-item dl dt{}
-.gift-item dl dd{}
-.gift-tip{padding:40px 0;line-height:1.4;color:#72767a;text-align:Center;}
+.gift-info-area .gift-item-area .label{position: absolute;background-color: #333;border-radius:60px;padding:0 20px;color:#fff;line-height:1.4;display:inline-block;font-weight:700;left:50%;transform:translateX(-50%);white-space: nowrap;top:-22px;}
+.gift-info-area .gift-item-area{border:1px solid #ebebeb;border-radius:16px;position: relative;}
+.gift-info-area .gift-item-area .gift-item{display:flex;align-items: center;padding:42px 0 32px;border-bottom:1px solid #ebebeb;}
+.gift-info-area .gift-item-area .gift-item .bridge{flex-shrink: 0;font-weight:600;color:#d9d9d9;}
+.gift-info-area .gift-item-area .gift-item dl{flex-grow:1;text-align:center;}
+.gift-info-area .gift-item-area .gift-item dl dd{font-weight:600;color:#333;margin-top:18px;}
+.gift-info-area .gift-item-area .gift-tip{padding:40px 0;line-height:1.4;color:#72767a;text-align:Center;}
+.gift-info-area .gift-tail{text-align:center;margin-top:60px;}
+.gift-info-area .gift-tail .tit{font-weight:700;color:#333;position: relative;display:inline-block;}
+.gift-info-area .gift-tail .tit span{position: relative;}
+.gift-info-area .gift-tail .tit::before{content:'';display:inline-block;background-color: #b5fadc;height:28px;width:100%;position: absolute;left:0;bottom:-10px;}
+.gift-info-area .gift-tail .con{margin-top:40px;line-height:1.4;}
+
+.winner-secret-area{position: relative;}
+.winner-secret-area .winner-text{text-align:center;color:#fff;font-weight:300;line-height:1.1;}
+.winner-secret-area .winner-text strong{font-weight:700;}
+.winner-secret-area .winner-list-area{position: relative;height:374px;}
+.winner-secret-area .winner-list{margin-top:38px;}
+.winner-secret-area .winner-list > li{padding:24px 20px;display:flex;justify-content:space-between;background: rgba(255, 255, 255, 0.30);border-radius:16px;align-items: center;margin-top:10px;}
+.winner-secret-area .winner-list > li:first-child{margin-top:0;}
+.winner-secret-area .winner-list > li .nickname{background-color:#333;color:#fff;padding:6px 20px;border-radius:80px;line-height:1.6;}
+.winner-secret-area .winner-list > li .right-area{display:flex;gap: 0 29px;}
+.winner-secret-area .winner-list > li .gift{font-weight:500;}
+.winner-secret-area .winner-list > li .date{font-weight:500;color:#fff;}
+.winner-secret-area .winner-dimm{position: absolute;left:0;bottom:0;width:100%;background: linear-gradient(180deg, rgba(38, 196, 140, 0.00) 42.91%, var(--Key, #26C48C) 100%);height:100%;}
+
+.slot-ad-area{position: relative;}
+.slot-ad-area .tit{color:#fff;font-weight:300;line-height:1.2;text-align:center;position: absolute;top:-52px;left:0;width:100%;}
+.slot-ad-area .tit strong{font-weight:700;}
+.promo-ad-area.ver_black .promo-ad-content .btn-base{margin-top:10px;}
+.promo-ad-area.ver_black .promo-ad-content .btn-base > *{border-radius:50px;}
 
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
@@ -621,8 +646,8 @@
 
   .order-result .product-list{margin-top:0;}
 
-  /* promotion */
-  .promo-detail-area{padding:50px 16px 0;}
+  /* promotion */ 
+  .promo-detail-area{padding:50px 16px 36px;}
   .promo-top .label{padding:0 15px;}
   .promo-top .title{margin-top:14px;}
   .promo-visual{margin-top:50px;}
@@ -631,5 +656,21 @@
   .promo-list > li dl dt{width:86px;}
   .promo-sub-area{margin-top:40px;padding:7% 0 11%;}
   .promo-sub-con{margin-top:22px;}
-  
+
+  .promo-ad-area .promo-ad-content{border-radius:20px 20px 0 0;}
+  .promo-ad-area.ver_white .promo-ad-content{padding:43px 16px 48px;}
+  .gift-info-area .gift-item-area .label{top:-4.5%;font-size:16px;}
+  .gift-info-area .gift-item-area .gift-item{padding:16px 0 7px;}
+  .gift-info-area .gift-item-area .gift-tip{padding:20px 0;font-size:13px;}
+
+  .promo-ad-area.ver_green .promo-ad-content{padding:30px 16px 0;}
+  .winner-secret-area .winner-list-area{height:187px;}
+  .winner-secret-area .winner-list{margin-top:20px;}
+  .winner-secret-area .winner-list > li{font-size:12px;padding:12px 20px 12px 10px;border-radius:8px;}
+  .winner-secret-area .winner-list > li .nickname{padding:3px 10px;}
+  .winner-secret-area .winner-list > li .right-area{gap:0 14px;}
+
+  .promo-ad-area.ver_black .promo-ad-content{padding:56px 26px 180px;}
+  .slot-ad-area .tit{top:-26px;font-size:22px;}
+  .slot-ad-area .slot-ad{width:313px;margin:0 auto;}
 }

@@ -374,6 +374,9 @@ var GUI = window.GUI || (function(){
           $fmWrap.addClass('on');
           $top.addClass('on');
           $header.addClass('on');
+          if ($('.btn-payment').length) {
+            $('.btn-payment').addClass('on');
+          }
           if ($('.search-paging').length) {
             $('.search-paging').addClass('on');
           }
@@ -382,6 +385,9 @@ var GUI = window.GUI || (function(){
             $fmWrap.removeClass('on');
             $top.removeClass('on');
             $header.removeClass('on');
+            if ($('.btn-payment').length) {
+            $('.btn-payment').removeClass('on');
+          }
             if ($('.search-paging').length) {
               $('.search-paging').removeClass('on');
             }
