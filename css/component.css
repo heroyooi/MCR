@@ -32,7 +32,12 @@
 .fix-reason-area{margin-top:30px;}
 
 .btn-base-wrap{display:flex;gap:5px;}
-.btn-base-wrap .btn{display:inline-block;font-size:12px;font-weight:500;color:#333;padding:4px 10px;border:1px solid #72767A;border-radius:4px; line-height:18px;}
+.btn-base-wrap .btn{display:inline-block;font-size:12px;font-weight:500;color:#333;padding:4px 10px;border:1px solid #72767A;border-radius:4px; line-height:18px;position: relative;text-align:center;background-color:#fff;}
+.btn-base-wrap .btn.on{background-color: #333;color:#fff;}
+.btn-base-wrap .btn.on::after{content:'';display:block;width:10px;height:10px;position: absolute;left:50%;margin-left:-5px;bottom:-7px;background:url('/img/common/ic_edge.svg') 50% 50% no-repeat;background-size:cover;}
+.btn-base-wrap .btn.md{font-size:14px;line-height:20px;font-weight:600;padding:9px;}
+.btn-base-wrap.full{width:100%;gap:0 10px;}
+.btn-base-wrap.full .btn{flex-grow:1;}
 
 /* input */
 .input-base{width:100%;padding:16px 14px;border:1px solid #EBEBEB;border-radius:8px;}
@@ -291,6 +296,63 @@ select{width:100%;height:50px;line-height:50px;border:1px solid #ebebeb;padding:
 .modal-area .btn-base{margin-top:10px;}
 .modal-area .btn-base:first-child{margin-top:0;}
 
+/* font */
+.clp-fs104 {font-size:104px;}
+.clp-fs72 {font-size:72px;}
+.clp-fs62 {font-size:62px;}
+.clp-fs61 {font-size:61px;}
+.clp-fs60 {font-size:60px;}
+.clp-fs59 {font-size:59px;}
+.clp-fs58 {font-size:58px;}
+.clp-fs57 {font-size:57px;}
+.clp-fs56 {font-size:56px;}
+.clp-fs55 {font-size:55px;}
+.clp-fs54 {font-size:54px;}
+.clp-fs53 {font-size:53px;}
+.clp-fs52 {font-size:52px;}
+.clp-fs51 {font-size:51px;}
+.clp-fs50 {font-size:50px;}
+.clp-fs49 {font-size:49px;}
+.clp-fs48 {font-size:48px;}
+.clp-fs47 {font-size:47px;}
+.clp-fs46 {font-size:46px;}
+.clp-fs45 {font-size:45px;} 
+.clp-fs44 {font-size:44px;} 
+.clp-fs43 {font-size:43px;} 
+.clp-fs42 {font-size:42px;} 
+.clp-fs41 {font-size:41px;} 
+.clp-fs40 {font-size:40px;} 
+.clp-fs39 {font-size:39px;} 
+.clp-fs38 {font-size:38px;} 
+.clp-fs37 {font-size:37px;} 
+.clp-fs36 {font-size:36px;} 
+.clp-fs35 {font-size:35px;} 
+.clp-fs34 {font-size:34px;} 
+.clp-fs33 {font-size:33px;} 
+.clp-fs32 {font-size:32px;} 
+.clp-fs31 {font-size:31px;} 
+.clp-fs30 {font-size:30px;} 
+.clp-fs29 {font-size:29px;} 
+.clp-fs28 {font-size:28px;} 
+.clp-fs27 {font-size:27px;} 
+.clp-fs26 {font-size:26px;} 
+.clp-fs25 {font-size:25px;} 
+.clp-fs24 {font-size:24px;} 
+.clp-fs23 {font-size:23px;} 
+.clp-fs22 {font-size:22px;} 
+.clp-fs21 {font-size:21px;} 
+.clp-fs20 {font-size:20px;} 
+.clp-fs19 {font-size:19px;} 
+.clp-fs18 {font-size:18px;} 
+.clp-fs17 {font-size:17px;} 
+.clp-fs16 {font-size:16px;} 
+.clp-fs15 {font-size:15px;} 
+.clp-fs14 {font-size:14px;}
+.clp-fs13 {font-size:13px;}
+.clp-fs12 {font-size:12px;}
+[class*="clp-fs"]{font-family:'Noto Sans KR';}
+[class*="clp-fs"] strong{font-weight:700;}
+
 @media screen and (max-width: 750px) {
   .btn-base.tp1 > *{font-size:20px;padding:16px 10px;}
   .btn-base.tp1.reverse > *{padding:15px 9px;}
@@ -303,4 +365,59 @@ select{width:100%;height:50px;line-height:50px;border:1px solid #ebebeb;padding:
   .fix-chk-area.type_2{background-color:#fff;}
   .fix-chk-area.type_2{z-index:3;margin-top:0 !important;border-top:1px solid #ddd;left:0;right:0;padding:20px 16px 0;}
   .fix-chk-area.type_2 .chk-base-wrap{border:1px solid #eee;border-radius:8px;padding:15px 20px;}
+
+  /* 반응형 폰트 */
+  .clp-fs104 {font-size:clamp(25px,12vmin,104px);}
+  .clp-fs72 {font-size:clamp(22px,7.7vmin,72px);}
+  .clp-fs62 {font-size:clamp(22px,6.7vmin,62px);}
+  .clp-fs61 {font-size:clamp(22px,6.6vmin,61px);}
+  .clp-fs60 {font-size:clamp(22px,6.5vmin,60px);}
+  .clp-fs59 {font-size:clamp(22px,6.4vmin,59px);}
+  .clp-fs58 {font-size:clamp(22px,6.3vmin,58px);}
+  .clp-fs57 {font-size:clamp(22px,6.2vmin,57px);}
+  .clp-fs56 {font-size:clamp(22px,6.1vmin,56px);}
+  .clp-fs55 {font-size:clamp(22px,6.0vmin,55px);}
+  .clp-fs54 {font-size:clamp(22px,5.9vmin,54px);}
+  .clp-fs53 {font-size:clamp(22px,5.8vmin,53px);}
+  .clp-fs52 {font-size:clamp(22px,5.7vmin,52px);}
+  .clp-fs51 {font-size:clamp(22px,5.6vmin,51px);}
+  .clp-fs50 {font-size:clamp(22px,5.5vmin,50px);}
+  .clp-fs49 {font-size:clamp(20px,5.4vmin,49px);}
+  .clp-fs48 {font-size:clamp(20px,5.3vmin,48px);}
+  .clp-fs47 {font-size:clamp(20px,5.2vmin,47px);}
+  .clp-fs46 {font-size:clamp(20px,5.1vmin,46px);}
+  .clp-fs45 {font-size:clamp(20px,5.0vmin,45px);}
+  .clp-fs44 {font-size:clamp(20px,4.9vmin,44px);}
+  .clp-fs43 {font-size:clamp(20px,4.8vmin,43px);}
+  .clp-fs42 {font-size:clamp(20px,4.7vmin,42px);}
+  .clp-fs41 {font-size:clamp(20px,4.6vmin,41px);}
+  .clp-fs40 {font-size:clamp(20px,4.5vmin,40px);}
+  .clp-fs39 {font-size:clamp(20px,4.4vmin,39px);}
+  .clp-fs38 {font-size:clamp(20px,4.3vmin,38px);}
+  .clp-fs37 {font-size:clamp(20px,4.2vmin,37px);}
+  .clp-fs36 {font-size:clamp(20px,4.1vmin,36px);}
+  .clp-fs35 {font-size:clamp(20px,4.0vmin,35px);}
+  .clp-fs34 {font-size:clamp(20px,3.9vmin,34px);}
+  .clp-fs33 {font-size:clamp(17px,3.8vmin,33px);}
+  .clp-fs32 {font-size:clamp(17px,3.7vmin,32px);}
+  .clp-fs31 {font-size:clamp(17px,3.6vmin,31px);}
+  .clp-fs30 {font-size:clamp(17px,3.5vmin,30px);}
+  .clp-fs29 {font-size:clamp(17px,3.4vmin,29px);}
+  .clp-fs28 {font-size:clamp(17px,3.3vmin,28px);}
+  .clp-fs27 {font-size:clamp(16px,3.2vmin,27px);}
+  .clp-fs26 {font-size:clamp(16px,3.1vmin,26px);}
+  .clp-fs25 {font-size:clamp(16px,3.0vmin,25px);}
+  .clp-fs24 {font-size:clamp(15px,2.9vmin,24px);}
+  .clp-fs23 {font-size:clamp(15px,2.8vmin,23px);}
+  .clp-fs22 {font-size:clamp(15px,2.7vmin,22px);}
+  .clp-fs21 {font-size:clamp(15px,2.6vmin,21px);}
+  .clp-fs20 {font-size:clamp(15px,2.5vmin,20px);}
+  .clp-fs19 {font-size:clamp(15px,2.4vmin,19px);}
+  .clp-fs18 {font-size:clamp(14px,2.3vmin,18px);}
+  .clp-fs17 {font-size:clamp(13px,2.2vmin,17px);}
+  .clp-fs16 {font-size:clamp(13px,2.1vmin,16px);}
+  .clp-fs15 {font-size:clamp(13px,2.0vmin,15px);}
+  .clp-fs14 {font-size:clamp(13px,1.9vmin,14px);}
+  .clp-fs13 {font-size:clamp(13px,1.8vmin,13px);}
+  .clp-fs12 {font-size:clamp(12px,1.7vmin,12px);}
 }

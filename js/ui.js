@@ -24,6 +24,10 @@ var GUI = window.GUI || (function(){
       if ($('.menu-wrap').length) {
         GUI.gnbMenu();
       }
+
+      if ($('#container').hasClass('ver_promotion')) {
+        $('#wrapper').addClass('ver_promotion');
+      }
     },
     baseUI: function($this){
       var _ = $this;
@@ -321,7 +325,13 @@ var GUI = window.GUI || (function(){
     gnbMenu: function(){
       $(window).on('load resize', function(){
         $('.menu-wrap .m-container').each(function(){
-          $(this).css({height: $(window).height() - $('.menu-wrap .m-header').outerHeight()});
+          var $header = $('.menu-wrap .m-header');
+          var $btn = $('.menu-wrap .btn-base-wrap');
+          if ($btn.length) {
+            $(this).css({height: $(window).height() - $header.outerHeight() - $btn.outerHeight()});
+          } else {
+            $(this).css({height: $(window).height() - $header.outerHeight()});
+          }
         });
 
         if ($(window).width() > 750) {
