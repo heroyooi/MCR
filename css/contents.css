@@ -546,6 +546,14 @@
 .promo-ad-area.ver_green .promo-ad-content{background-color: #26C48C;}
 .promo-ad-area.ver_black .promo-ad-content{background-color: #333;}
 
+.gift-item-area{border:1px solid #ebebeb;border-radius:16px;}
+.gift-item{display:flex;align-items: center;padding:32px 0;border-bottom:1px solid #ebebeb;}
+.gift-item .bridge{flex-shrink: 0;font-weight:600;color:#d9d9d9;}
+.gift-item dl{flex-grow:1;text-align:center;}
+.gift-item dl dt{}
+.gift-item dl dd{}
+.gift-tip{padding:40px 0;line-height:1.4;color:#72767a;text-align:Center;}
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
