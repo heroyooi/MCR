@@ -40,6 +40,13 @@
 			//<![CDATA[
 			b = new dTree('b');
 
+			const addList = [];
+			const originalAdd = b.add.bind(b);
+			b.add = function (...args) {
+				addList.push([...args]);
+				return originalAdd(...args);
+			};
+
 			b.add(0, -1, 'MadeCoupon 반응형');
 
 			b.add(1, 0, '1. 메인' );
@@ -84,7 +91,7 @@
 			b.add(5.033, 5, '3-3) 마일리지 충전소 - 충전 실패 - 사유 포함','charge_02.html?sample=failReason', '완료', '_blank');
 			b.add(5.041, 5, '4-1) 상품권 지갑','charge_03.html', '완료', '_blank');
 			b.add(5.042, 5, '4-2) 상품권 지갑 - 휴대폰 인증','charge_03_2.html', '완료', '_blank');
-			b.add(5.051, 5, '5-1) 상품권 지갑','charge_04.html', '신규', '_blank');
+			b.add(5.051, 5, '5-1) 상품권 지갑','charge_04.html', '완료', '_blank');
 
 			b.add(6, 0, '6. 선물하기' );
 			b.add(6.011, 6, '1-1) 선물하기','gift.html', '완료', '_blank');
@@ -131,7 +138,92 @@
 			b.add(10.024, 10, '2-4) 모달 - 오늘 하루 그만 보기 - slideUp', 'modal.html?popup=today2', '완료', '_blank');
 			b.add(10.025, 10, '2-5) 모달 - 개인정보 수집 및 이용 동의', 'modal.html?popup=privacy', '완료', '_blank');
 
-			document.write(b);
+			b.add(11, 0, '11. 신규페이지 - UI 추가');  
+			b.add(11.011, 11, '1-1) splash_w', '.html', '작업전', '_blank');
+			b.add(11.012, 11, '1-2) splash', '.html', '작업전', '_blank');
+			b.add(11.021, 11, '2-1) 권한설정', '.html', '작업전', '_blank');
+			b.add(11.022, 11, '2-2) 권한설정_alert', '.html', '작업전', '_blank');
+			b.add(11.031, 11, '3-1) 알람동의', '.html', '작업전', '_blank');
+			b.add(11.032, 11, '3-2) 알람동의_alert', '.html', '작업전', '_blank');
+			b.add(11.041, 11, '4-1) 앱설정', '.html', '작업전', '_blank');
+			b.add(11.042, 11, '4-2) 앱설정_message', '.html', '작업전', '_blank');
+			b.add(11.043, 11, '4-3) 앱설정_toast01', '.html', '작업전', '_blank');
+			b.add(11.044, 11, '4-4) 앱설정_toast02', '.html', '작업전', '_blank');
+			b.add(11.045, 11, '4-5) 앱설정_alert', '.html', '작업전', '_blank');
+
+			b.add(11.051, 11, '5-1) 메인 - icon_default', '.html', '작업전', '_blank');
+			b.add(11.052, 11, '5-2) 메인 - icon_on', '.html', '작업전', '_blank');
+			b.add(11.053, 11, '5-3) 메인 - login_alert', '.html', '작업전', '_blank');
+ 
+			b.add(11.061, 11, '6-1) 알림 - event_notice', '.html', '작업전', '_blank');
+			b.add(11.062, 11, '6-2) 알림 - event_empty', '.html', '작업전', '_blank');
+			b.add(11.07, 11, '7) 회원가입 - join', '.html', '작업전', '_blank');
+
+			b.add(12, 0, '12. 신규페이지 - 구독서비스');  
+			b.add(12.01, 12, '1) 상세페이지', '.html', '작업전', '_blank');
+			b.add(12.021, 12, '2-1) 비밀번호', '.html', '작업전', '_blank');
+			b.add(12.022, 12, '2-2) 비밀번호 - 유효성 검사', '.html', '작업전', '_blank');
+			b.add(12.023, 12, '2-3) 비밀번호 - alert', '.html', '작업전', '_blank');
+			b.add(12.031, 12, '3-1) 상세페이지 - 결제바코드', '.html', '작업전', '_blank');
+			b.add(12.032, 12, '3-2) 상세페이지 - 비밀번호_미설정', '.html', '작업전', '_blank');
+			b.add(12.041, 12, '4-1) 결제바코드', '.html', '작업전', '_blank');
+			b.add(12.042, 12, '4-2) 결제바코드_btn', '.html', '작업전', '_blank');
+			b.add(12.043, 12, '4-3) 결제바코드_btn - 썸네일 없음', '.html', '작업전', '_blank');
+			b.add(12.05, 12, '5) 결제 브랜드 리스트', '.html', '작업전', '_blank');
+			b.add(12.061, 12, '6-1) main', '.html', '작업전', '_blank');
+			b.add(12.062, 12, '6-2) main - menu', '.html', '작업전', '_blank');
+			b.add(12.071, 12, '7-1) 구독서비스', '.html', '작업전', '_blank'); 
+			b.add(12.072, 12, '7-2) 구독서비스 - menu', '.html', '작업전', '_blank'); 
+			b.add(12.081, 12, '8-1) gift_default', '.html', '작업전', '_blank'); 
+			b.add(12.082, 12, '8-2) gift_menu', '.html', '작업전', '_blank'); 
+			b.add(12.09, 12, '9) 상품정보', '.html', '작업전', '_blank'); 
+			b.add(12.10, 12, '10) 구매하기', '.html', '작업전', '_blank'); 
+			b.add(12.11, 12, '11) 실시간당첨', '.html', '작업전', '_blank'); 
+			b.add(12.12, 12, '12) mypage', '.html', '작업전', '_blank'); 
+			b.add(12.131, 12, '13-1) 환불신청', '.html', '작업전', '_blank'); 
+			b.add(12.132, 12, '13-2) 환불신청_list', '.html', '작업전', '_blank'); 
+			b.add(12.141, 12, '14-1) 마일리지환불', '.html', '작업전', '_blank'); 
+			b.add(12.142, 12, '14-2) 마일리지환불_비활성화', '.html', '작업전', '_blank'); 
+			b.add(12.143, 12, '14-3) 마일리지환불_확인', '.html', '작업전', '_blank'); 
+			b.add(12.144, 12, '14-4) 환불안내_alert01', '.html', '작업전', '_blank'); 
+			b.add(12.145, 12, '14-5) 환불안내_alert02', '.html', '작업전', '_blank'); 
+			b.add(12.151, 12, '15-1) 환불계좌01', '.html', '작업전', '_blank'); 
+			b.add(12.152, 12, '15-2) 환불계좌02', '.html', '작업전', '_blank'); 
+			b.add(12.153, 12, '15-3) 환불계좌_bank', '.html', '작업전', '_blank'); 
+			b.add(12.154, 12, '15-4) 환불계좌_alert', '.html', '작업전', '_blank'); 
+
+			b.add(12.16, 12, '16) 구매내역', '.html', '작업전', '_blank'); 
+			b.add(12.171, 12, '17-1) 구매내역01', '.html', '작업전', '_blank'); 
+			b.add(12.172, 12, '17-2) 구매내역02', '.html', '작업전', '_blank'); 
+			b.add(12.173, 12, '17-3) 구매내역03', '.html', '작업전', '_blank'); 
+			b.add(12.18, 12, '18) 상품받기', '.html', '작업전', '_blank'); 
+			b.add(12.19, 12, '19) 마일리지환급', '.html', '작업전', '_blank');
+			b.add(12.201, 12, '20-1) 구독서비스뽑기', '.html', '작업전', '_blank');
+			b.add(12.202, 12, '20-2) 구독서비스뽑기 - 당첨', '.html', '작업전', '_blank');
+
+			const countMap = {};
+			const nameMap = {};
+			const topLevelIndexes = [];
+
+			addList.forEach(([id, pid, name], idx) => {
+				if (!countMap[pid]) countMap[pid] = 0;
+				countMap[pid]++;
+				if (!nameMap[id]) nameMap[id] = name;
+
+				if (pid === 0) topLevelIndexes.push(idx);
+			});
+
+			topLevelIndexes.forEach((idx) => {
+				const [id] = addList[idx];
+				const count = countMap[id];
+				const name = nameMap[id];
+				if (count && name) {
+				const node = b.aNodes.find((n) => n.id === id);
+				if (node) node.name = `${name} (${count})`;
+				}
+			});
+
+			document.write(b.toString());
 			//]]>
   		</script>
   	</div>
