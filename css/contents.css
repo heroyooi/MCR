@@ -449,6 +449,58 @@
 .event-detail > dt .date{font-size:12px;font-weight:500;line-height:1.6;color:#bbb;margin-top:5px;}
 .event-detail > dd{padding-top:24px;}
 
+/* slot */
+.slot-machine-area {
+  position: relative;
+  padding: 87px 0 0;
+  overflow: hidden;
+}
+.slot-machine {
+  padding: 40px;
+  border-radius: 20px;
+  background: url('/img/promotion/bg_slot.png') 50% 50% no-repeat;
+  background-size: auto 100%;
+  height: 222px;
+  position: relative;
+}
+
+.slot-machine-area .particle {
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  margin-left: -187.5px;
+  width: 375px;
+  display: inline-block;
+}
+
+.slot-window {
+  width: 140px;
+  height: 140px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 16px;
+  position: relative;
+}
+
+.slot-track {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 2s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.slot-track li {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slot-track img {
+  max-height: 860%;
+  max-width: 80%;
+}
+
 /* splash */
 .splash_area{position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items: center;justify-content: center;background-color: #fff;}
 .splash_text{text-align:center;}
