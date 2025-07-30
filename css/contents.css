@@ -449,7 +449,13 @@
 .event-detail > dt .date{font-size:12px;font-weight:500;line-height:1.6;color:#bbb;margin-top:5px;}
 .event-detail > dd{padding-top:24px;}
 
-
+/* splash */
+.splash_area{position:fixed;left:0;top:0;width:100%;height:100%;display:flex;align-items: center;justify-content: center;background-color: #fff;}
+.splash_text{text-align:center;}
+.splash_text .tit{font-size:30px;font-weight:700;color:#26c48c;line-height:37px;font-family:'Montserrat'}
+.splash_text .con{font-size:16px;font-weight:500;color:#72767a;margin-top:10px;line-height:22px;}
+.splash_area.ver_green{background-color: #26C48C;}
+.splash_area.ver_green .tit, .splash_area.ver_green .con{color:#ffffff;}
 
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
