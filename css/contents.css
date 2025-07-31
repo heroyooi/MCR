@@ -113,6 +113,19 @@
 .search-paging{position: fixed;left:50%;bottom:50px;transform:translateX(-50%);display:inline-block;padding:5px 18px;border-radius:100px;background-color:rgba(0, 0, 0, 0.5);font-size:14px;font-weight:500;color:#bbb;line-height:1.4;}
 .search-paging em.current{color:#fff;}
 
+.search-result .product-list .product-info .discount-area{display:flex;justify-content: space-between;}
+.search-result .product-list .product-info .discount-area .label{font-size:12px;font-weight:500;line-height:1.6;color:#fc4852;display:flex;gap:0 2px;align-items: center;}
+.search-result .product-list .product-info .discount-area .label::before{content:'';display:block;width:14px;height:14px;background:url('../img/common/ic_check_fill.svg') 50% 50% no-repeat;}
+.search-result .product-list .product-info .discount-area .discount{display:inline-block;padding:3px 4px;border-radius:4px;background-color: #26c48c;font-size:12px;color:#fff;font-weight:500;}
+.search-result .product-list .product-info .discount-area + .brand{margin-top:5px;}
+
+.search-result .product-list.ver_slot > li dl dt{padding:16% 19% 19%;background: url('../img/subscribe/slot_frame.svg') 50% 50% no-repeat;background-size: cover;border: 0;position: relative;}
+.search-result .product-list.ver_slot > li dl dt .product-frame{background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;border-radius:11.5%;aspect-ratio: 101/100;position: relative;overflow:hidden;}
+.search-result .product-list.ver_slot > li dl dt .side_item {position: absolute;width: 45px;height: 45px;right: 8%;top: 8%;border-radius: 30px;border: 1px solid #26C48C;background: #FFF;padding: 5px;}
+.search-result .product-list.ver_slot > li dl dt .side_item::before{content:'';display:inline-block;width:28px;height:28px;background:url('../img/common/ic_ribbon.svg') 50% 50% no-repeat;position: absolute;left: 50%;top:-15px;margin-left:-14px;}
+.search-result .product-list.ver_slot > li dl dt .side_item img{position: static;border-radius:50%;}
+
+
 .no-data{padding:200px 0;}
 .no-data p{font-size:20px;font-weight:500;line-height:1.4;color:#72767a;text-align:center;}
 .no-data p::before{content:'';display:block;width:60px;height:60px;background:url(../img/common/ic_data.svg) 50% 50% no-repeat;margin:0 auto 30px;}
@@ -265,6 +278,8 @@
 .brand-swiper.swiper-container .swiper-slide dt{width:70px;height:70px;background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;border-radius:35px;}
 .brand-swiper.swiper-container .swiper-slide dd{font-size:14px;font-weight:500;line-height:1.4;margin-top:10px;text-align:center;}
 .brand-swiper.swiper-container .swiper-slide:last-child{margin-right:0;}
+.brand-swiper.swiper-container.ver_square .swiper-slide dt{border-radius:8px;border:1px solid #EBEBEB;}
+.brand-swiper.swiper-container.ver_square .swiper-slide.ver_more dt{background:#fff url('../img/common/ic_plus.svg') 50% 50% no-repeat;}
 
 /* gift - 상품정보 */
 .gift-visual{max-width:1000px;margin:0 auto;}

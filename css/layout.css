@@ -45,6 +45,7 @@ body.bg{background-color:#F2F9FF;}
 
 #header .h-inner.only-mobile .evt-tit{display:flex;align-items:center;gap:0 4px;cursor:pointer;}
 #header .h-inner.only-mobile .evt-tit::after{content:'';display:block;width:22px;height:22px;background:url(../img/common/ic_blue_arrow.svg) 50% 50% no-repeat;transition:transform 0.2s;}
+#header .h-inner.only-mobile .evt-tit.green::after{background:url(../img/common/ic_green_arrow.svg) 50% 50% no-repeat;}
 #header .h-inner.only-mobile .evt-tit.on::after{transform:rotate(180deg);}
 
 #header .btn-base-wrap{position: absolute;right:92px;top:11px;}
@@ -162,6 +163,7 @@ body.bg{background-color:#F2F9FF;}
 .left-area .my-btn li:last-child{padding-bottom:0;}
 
 .top-modal-wrap{position:fixed;left:0;top:50px;width:100%;max-height:calc(100% - 50px);background-color:#F2F9FF;padding:20px;z-index:4;display:none;overflow-y:auto;}
+.top-modal-wrap.green{background-color: rgb(203, 252, 231);}
 .cate-list{display:flex;flex-wrap:wrap;gap:40px 20px;}
 .cate-list li{width:calc(33.333% - 14px);text-align:center;}
 .cate-list li dt{display:flex;width:70px;height:70px;background-color:#fff;border-radius:50%;justify-content:center;align-items:center;margin:0 auto;}
@@ -201,6 +203,7 @@ body.bg{background-color:#F2F9FF;}
   #container{padding-top:50px;}
   #container.ver_search{padding-top:100px;}
   #container.ver_search.ver_brand{padding-top:50px;}
+  #container.ver_search.ver_subscribe{padding-top:50px;}
   #container.ver_tab{padding-top:90px;}
   
   .content-wrap{padding:40px 16px 50px;min-height:initial;overflow:hidden;}
