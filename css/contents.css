@@ -664,6 +664,12 @@
 .gift-detail .gift-inner .discount-area{display:flex;gap:0 4px;}
 .gift-detail .gift-inner .discount-area .label{font-size:12px;font-weight:500;line-height:1.6;color:#fc4852;display:flex;gap:0 2px;align-items: center;}
 .gift-detail .gift-inner .discount-area .label::before{content:'';display:block;width:14px;height:14px;background:url('../img/common/ic_check_fill.svg') 50% 50% no-repeat;}
+.gift-tab-area .panel-base > li .other-area{margin-top:30px;}
+.gift-tab-area .panel-base > li .other-area .tit{font-size:16px;font-weight:600;color:#333;line-height:19px; }
+.gift-tab-area .panel-base > li .other-area .tit + .other-list{margin-top:20px;}
+.gift-tab-area .panel-base > li .other-area .other-list{display:flex;gap:16px;width:100%;flex-wrap:wrap;}
+.gift-tab-area .panel-base > li .other-area .other-list > li{border:1px solid #ebebeb;background-color: #fff;border-radius: 8px;width:calc(50% - 8px);aspect-ratio:1 / 1;overflow: hidden;padding: 4%;}
+.gift-tab-area .panel-base > li .other-area .other-list > li img{width: 100%;height: 100%;object-fit: cover;display: block;}
 
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
