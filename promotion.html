@@ -300,10 +300,65 @@
       </div><!-- .popup-inner -->
     </div><!-- .popup-wrap -->
 
-    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-payment" data-width="343">
+    <div class="popup-wrap z-anim mfp-hide popup-bottom" id="popup-payment" style="max-width: 750px;">
       <div class="popup-inner">
-        <div class="con-wrap tl">
-          123
+        <div class="con-wrap">
+          <div class="popup-header">
+            <p class="tit payment"><span>결제 바코드</span></p>
+            <button class="btn-close b-mfp-close"></button>
+          </div>
+          <div class="popup-content">
+            <div class="mileage-info-area">
+              <div class="mileage-total">
+                <dl>
+                  <dd>마일리지</dd>
+                  <dt><strong>27,000</strong>원</dt>
+                </dl>
+                <a href="#" class="btn-link">마일리지 충전하기</a>
+              </div>
+              <div class="mileage-list-area">
+                <ul class="mileage-item">
+                  <li>
+                    <div class="product-area">
+                      <dl>
+                        <dt><img src="img/common/no_image.svg" alt=""></dt>
+                        <dd>GS25</dd>
+                      </dl>
+                    </div>
+                    <div class="barcode-area">
+                      <a href="#" class="btn-barcode"></a>
+                    </div>
+                    <a href="#" class="btn-like on"></a>
+                  </li>
+                  <li>
+                    <div class="product-area">
+                      <dl>
+                        <dt><img src="img/common/no_image.svg" alt=""></dt>
+                        <dd>GS25</dd>
+                      </dl>
+                    </div>
+                    <div class="barcode-area">
+                      <a href="#" class="btn-barcode"></a>
+                    </div>
+                    <a href="#" class="btn-like"></a>
+                  </li>
+                  <li>
+                    <div class="product-area">
+                      <dl>
+                        <dt><img src="img/mock/mileage_gs25.png" alt=""></dt>
+                        <dd>GS25</dd>
+                      </dl>
+                    </div>
+                    <div class="barcode-area">
+                      <a href="#" class="btn-barcode"></a>
+                    </div>
+                    <a href="#" class="btn-like"></a>
+                  </li>
+                </ul>
+              </div>
+              <span class="btn-base tp1 reverse"><a href="#">결제 가능 브랜드 전체보기</a></span>
+            </div>
+          </div>
         </div><!-- .con-wrap -->
       </div><!-- .popup-inner -->
     </div><!-- .popup-wrap -->
@@ -394,6 +449,15 @@
         delay: 3000,
       },
       loop: true,
+    });
+
+    $('.mileage-info-area .mileage-item > li .btn-like').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
     });
 
     // 비밀번호 입력 - 팝업 기능

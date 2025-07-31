@@ -39,6 +39,10 @@
 .btn-base-wrap.full{width:100%;gap:0 10px;}
 .btn-base-wrap.full .btn{flex-grow:1;}
 
+a.btn-link{display:inline-block;font-size:12px;font-weight:500;line-height:1.6;color:#72767a;text-decoration: underline;}
+.btn-like{display:inline-block;width:13px;height:13px;background:url('../img/common/ic_like.svg') 50% 50% no-repeat;}
+.btn-like.on{background:url('../img/common/ic_like_on.svg') 50% 50% no-repeat;}
+
 /* input */
 .input-base{width:100%;padding:16px 14px;border:1px solid #EBEBEB;border-radius:8px;}
 .input-base:focus{border-color:#26C48C;}
@@ -240,6 +244,13 @@
 .popup-wrap#popup-today .btn-wrap{margin-top:20px;display:flex;justify-content:space-between;padding:0 20px;}
 .popup-wrap#popup-today .btn-wrap a{font-size:14px;color:#fff;}
 .popup-wrap#popup-today .swiper-slide img{width:100%;}
+
+.popup-wrap.popup-bottom .con-wrap{background-color:#fff;padding:18px 16px 38px;border-radius:20px 20px 0 0;}
+.popup-wrap .popup-header{position:relative;display:flex;align-items:center;justify-content: space-between;padding-bottom:10px;border-bottom:1px solid #EBEBEB;}
+.popup-wrap .popup-header .tit{font-size:14px;color:#333;font-weight:500;line-height:1.4;display:flex;align-items: center;gap: 0 2px;}
+.popup-wrap .popup-header .tit.payment::before{display:block;width:24px;height:24px;background:url('../img/common/ic_payment.svg') 50% 50% no-repeat;content:'';}
+.popup-wrap .popup-header .btn-close{display:block;width:28px;height:28px;background:url('../img/common/ic_popup_close.svg') 50% 50% no-repeat;}
+.popup-wrap .popup-content{padding:21px 0 0;position: relative;}
 
 .fix-bottom{overflow:hidden !important;}/* 스크롤 버그 해결 */
 .fix-bottom .mfp-content{vertical-align:bottom;}

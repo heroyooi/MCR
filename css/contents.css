@@ -579,6 +579,23 @@
 .promo-ad-area.ver_black .promo-ad-content .btn-base{margin-top:10px;}
 .promo-ad-area.ver_black .promo-ad-content .btn-base > *{border-radius:50px;}
 
+/* 결제 바코드 팝업 */
+.mileage-info-area .mileage-total{display:flex;justify-content: space-between;}
+.mileage-info-area .mileage-total dd{font-size:16px;font-weight:500;line-height:1.4;color:#72767a;}
+.mileage-info-area .mileage-total dt{font-size:22px;line-height:1.4;font-weight:600;color:#333;}
+.mileage-info-area .mileage-total dt strong{font-size:30px;font-weight:700;}
+.mileage-info-area .mileage-item{display:flex;gap:20px 10px;flex-wrap:wrap;margin-top:20px;}
+.mileage-info-area .mileage-item > li{border-radius: 8px;border: 1px solid #EBEBEB;background: #FFF;box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.04);width:calc(33.333% - 7px);text-align:center;position: relative;}
+.mileage-info-area .mileage-item > li .product-area{padding:25px 0 15px;}
+.mileage-info-area .mileage-item > li .product-area dt{width:50px;margin:0 auto;border-radius:8px;border:1px solid #ebebeb;}
+.mileage-info-area .mileage-item > li .product-area dd{font-size:14px;font-weight:500;line-height:1.4;color:#333;margin-top:10px;}
+.mileage-info-area .mileage-item > li .barcode-area{padding:5px 0;background-color: #F2F9FF;}
+.mileage-info-area .mileage-item > li .barcode-area .btn-barcode{width:24px;height:24px;display:inline-block;background:url('../img/common/ic_barcode.svg') 50% 50% no-repeat;}
+.mileage-info-area .mileage-item > li .btn-like{position: absolute;right:10px;top:10px;}
+.mileage-info-area > .btn-base{margin-top:20px;}
+.mileage-info-area > .btn-base.tp1.reverse > *{border-color:#D0E8FF;padding:12px;font-size:12px;font-weight:500;}
+
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
