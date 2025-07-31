@@ -45,6 +45,12 @@ a.btn-link{display:inline-block;font-size:12px;font-weight:500;line-height:1.6;c
 .btn-like{display:inline-block;width:13px;height:13px;background:url('../img/common/ic_like.svg') 50% 50% no-repeat;}
 .btn-like.on{background:url('../img/common/ic_like_on.svg') 50% 50% no-repeat;}
 
+.btn-more{display:block;font-size:12px;font-weight:500;color:#72767a;text-align:center;padding:12px 20px;border: 1px solid #EBEBEB;
+background: #fff;box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.04);}
+.btn-more span{display:flex;align-items: center;justify-content: center;gap:0 4px;}
+.btn-more span::after{content:'';width:22px;height:22px;background:url('/img/common/ic_more_arrow_type2.svg') 50% 50% no-repeat;transform: rotate(180deg);}
+.btn-more.on span::after{transform: rotate(0deg);}
+
 /* input */
 .input-base{width:100%;padding:16px 14px;border:1px solid #EBEBEB;border-radius:8px;}
 .input-base:focus{border-color:#26C48C;}

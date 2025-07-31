@@ -652,6 +652,19 @@
 .top-modal-wrap .brand-list > li dl dt{width:100%;padding:0 0 99% 0;border:1px solid #ebebeb;border-radius:8px;display:inline-block;overflow:hidden;flex-shrink:0;position:relative;background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;}
 .top-modal-wrap .brand-list > li dl dd{margin-top:10px;font-size:14px;font-weight:500;color:#333;text-align:center;}
 
+/* 상품정보 */
+.product-detail-area{padding:10px 16px;}
+.product-detail-area .product-thumb-area{max-width:343px;margin: 0 auto;}
+.product-detail-area .product-thumb{padding:19%;background: url('../img/detail/slot_frame_lg.svg') 50% 50% no-repeat;background-size: cover;border: 0;position: relative;}
+.product-detail-area .product-thumb .product-frame{background:#F5F5F5 url(../img/common/ic_thumb_lg.svg) 50% 50% no-repeat;border-radius:11.5%;aspect-ratio: 99/100;position: relative;overflow:hidden;}
+.product-detail-area .product-thumb .side_item {position: absolute;width: 92px;height: 92px;right: 8%;top: 8%;border-radius: 46px;border: 1px solid #26C48C;background: #FFF;padding: 10px;}
+.product-detail-area .product-thumb .side_item::before{content:'';display:inline-block;width:57px;height:57px;background:url('../img/common/ic_ribbon_lg.svg') 50% 50% no-repeat;position: absolute;left: 50%;top:-27px;margin-left:-28.5px;}
+.product-detail-area .product-thumb .side_item img{position: static;border-radius:50%;}
+
+.gift-detail .gift-inner .discount-area{display:flex;gap:0 4px;}
+.gift-detail .gift-inner .discount-area .label{font-size:12px;font-weight:500;line-height:1.6;color:#fc4852;display:flex;gap:0 2px;align-items: center;}
+.gift-detail .gift-inner .discount-area .label::before{content:'';display:block;width:14px;height:14px;background:url('../img/common/ic_check_fill.svg') 50% 50% no-repeat;}
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
