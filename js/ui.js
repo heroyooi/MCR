@@ -401,29 +401,46 @@ var GUI = window.GUI || (function(){
         $('html, body').stop().animate({ scrollTop: 0 }, 150);
       });
     },
-    toastUI: function({ text, bottom, zIndex }) {      
-      if (!runToast) {
-        runToast = true;
-        var $toast = $('.toast-area');
-        if (zIndex) $toast.css('z-index', zIndex);        
-        $toast.stop().css('display', 'block');
-        $toast.append('<p class="txt">'+ text +'</p>');
-        setTimeout(function(){
-          if (bottom) {
-            $toast.css({ bottom: bottom });
-          }        
-          $toast.addClass('on');
-          setTimeout(function(){
-            $toast.attr('style', null);
-            $toast.removeClass('on');
-            setTimeout(function(){
-              $toast.stop().css('display', 'none');
-              $toast.find('.txt').remove();
-              runToast = false;
-            }, 500);
-          }, 2000);
-        }, 150);
+    toastUI: function({ text, bottom, zIndex, type = 'normal' }) {      
+      var $toast = $('.toast-area');
+
+      if (runToast) {
+        clearTimeout($toast.data('hideTimeout'));
+        $toast.stop().removeClass('on').css('display', 'none');
+        $toast.find('.txt').remove();
       }
+
+      runToast = true;
+
+      if (type === 'small') {
+        $toast.addClass('small');
+      } else {
+        $toast.removeClass('small');
+      }
+
+      if (zIndex) $toast.css('z-index', zIndex);
+
+      $toast.append('<p class="txt">' + text + '</p>');
+      $toast.css('display', 'block');
+
+      setTimeout(function () {
+        if (bottom) {
+          $toast.css({ bottom: bottom });
+        }
+        $toast.addClass('on');
+
+        const hideTimeout = setTimeout(function () {
+          $toast.attr('style', null);
+          $toast.removeClass('on');
+          setTimeout(function () {
+            $toast.stop().css('display', 'none');
+            $toast.find('.txt').remove();
+            runToast = false;
+          }, 500);
+        }, 2000);
+
+        $toast.data('hideTimeout', hideTimeout);
+      }, 150);
     },
   }
 }());

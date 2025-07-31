@@ -579,7 +579,7 @@
 .promo-ad-area.ver_black .promo-ad-content .btn-base{margin-top:10px;}
 .promo-ad-area.ver_black .promo-ad-content .btn-base > *{border-radius:50px;}
 
-/* 결제 바코드 팝업 */
+/* 결제 바코드 팝업 - 마일리지 */
 .mileage-info-area .mileage-total{display:flex;justify-content: space-between;}
 .mileage-info-area .mileage-total dd{font-size:16px;font-weight:500;line-height:1.4;color:#72767a;}
 .mileage-info-area .mileage-total dt{font-size:22px;line-height:1.4;font-weight:600;color:#333;}
@@ -592,9 +592,39 @@
 .mileage-info-area .mileage-item > li .barcode-area{padding:5px 0;background-color: #F2F9FF;}
 .mileage-info-area .mileage-item > li .barcode-area .btn-barcode{width:24px;height:24px;display:inline-block;background:url('../img/common/ic_barcode.svg') 50% 50% no-repeat;}
 .mileage-info-area .mileage-item > li .btn-like{position: absolute;right:10px;top:10px;}
-.mileage-info-area > .btn-base{margin-top:20px;}
+.mileage-info-area > .btn-base {margin-top:20px;}
 .mileage-info-area > .btn-base.tp1.reverse > *{border-color:#D0E8FF;padding:12px;font-size:12px;font-weight:500;}
 
+/* 바코드 */
+.pay-barcode-area .tit{font-size:22px;line-height:1.4;color:#333;}
+.pay-barcode-area .tit dt{font-weight:600;}
+.pay-barcode-area .pay-barcode{border:1px solid #ebebeb;margin-top:30px;border-radius:8px;padding:30px;position: relative;}
+.pay-barcode-area .pay-barcode .item{text-align:center;}
+.pay-barcode-area .pay-barcode .item dt{width:70px;height:70px;border-radius:8px;border:1px solid #ebebeb;overflow:hidden;margin: 0 auto;}
+.pay-barcode-area .pay-barcode .item dd{margin-top:15px;font-size:20px;font-weight:600;color:#4289f0;}
+.pay-barcode-area .barcode-item{margin:20px auto 0;width:251px;}
+.pay-barcode-area .pay-item{margin:20px auto 0;}
+.pay-barcode-area .pay-item .tip{font-size:12px;font-weight:500;line-height:1.6;color:#72767a;display:block;margin-top:10px;text-align:center;}
+.pay-barcode-area .pay-barcode .time-area{margin-top:15px;display:flex;justify-content: space-between;align-items: center;}
+.pay-barcode-area .pay-barcode .time-area .time{display:flex;gap:0 6px;padding:4px 8px;border-radius:100px;background: rgba(219, 30, 41, 0.05);font-size:12px;font-weight:500;color:#fc4852;align-items: center;}
+.pay-barcode-area .pay-barcode .time-area .time::before{content:'';display:block;width:16px;height:16px;background:url('../img/common/ic_clock.svg') 50% 50% no-repeat;}
+.pay-barcode-area .pay-barcode .time-area .number{font-size:14px;color:#333;font-weight:500;line-height:1.4;}
+.pay-barcode-area .pay-barcode .btn-like{position: absolute;right:20px;top:20px;width:17px;background-size:auto 100%;}
+.pay-barcode-area .pay-mileage{margin-top:30px;text-align:center;}
+.pay-barcode-area .pay-mileage .mileage-item{display:flex;justify-content: space-between;align-items: center;padding: 20px;background-color: #F2F9FF;border-radius: 8px;}
+.pay-barcode-area .pay-mileage .mileage-item .label{font-size:14px;color:#333;line-height:1.4;}
+.pay-barcode-area .pay-mileage .mileage-item .money{font-size:14px;color:#4289f0;line-height:1.4;font-weight:600;}
+.pay-barcode-area .pay-mileage .mileage-item .money strong{font-weight:600;font-family:'Montserrat';}
+.pay-barcode-area .pay-mileage .mileage-item + .btn-link{margin-top:20px;}
+.pay-barcode-area .pay-warning{margin-top:60px;}
+.pay-barcode-area .pay-warning .tit{font-size:16px;font-weight:700;color:#333;}
+.pay-barcode-area .pay-warning .warning{margin-top:10px;}
+.pay-barcode-area .pay-warning .warning > li{text-indent:-8px;padding-left:8px;font-size:12px;line-height:1.6;font-weight:500;color:#72767a;}
+
+/* 결제 가능 전체 브랜드 */
+.pay_brand_list > li{margin-top:40px;}
+.pay_brand_list > li:first-child{margin-top:0;}
+.pay_brand_list > li .tit{font-size:20px;color:#333;font-weight:600;}
 
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}

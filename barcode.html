@@ -46,11 +46,56 @@
     <div id="container">
       <div class="content-wrap">
         <h2 class="con-tit hide-750">결제바코드</h2>
-        <div class="barcode-area">
+        <div class="pay-barcode-area">
           <dl class="tit">
             <dt>GS25</dt>
             <dd>모바일 상품권으로 결제해주세요</dd>
           </dl>
+          <div class="pay-barcode">
+            <dl class="item">
+              <dt id="product"><img src="img/mock/barcode_gs25.png" alt=""></dt>
+              <dt id="no_product" style="display: none;"><img src="img/common/no_image_70.svg" alt=""></dt>
+              <dd>20% 할인</dd>
+            </dl>
+
+            <!-- 결제바코드 -->
+            <div class="barcode-item" id="barcode">
+              <div class="barcode"><img src="img/mock/barcode.png" alt=""></div>
+              <div class="time-area">
+                <span class="time">02분 59초</span>
+                <span class="number">9999 1111 2222 1111</span>
+              </div>
+            </div>
+
+            <!-- 결제바코드 - 결제하기 -->
+            <div class="pay-item" id="pay" style="display: none;">
+              <span class="btn-base tp1 gray reverse"><a href="#" class="sm">결제하기</a></span>
+            </div>
+
+            <!-- 결제바코드 - 충전하기 -->
+             <div class="pay-item" id="charge" style="display: none;">
+              <span class="btn-base tp1 gray reverse"><a href="#" class="sm">충전하기</a></span>
+              <p class="tip">마일리지 충전 후 이용 가능 합니다.</p>
+            </div>
+
+            <a href="#" class="btn-like"></a>
+          </div><!-- .pay-barcode -->
+          <div class="pay-mileage">
+            <div class="mileage-item">
+              <span class="label">마일리지</span>
+              <span class="money"><strong>40,000</strong>원</span>
+            </div>
+            <a href="#" class="btn-link">마일리지 충전하기</a>
+          </div><!-- .pay-mileage -->
+          <div class="pay-warning">
+            <p class="tit">이용방법 및 유의사항</p>
+            <ul class="warning">
+              <li>- 매장에서 모바일상품권으로 선택하여 바코드 결제해야 합니다. <br />(키오스크/POS : ‘모바일상품권/금액권/쿠폰‘ 선택)</li>
+              <li>- 당사 및 제휴사 사정에 의해 혜택적용이 변경될 수 있습니다.</li>
+              <li>- 현금영수증은 매장에서 발급 진행 가능합니다.</li>
+              <li>- 고객센터 : 1522-7044</li>
+            </ul>
+          </div><!-- .pay-warning -->
         </div>
       </div><!-- .content-wrap -->
     </div><!-- #container -->
@@ -175,14 +220,32 @@
       }
     });
 
+    $('.pay-barcode-area .pay-barcode .btn-like').on('click', function(e){
+      e.preventDefault();
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        GUI.toastUI({text: '즐겨찾기에서 저장했어요!', type:'small'});
+      } else {
+        $(this).removeClass('on');
+        GUI.toastUI({text: '즐겨찾기에서 삭제했어요!', type:'small'});
+      }
+    });
+
     var Qsample = $.urlParam('sample');
     if (Qsample) {
       setTimeout(() => {
         if (Qsample === 'menu') {
           $('.fm-wrap li.menu a').click();
-        } else if (Qsample === 'validation') {
-          $('.form-list li .input-base').addClass('error');
-          $('.form-list li .valid').show();
+        }
+        if (Qsample === 'pay') {
+          $('.pay-barcode-area #barcode').hide();
+          $('.pay-barcode-area #pay').show();
+        } else if (Qsample === 'charge') {
+          $('.pay-barcode-area .pay-barcode .item dt#product').hide();
+          $('.pay-barcode-area .pay-barcode .item dt#no_product').show();
+          $('.pay-barcode-area #barcode').hide();
+          $('.pay-barcode-area #charge').show();
+          $('.pay-barcode-area .pay-mileage .mileage-item .money strong').text(0);
         }
       }, 250);
     }
