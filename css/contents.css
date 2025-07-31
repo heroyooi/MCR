@@ -119,7 +119,7 @@
 .search-result .product-list .product-info .discount-area .discount{display:inline-block;padding:3px 4px;border-radius:4px;background-color: #26c48c;font-size:12px;color:#fff;font-weight:500;}
 .search-result .product-list .product-info .discount-area + .brand{margin-top:5px;}
 
-.search-result .product-list.ver_slot > li dl dt{padding:16% 19% 19%;background: url('../img/subscribe/slot_frame.svg') 50% 50% no-repeat;background-size: cover;border: 0;position: relative;}
+.search-result .product-list.ver_slot > li dl dt{padding:17% 19% 20%;background: url('../img/subscribe/slot_frame.svg') 50% 50% no-repeat;background-size: cover;border: 0;position: relative;}
 .search-result .product-list.ver_slot > li dl dt .product-frame{background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;border-radius:11.5%;aspect-ratio: 101/100;position: relative;overflow:hidden;}
 .search-result .product-list.ver_slot > li dl dt .side_item {position: absolute;width: 45px;height: 45px;right: 8%;top: 8%;border-radius: 30px;border: 1px solid #26C48C;background: #FFF;padding: 5px;}
 .search-result .product-list.ver_slot > li dl dt .side_item::before{content:'';display:inline-block;width:28px;height:28px;background:url('../img/common/ic_ribbon.svg') 50% 50% no-repeat;position: absolute;left: 50%;top:-15px;margin-left:-14px;}
@@ -144,6 +144,7 @@
 .menu-list > li.mypage-5 > a > span::before{background-image:url(../img/mypage/ic_mypage_5.png);}
 .menu-list > li.mypage-6 > a > span::before{background-image:url(../img/mypage/ic_mypage_6.png);}
 .menu-list > li.mypage-7 > a > span::before{background-image:url(../img/mypage/ic_mypage_7.png);}
+.menu-list > li.mypage-8 > a > span::before{background-image:url(../img/mypage/ic_mypage_8.svg);}
 
 .right-area .contact-info{margin-top:20px;}
 .right-area .contact-info .tit{font-size:14px;font-weight:600;line-height:1.4;}
@@ -359,6 +360,7 @@
 .result-list > li .result-item .result.price{font-weight:600;}
 .result-list > li .result-item .result em{font-family:"Montserrat";font-weight:inherit;}
 .result-list > li .result-item .result .tiny{color:#72767a;font-weight:500;}
+.result-list > li .result-item .result.red{color:#FC4852;}
 .result-list > li.type-2 .result-item .label,
 .result-list > li.type-3 .result-item .label{color:#333;}
 .result-list > li.type-2 .result-item .result,
@@ -671,6 +673,21 @@
 .gift-tab-area .panel-base > li .other-area .other-list > li{border:1px solid #ebebeb;background-color: #fff;border-radius: 8px;width:calc(50% - 8px);aspect-ratio:1 / 1;overflow: hidden;padding: 4%;}
 .gift-tab-area .panel-base > li .other-area .other-list > li img{width: 100%;height: 100%;object-fit: cover;display: block;}
 
+/* 선물하기 */
+.product-list > li dl dd .discount-area{display:flex;gap:0 4px;align-items: center;}
+.product-list > li dl dd .discount-area .label{font-size:12px;font-weight:500;line-height:1.6;color:#fc4852;display:flex;gap:0 2px;align-items: center;}
+.product-list > li dl dd .discount-area .label::before{content:'';display:block;width:14px;height:14px;background:url('../img/common/ic_check_fill.svg') 50% 50% no-repeat;}
+.product-list.ver_new > li dl{gap:0 20px;}
+.product-list.ver_new > li dl dt{width:80px;height:80px;}
+.product-list.ver_new .product-info .name:not(.line-1){line-height:22px;max-height:44px;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;overflow: hidden;white-space:initial;}
+
+/* 실시간 당첨 */
+.winning-list > li{padding:0 10px 16px;border:1px solid #EBEBEB;border-radius:8px;margin-top:15px;}
+.winning-list > li:first-child{margin-top:0;}
+.winning-list > li .top-area{display:flex;justify-content: space-between;padding:10px 5px;border-bottom: 1px solid #EBEBEB;}
+.winning-list > li .top-area .user{font-size:14px;font-weight:500;color:#333;line-height:20px;}
+.winning-list > li .top-area .label{display:inline-block;padding:4px 6px;font-size:12px;font-weight:600;color:#fc4852;background: rgba(252, 72, 82, 0.15);border-radius:4px;}
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
@@ -727,6 +744,7 @@
   .menu-list > li.mypage-5 > a > span::before{background-image:url(../img/mypage/ic_mypage_m5.svg);}
   .menu-list > li.mypage-6 > a > span::before{background-image:url(../img/mypage/ic_mypage_m6.svg);}
   .menu-list > li.mypage-7 > a > span::before{background-image:url(../img/mypage/ic_mypage_m7.png);background-size:cover;}
+  .menu-list > li.mypage-8 > a > span::before{background-image:url(../img/mypage/ic_mypage_m8.svg);background-size:cover;}
 
   .menu-list > li.mypage-1{border-radius:8px 8px 0 0;}
   .menu-list > li.mypage-7{border-radius:0 0 8px 8px;border-bottom:0;}
