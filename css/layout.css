@@ -242,6 +242,7 @@ body.bg{background-color:#F2F9FF;}
   #wrapper.ver_main #footer{display:block;}
   #wrapper.ver_fix_btn{padding-bottom:92px;}
   #wrapper.ver_fix_btn .btn-top{bottom:100px;}
+  #wrapper.ver_fix_btn.ver_fix_chk .btn-top{bottom:130px;}
   #wrapper.ver_fix_btn.btn_2{padding-bottom:162px;}
   #wrapper.ver_fix_btn.btn_2 .btn-top{bottom:170px;}
   #wrapper.ver_fix_btn .fm-wrap{display:none;}

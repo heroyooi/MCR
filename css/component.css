@@ -31,9 +31,11 @@
 .fix-btn-area{margin-top:30px;}
 .fix-btn-area .btn-base{margin-top:10px;}
 .fix-btn-area .btn-base:first-child{margin-top:0;}
+.fix-btn-area .btn-info{display:block;text-align:center;margin-top:10px;font-size:12px;color:#72767a;line-height:1.6;}
 .fix-btn-area.multi{display:flex;gap:0 10px;}
 .fix-btn-area.multi .btn-base{margin-top:0;}
 .fix-reason-area{margin-top:30px;}
+.fix-btn-area.ver_white{background-color: #fff !important;border-top:1px solid #EBEBEB;}
 
 .btn-base-wrap{display:flex;gap:5px;}
 .btn-base-wrap .btn{display:inline-block;font-size:12px;font-weight:500;color:#333;padding:4px 10px;border:1px solid #72767A;border-radius:4px; line-height:18px;position: relative;text-align:center;background-color:#fff;}

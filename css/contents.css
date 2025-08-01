@@ -721,6 +721,9 @@
 .refund-list > li dd.reply-area{margin-top:10px;background: #F2F9FF;}
 .refund-list > li dd.reply-area .label{padding:4px 6px;border-radius:4px;border:1px solid #D0E8FF;background-color:#fff;color:#4289F0;font-size:12px;font-weight:600;}
 .refund-list > li dd.reply-area .con{margin-top:10px;font-size:14px;line-height:1.4;color:#333;font-weight:500;}
+.refund-list > li dd.charge-area{margin-top:10px;background: #F2F9FF;display:flex;justify-content: space-between;align-items: center;}
+.refund-list > li dd.charge-area .label{font-size:14px;font-weight:500;line-height:1.4;color:#333;}
+.refund-list > li dd.charge-area .value{font-family:'Montserrat';font-size:14px;color:#4289f0;font-weight:600;}
 
 /* 마일리지 환불 신청 */
 .mileage-refund-area .refund-total{background-color: #fff;padding:20px;border-radius:8px;}
