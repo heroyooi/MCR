@@ -12,11 +12,14 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/swiper.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script> -->
+  <script src="js/lottie.min.js"></script>
   <script src="js/ui.js"></script>
 </head>
 <body>
   <div id="wrapper">
     <div class="splash_area">
+      <div id="lottie-spinner" style="width: 50px; height: 50px; margin-top: 25px;"></div>
       <div class="splash_text">
         <p class="tit">MadeCoupon</p>
         <p class="con">모든 상품권 교환은 메이드 쿠폰</p>
@@ -24,7 +27,15 @@
     </div>
   </div><!-- #wrapper -->
 
+  
   <script>
+    var spinner = lottie.loadAnimation({
+      container: document.getElementById('lottie-spinner'),
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      path: 'json/spinner.json'
+    });
     var Qver = $.urlParam('ver');
     if (Qver == 'green') {
       $('.splash_area').addClass('ver_green');

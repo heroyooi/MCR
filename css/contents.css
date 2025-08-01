@@ -163,6 +163,9 @@
 .login-area .sns-login dt span{flex-shrink:0;}
 .login-area .sns-login dt::before, .login-area .sns-login dt::after{content:'';display:block;width:100%;height:1px;flex-grow:1;background-color:#ebebeb;}
 .login-area .sns-login dd{display:flex;justify-content:center;gap:0 40px;padding-top:20px;}
+.login-area.ver_new{margin-top:77px;}
+.login-area.ver_new .sns-login a{width:52px;height:52px;}
+.login-area.ver_new .sns-login a.kakao{background-color:#fde500;border-radius:26px;padding:12px;}
 
 /* join */
 .join-area .logo,
@@ -406,8 +409,10 @@
 
 /* qna */
 .top-info-area{padding:16px;border-bottom:1px solid #ebebeb;}
+.top-info-area.ver_white{background-color: #fff;}
 .top-info-area .info{display:flex;align-items:center;font-size:12px;font-weight:500;color:#72767a;line-height:1.6;gap:0 8px;}
 .top-info-area .info::before{content:'';display:block;width:15px;height:14px;background:url(../img/common/ic_warning_gray.svg) 50% 50% no-repeat;}
+.top-info-area .top-info-inner{max-width:1080px;margin:0 auto;padding:0 40px;}
 .qna-list-area{padding:20px 16px;}
 .qna-list > li{border-bottom:1px solid #ebebeb;padding:20px 0;}
 .qna-list > li:first-child{padding-top:0;}
@@ -688,10 +693,53 @@
 .winning-list > li .top-area .user{font-size:14px;font-weight:500;color:#333;line-height:20px;}
 .winning-list > li .top-area .label{display:inline-block;padding:4px 6px;font-size:12px;font-weight:600;color:#fc4852;background: rgba(252, 72, 82, 0.15);border-radius:4px;}
 
+/* 환불 신청 내역 */
+.refund-list > li{padding:20px 15px;background-color: #fff;margin-top:10px;border-radius:8px;}
+.refund-list > li:first-child{margin-top:0;}
+.refund-list > li dt{display:flex;justify-content:space-between;}
+.refund-list > li dt .r-detail{display:flex;gap:0 10px;align-items: center;}
+.refund-list > li dt .r-detail .label{font-size:12px;font-weight:600;color:#333;padding:9px 12px;border:1px solid #bbb;border-radius:8px;line-height:1.2;}
+.refund-list > li dt .r-detail .label.red{background-color: #FC4852;border-color:#FC4852;color:#fff;}
+.refund-list > li dt .r-detail .label.gray{background-color: #F5F5F5;color:#72767A;border-color:#EBEBEB;}
+.refund-list > li dt .r-detail .label.b-red{background-color: #ffffff;color:#FC4852;border-color:#FC4852;}
+.refund-list > li dt .r-detail .detail .tit{font-size:14px;font-weight:500;color:#333;line-height:1.4;}
+.refund-list > li dt .r-detail .detail .date{font-size:12px;font-weight:500;color:#bbb;line-height:1.6;margin-top:4px;}
+.refund-list > li dt .r-price{font-size:16px;font-weight:500;display:flex;gap:0 10px;align-items: flex-start;}
+.refund-list > li dt .r-price span{display:block;line-height:22px;}
+.refund-list > li dt .r-price strong{font-weight:600;font-family:'Montserrat';}
+.refund-list > li dt .r-price .toggle{content:'';display:block;width:22px;height:22px;background:url('../img/common/ic_more_arrow_type2.svg') 50% 50% no-repeat;transform:rotate(180deg);}
+.refund-list > li dd{padding:16px;background-color: #f5f5f5;border-radius:8px;margin-top:20px;display:none;}
+.refund-list > li dd li{display:flex;font-size:14px;font-weight:500;line-height:1.4;justify-content: space-between;margin-top:6px;}
+.refund-list > li dd li:first-child{margin-top:0;}
+.refund-list > li dd li .label{color:#72767A;}
+.refund-list > li dd li .value{color:#333;}
+.refund-list > li.on dt .r-price .toggle{transform:rotate(0deg);}
+.refund-list > li.on dd{display:block;}
+.refund-list > li dd.reply-area{margin-top:10px;background: #F2F9FF;}
+.refund-list > li dd.reply-area .label{padding:4px 6px;border-radius:4px;border:1px solid #D0E8FF;background-color:#fff;color:#4289F0;font-size:12px;font-weight:600;}
+.refund-list > li dd.reply-area .con{margin-top:10px;font-size:14px;line-height:1.4;color:#333;font-weight:500;}
+
+/* 마일리지 환불 신청 */
+.mileage-refund-area .refund-total{background-color: #fff;padding:20px;border-radius:8px;}
+.mileage-refund-area .refund-total .r-top{display:flex;align-items: center;justify-content: space-between;}
+.mileage-refund-area .refund-total .r-top .label{font-size:16px;font-weight:600;color:#333;}
+.mileage-refund-area .refund-total .r-top .price{font-size:16px;font-weight:500;color:#4289f0;}
+.mileage-refund-area .refund-total .r-top .price em{font-size:22px;font-weight:700;font-family:'Montserrat';}
+.mileage-refund-area .refund-total .r-detail{padding-top:20px;margin-top:20px;border-top:1px solid #EBEBEB;}
+.mileage-refund-area .refund-total .r-detail li{display:flex;justify-content: space-between;align-items: center;margin-top:7px;}
+.mileage-refund-area .refund-total .r-detail li:first-child{margin-top:0;}
+.mileage-refund-area .refund-total .r-detail li .label{font-size:14px;font-weight:500;color:#72767a;}
+.mileage-refund-area .refund-total .r-detail li .price{font-size:14px;font-weight:500;color:#333333;}
+.mileage-refund-area .refund-total .r-detail li .price em{font-family:'Montserrat';font-weight:500;}
+
+.mileage-refund-area .warning-list-area{margin-top:40px;}
+
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
   .brand-top{padding:25px 20px;}
+  .top-info-area .top-info-inner{padding:0;}
 }
 
 @media screen and (max-width: 950px) {
