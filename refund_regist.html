@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Made Coupon</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="h-inner hide-750">
+        <div class="h-left">
+          <h1><a href="#">Made Coupon</a></h1>
+          <ul id="gnb">
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">상품권교환소</a></li>
+            <li><a href="#">마일리지충전소</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .h-left -->
+        <div class="h-right hide-750">
+          <div class="search-form">
+            <input type="text" placeholder="상품명, 브랜드 검색" />
+            <a href="#" class="btn-search">검색</a>
+          </div>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
+        </div><!-- .h-right -->
+      </div><!-- .h-inner -->
+      <div class="h-inner only-mobile show-750 flex">
+        <a href="#" class="m-btn-back">뒤로 가기</a>
+        <h2 class="sub-tit">환불 계좌 등록</h2>
+        <a href="#" class="m-btn-home">홈</a>
+      </div>
+    </div><!-- #header -->
+      
+    <div id="container">
+      <div class="content-wrap">
+        <h2 class="con-tit hide-750">환불 계좌 등록</h2>
+        <h3 class="md-tit">환불 계좌 정보</h3>
+        <ul class="form-list tp2">
+          <li>
+            <span class="label">회원명(예금주)</span>
+            <div class="input-wrap disabled">
+              <input type="text" class="input-base" value="홍길동" disabled>
+              <a href="#" class="btn-delete">삭제</a>
+            </div>
+            <p class="form-info">- 회원정보와 동일한 본인 명의의 계좌로만 환불 가능합니다.</p>
+          </li>
+          <li>
+            <span class="label">휴대번호</span>
+            <div class="input-wrap disabled">
+              <input type="text" class="input-base" value="010-123-4678" disabled>
+              <a href="#" class="btn-delete">삭제</a>
+            </div>
+            <p class="form-info">- 휴대번호가 변경되신 경우, ‘마이페이지 > 회원정보확인’에서 수정해 주시기 바랍니다.</p>
+          </li>
+          <li>
+            <span class="label">은행</span>
+            <!-- 디자인 셀렉트박스 -->
+            <div class="select-ui">
+              <a href="#popup-bank" class="btn-popup-anim-3">은행을 선택해 주세요.</a>
+            </div>
+          </li>
+          <li>
+            <span class="label">계좌번호</span>
+          </li>
+          <li>
+            <div class="input-wrap disabled">
+              <input type="text" class="input-base" placeholder="정확하게 입력해 주세요.">
+              <a href="#" class="btn-delete">삭제</a>
+            </div>
+          </li>
+        </ul>
+        <div class="sm-area">
+          <dl class="sub-tit">
+            <dt>개인정보 수집/이용 안내</dt>
+            <dd>
+              <ul class="info-area tp2">
+                <li>- 수집 목적 : 마일리지 환불 처리</li>
+                <li>- 수집 항목 : 예금주, 은행명, 계좌번호, 휴대번호</li>
+                <li>- 보유/이용기간 : 환불 신청일로부터 60일간</li>
+              </ul>
+            </dd>
+          </dl>
+        </div>
+
+        <div class="mt20">
+          <span class="chk-base">
+            <input type="checkbox" id="chk-agree">
+            <label for="chk-agree">위 개인정보 수집/이용에 동의합니다.</label>
+          </span>
+        </div>
+        <div class="fix-btn-area multi no_fixed mt40">
+          <span class="btn-base tp1 green reverse"><a href="#">취소</a></span>
+          <span class="btn-base tp1 green"><a href="#">등록</a></span>
+        </div>
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div id="footer">
+      <div class="f-inner">
+        <ul class="menu">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <div class="address-area">
+          <dl class="address">
+            <dt>메이드쿠폰 사업자 정보</dt>
+            <dd>
+              <ul>
+                <li>
+                  <span class="label">회사명</span>
+                  <span class="value">㈜엔버</span>
+                </li>
+                <li>
+                  <span class="label">대표이사</span>
+                  <span class="value">이광용</span>
+                </li>
+                <li>
+                  <span class="label">사업자등록번호</span>
+                  <span class="value">465 88 00127</span>
+                </li>
+                <li>
+                  <span class="label">통신판매업</span>
+                  <span class="value">제 2016 서울광진 1141 호</span>
+                </li>
+                <li>
+                  <span class="label">개인정보관리책임자</span>
+                  <span class="value">전준상</span>
+                </li>
+                <li>
+                  <span class="label">주소</span>
+                  <span class="value">서울 강남구 봉은사로 47 길 12 진현빌딩 2 동 401 호</span>
+                </li>
+              </ul>
+              <p class="copy">Copyright ⓒ 메이드쿠폰 MadeCoupon All RightsReserved</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div><!-- #footer -->
+
+    <div class="fm-wrap">
+      <ul>
+        <li class="menu"><a href="#"></a></li>
+        <li class="home"><a href="#"></a></li>
+        <li class="my"><a href="#"></a></li>
+        <li class="gift"><a href="#"></a></li>
+      </ul>
+    </div><!-- .fm-wrap -->
+
+    <button class="btn-top">위로 가기</button>
+
+    <div class="menu-dimm"></div>
+    <div class="menu-wrap">
+      <div class="m-header">
+        <h1>메이드쿠폰 메뉴</h1>
+        <a class="btn-close" href="#">닫기</a>
+      </div>
+      <div class="m-container">
+        <ul>
+          <li class="menu-1"><a href="#"><span>선물하기</span></a></li>
+          <li class="menu-2"><a href="#"><span>상품권 보관소</span></a></li>
+          <li class="menu-3"><a href="#"><span>상품권 지갑</span></a></li>
+          <li class="menu-4"><a href="#"><span>마일리지 충전소</span></a></li>
+          <li class="menu-5"><a href="#"><span>마일리지 선물하기</span></a></li>
+          <li class="menu-6"><a href="#"><span>마이페이지</span></a></li>
+          <li class="menu-7"><a href="#"><span>공지사항</span></a></li>
+          <li class="menu-8"><a href="#"><span>1:1 문의</span></a></li>
+          <li class="menu-9"><a href="#"><span>이벤트</span></a></li>
+        </ul>
+      </div>
+    </div><!-- .menu-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-today" data-width="448">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <div class="popup-swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+            </div>
+            <span class="swiper-pagination"></span>
+          </div>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-today">오늘 하루 그만 보기</a>
+          <a href="#" class="btn-close b-mfp-close">닫기</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide popup-bottom" id="popup-bank" style="max-width: 750px;">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <div class="popup-header">
+            <p class="tit"><span>은행을 선택해 주세요.</span></p>
+            <button class="btn-close b-mfp-close"></button>
+          </div>
+          <div class="popup-content">
+            <ul class="bank-list">
+              <li><a href="#">산업</a></li>
+              <li><a href="#">기업</a></li>
+              <li><a href="#">국민</a></li>
+              <li><a href="#">외환</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+              <li><a href="#">은행명</a></li>
+            </ul>
+          </div>
+        </div><!-- .con-wrap -->
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-alert" data-width="343">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <p>개인정보 수집/이용에 동의해 주세요.</p>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-close b-mfp-close">확인</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+  </div><!-- #wrapper -->
+
+  <script>
+  $('.qna-list li .tit').on('click', function(){
+    if (!$(this).closest('li').hasClass('on')) {
+      $(this).closest('li').addClass('on');
+    } else {
+      $(this).closest('li').removeClass('on');
+    }
+  });
+
+  $('.bank-list > li a').on('click', function(e){
+    e.preventDefault();
+    $.magnificPopup.close();
+    $('.select-ui a').text($(this).text());
+  })
+
+  var Qsample = $.urlParam('sample');
+  var Qpopup = $.urlParam('popup');
+  var Qmodal = $.urlParam('modal');
+  if (Qsample || Qpopup || Qmodal) {
+    setTimeout(() => {
+      if (Qsample === 'menu') {
+        $('.fm-wrap li.menu a').click();
+      } else if (Qsample == 'nodata') {
+        $('.qna-list').hide();
+        $('.no-data').show();
+      }
+      if (Qpopup) {
+        $(`[href="#popup-${Qpopup}"]`).click();
+      }
+      if (Qmodal) {
+        $.magnificPopup.open(getOptions(`#popup-${Qmodal}`));
+      }
+    }, 250);
+  }
+  </script>
+</body>
+</html>

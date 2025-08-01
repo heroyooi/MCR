@@ -262,6 +262,9 @@ var GUI = window.GUI || (function(){
       if ($select.length) {
         $select.children('a').on('click', function(e){
           e.preventDefault();
+          if ($(this).hasClass('btn-popup-anim-3')) {
+            return;
+          }
           var $selectUi = $(this).closest('.select-ui');
           if (!$selectUi.hasClass('on')) {
             $selectUi.addClass('on');
