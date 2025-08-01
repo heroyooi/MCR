@@ -708,11 +708,14 @@
 .refund-list > li dt .r-price span{display:block;line-height:22px;}
 .refund-list > li dt .r-price strong{font-weight:600;font-family:'Montserrat';}
 .refund-list > li dt .r-price .toggle{content:'';display:block;width:22px;height:22px;background:url('../img/common/ic_more_arrow_type2.svg') 50% 50% no-repeat;transform:rotate(180deg);}
+.refund-list > li dt .price{font-size:16px;font-weight:500;color:#4289f0;}
+.refund-list > li dt .price strong{font-weight:600;font-family:'Montserrat';}
 .refund-list > li dd{padding:16px;background-color: #f5f5f5;border-radius:8px;margin-top:20px;display:none;}
 .refund-list > li dd li{display:flex;font-size:14px;font-weight:500;line-height:1.4;justify-content: space-between;margin-top:6px;}
 .refund-list > li dd li:first-child{margin-top:0;}
+.refund-list > li dd li.line{padding-top:16px;margin-top:16px;border-top:1px dashed #bbb;}
 .refund-list > li dd li .label{color:#72767A;}
-.refund-list > li dd li .value{color:#333;}
+.refund-list > li dd li .value{color:#333;text-align:right;}
 .refund-list > li.on dt .r-price .toggle{transform:rotate(0deg);}
 .refund-list > li.on dd{display:block;}
 .refund-list > li dd.reply-area{margin-top:10px;background: #F2F9FF;}
@@ -728,12 +731,18 @@
 .mileage-refund-area .refund-total .r-detail{padding-top:20px;margin-top:20px;border-top:1px solid #EBEBEB;}
 .mileage-refund-area .refund-total .r-detail li{display:flex;justify-content: space-between;align-items: center;margin-top:7px;}
 .mileage-refund-area .refund-total .r-detail li:first-child{margin-top:0;}
+.mileage-refund-area .refund-total .r-detail .con{font-size:12px;font-weight:500;color:#72767a;line-height:1.6;}
 .mileage-refund-area .refund-total .r-detail li .label{font-size:14px;font-weight:500;color:#72767a;}
 .mileage-refund-area .refund-total .r-detail li .price{font-size:14px;font-weight:500;color:#333333;}
 .mileage-refund-area .refund-total .r-detail li .price em{font-family:'Montserrat';font-weight:500;}
 
 .mileage-refund-area .warning-list-area{margin-top:40px;}
 
+/* 마일리지 환불 대상 확인 */
+.refund-valid-info{padding:20px 16px;border-radius: 8px;background: #FFF2F2;margin-top:10px;}
+.refund-valid-info .tit{font-size:14px;font-weight:600;display:flex;gap:0 5px;line-height:1.4;align-items: center;}
+.refund-valid-info .tit::before{content:'';display:block;width:15px;height:14px;background:url(../img/common/ic_warning.svg) 50% 50% no-repeat;}
+.refund-valid-info .con{margin-top:10px;font-size:12px;line-height:1.6;font-weight:500;color:#72767a;}
 
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}

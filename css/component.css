@@ -12,6 +12,7 @@
 .btn-base.tp1.gray.reverse > *{border:1px solid #bbb;color:#333;background-color:#fff;}
 
 .btn-base.tp1.disabled > *{pointer-events:none;background-color:#EBEBEB;color:#bbb;}
+.btn-base.tp1.green.reverse.disabled > *{border-color:#ebebeb;color:#d9d9d9;}
 .btn-base.tp2 > *{padding:13px 20px;font-size:12px;font-weight:500;color:#72767a;border:1px solid #EBEBEB;border-radius:100px;background-color:#fff;}
 .btn-base.tp2.gray > *{background-color:#72767A;color:#fff;font-weight:600;}
 .btn-base.tp3{width:auto;}
@@ -19,6 +20,7 @@
 .btn-base.tp4 > *{background-color:#72767A;padding:15px 20px;font-size:14px;font-weight:600;line-height:1.4;color:#fff;border-radius:8px;}
 .btn-base.tp5{width:auto;}
 .btn-base.tp5 > *{background-color:#ffffff;padding:5px 15px;font-size:12px;font-weight:500;color:#72767a;border-radius:50px;border:1px solid #EBEBEB;}
+
 .btn-search, .btn-delete{display:inline-block;font-size:0;background-repeat:no-repeat;background-position:50% 50%;}
 .btn-search{width:24px;height:24px;background-image:url(../img/common/ic_search.svg);}
 .btn-delete{width:16px;height:16px;background-image:url(../img/common/ic_search_del.svg);}

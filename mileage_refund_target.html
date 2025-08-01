@@ -38,14 +38,14 @@
       </div><!-- .h-inner -->
       <div class="h-inner only-mobile show-750 flex">
         <a href="#" class="m-btn-back">뒤로 가기</a>
-        <h2 class="sub-tit">마일리지 환불 신청</h2>
+        <h2 class="sub-tit">마일리지 환불 대상 확인</h2>
         <a href="#" class="m-btn-home">홈</a>
       </div>
     </div><!-- #header -->
       
     <div id="container">
       <div class="content-wrap">
-        <h2 class="con-tit hide-750">마일리지 환불 신청</h2>
+        <h2 class="con-tit hide-750">마일리지 환불 대상 확인</h2>
         <div class="mileage-refund-area">
           <div class="refund-total">
             <div class="r-top">
@@ -53,18 +53,56 @@
               <span class="price"><em>10,300</em>원</span>
             </div>
             <div class="r-detail">
-              <ul>
-                <li>
-                  <span class="label">유상 마일리지</span>
-                  <span class="price"><em>10,000</em>원</span>
-                </li>
-                <li>
-                  <span class="label">무상 마일리지 (환불 제외)</span>
-                  <span class="price"><em>300</em>원</span>
-                </li>
-              </ul>
+              <p class="con">환불 기준 금액이란 환불 조건을 충족하는 대상이 되는 잔액을 말합니다. 따라서, 보유하신 유상 마일리지 잔액과 실제 환불 기준 금액은 다를 수 있습니다.</p>
             </div>
           </div><!-- .refund-total -->
+
+          <div class="refund-valid-info">
+            <p class="tit">환불 대상을 확인해 주세요.</p>
+            <p class="con">환불 조건을 충족하는 대상과 그 잔액에 대해서만 환불 신청이 가능하며, 환불 수수료 10% 제외 후 환불 처리 됩니다.</p>
+          </div>
+
+          <ul class="refund-list mt10">
+            <li class="on">
+              <dl>
+                <dt>
+                  <p class="price"><strong>6,350</strong>원</p>
+                  <div class="r-price">
+                    <span>신용카드 충전</span>
+                    <button class="toggle"></button>
+                  </div>
+                </dt>
+                <dd>
+                  <ul>
+                    <li>
+                      <span class="label">충전 수단</span>
+                      <span class="value">충전 수단 출력 <br />(충전번호)</span>
+                    </li>
+                    <li class="line">
+                      <span class="label">충전 일시</span>
+                      <span class="value">2023.06.10 15:12:55</span>
+                    </li>
+                    <li>
+                      <span class="label">충전 실구매가 (할인율)</span>
+                      <span class="value">9,000 (10%)</span>
+                    </li>
+                    <li>
+                      <span class="label">충전 금액</span>
+                      <span class="value">10,000</span>
+                    </li>
+                    <li>
+                      <span class="label">사용 금액 (사용률)</span>
+                      <span class="value">8,500 (85%)</span>
+                    </li>
+                    <li>
+                      <span class="label">남은 금액</span>
+                      <span class="value">1,500</span>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </li>
+          </ul>
 
           <div class="warning-list-area">
             <p class="tit">환불 유의사항</p>
@@ -163,6 +201,13 @@
   </div><!-- #wrapper -->
 
   <script>
+    $('.refund-list > li .toggle').on('click', function(){
+      if (!$(this).closest('li').hasClass('on')) {
+        $(this).closest('li').addClass('on');
+      } else {
+        $(this).closest('li').removeClass('on');
+      }
+    });
     var Qsample = $.urlParam('sample');
     if (Qsample) {
       setTimeout(() => {

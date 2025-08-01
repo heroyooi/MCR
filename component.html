@@ -388,8 +388,8 @@
           </div>
       </div><!-- .section -->
 
-        <div class="section">
-        <h2>탭</h2>
+      <div class="section">
+        <h2>탭 &amp; 버튼 선택</h2>
         <div class="code-area">
           <h3>기본형 <button>코드 보기</button></h3>
 <div class="code-box"><ul class="tab-base">
@@ -411,6 +411,44 @@
   <li class="on"><a href="#"><em>100,000</em>원</a></li>
   <li><a href="#"><em>300,000</em>원</a></li>
 </ul></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>선택형 <button>코드 보기</button></h3>
+<div class="code-box"><ul class="select-count">
+  <li><a href="#">15회</a></li>
+  <li>
+    <a href="#">30회</a>
+    <span class="discount">10%</span>
+  </li>
+  <li class="on"><a href="#">50회</a></li>
+</ul></div>
+<script>$('.select-count li').on('click', function(e){
+  e.preventDefault();
+  $(this).addClass('on');
+  $(this).siblings().removeClass('on');
+});
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>유의사항</h2>
+        <div class="code-area">
+          <h3>기본형 <button>코드 보기</button></h3>
+<div class="code-box"><div class="warning-list-area">
+  <p class="tit">환불 유의사항</p>
+  <ul class="warning">
+    <li>- 환불 신청 시 마일리지는 즉시 차감되며, 신청 후 최대 2주 이내 (주말, 공휴일 제외) 본인 명의 계좌로 환불 됩니다.</li>
+    <li>- 이벤트, 행사 등을 통해 무상 제공 받은 무상 마일리지의 경우, 환불 대상에서 제외됩니다.</li>
+    <li>- 신용카드/휴대폰결제/계좌 수단으로 충전 된 마일리지의 경우 충전 건 별 충전액의 60% 이상 사용 시 마일리지 잔액의 10% 환불 수수료 제외 후 신청한 계좌로 환불 됩니다.</li>
+    <li>- 상품권 충전된 마일리지의 경우 충전 건 별 충전한 액면금액의 일정비율 이상 소진 시 그 잔액 에 대해 환불 처리됩니다. (1만원 이하 80%, 1만원 초과 60% 이상 사용 시 환불 가능), 이때 마일리지 잔액의 10% 환불 수수료 제외 후 신청한 계좌로 환불 됩니다.</li>
+    <li>- 회원 본인 명의 계좌로만 환불이 가능하며, 타인 계좌 등록 시 환불이 거절될 수 있습니다.</li>
+  </ul>
+</div></div>
 <pre class="language-html"></pre>
         </div>
       </div><!-- .section -->
