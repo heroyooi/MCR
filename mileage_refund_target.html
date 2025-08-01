@@ -293,6 +293,42 @@
         </ul>
       </div>
     </div><!-- .menu-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-alert1" data-width="343">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <p>환불 신청 접수 시 취소가 불가합니다. <br />환불 신청을 계속 진행 하시겠습니까?</p>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-close cancel b-mfp-close">신청 취소</a>
+          <a href="#" class="btn-close b-mfp-close">계속 진행</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-alert1" data-width="343">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <p>환불 신청 접수 시 취소가 불가합니다. <br />환불 신청을 계속 진행 하시겠습니까?</p>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-close cancel b-mfp-close">신청 취소</a>
+          <a href="#" class="btn-close b-mfp-close">계속 진행</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-alert2" data-width="343">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <p>환불 안내사항을 확인하시고, <br />동의해 주시기 바랍니다.</p>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-close b-mfp-close">확인</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
   </div><!-- #wrapper -->
 
   <script>
@@ -304,7 +340,8 @@
       }
     });
     var Qsample = $.urlParam('sample');
-    if (Qsample) {
+    var Qmodal = $.urlParam('modal');
+    if (Qsample || Qmodal) {
       setTimeout(() => {
         if (Qsample === 'menu') {
           $('.fm-wrap li.menu a').click();
@@ -313,6 +350,7 @@
           $('.mileage-refund-area .refund-total .r-detail li .price em').text(0);
           $('.fix-btn-area.multi .btn-base').addClass('disabled');
         }
+        $.magnificPopup.open(getOptions(`#popup-${Qmodal}`));
       }, 250);
     }
   </script>
