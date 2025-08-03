@@ -74,7 +74,7 @@
               <a href="#">
                 <dl> 
                   <dt class="product-thumb">
-                    <img src="img/mock/product_g1.png" alt="" />
+                    <!-- <img src="img/mock/product_g1.png" alt="" /> -->
                   </dt>
                   <dd class="product-info">
                     <span class="brand">메가 MGC 커피</span>
@@ -83,8 +83,7 @@
                       Tall(개인컵이용 
                       필수 조건)</span>
                     <div class="price">
-                      <span class="current">10,000원</span>
-                      <span class="count">총 <em>10</em>개</span>
+                      <span class="current">4,000원</span>
                     </div>
                   </dd>
                 </dl>
@@ -108,10 +107,17 @@
                   <span class="result"><em>2024.06.05 15:25</em></span>
                 </div>
               </li>
-              <li>
+              <li class="line sm">
                 <div class="result-item">
-                  <span class="label">구매상품 수</span>
-                  <span class="result">총 10개</span>
+                  <span class="label">언박싱 기간</span>
+                  <span class="result">2025-11-01 ~ 2025-11-30 23:59:59 까지</span>
+                </div>
+              </li>
+              
+              <li class="line">
+                <div class="result-item">
+                  <span class="label">언방식 총회수</span>
+                  <span class="result">30회</span>
                 </div>
               </li>
               <li>
@@ -120,17 +126,119 @@
                   <span class="result">마일리지</span>
                 </div>
               </li>
+              <li>
+                <div class="result-item">
+                  <span class="label">결제금액</span>
+                  <span class="result">40,000원</span>
+                </div>
+              </li>
             </ul>
           </li>
-          <li class="type-2">
-            <div class="result-item">
-              <span class="label">결제금액</span>
-              <span class="result price"><em>40,000</em>원</span>
+        </ul>
+        <ul class="event-info-area">
+          <li>
+            <ul class="event-info-list">
+              <li class="on">
+                <span class="label">잔여 14회</span>
+                <span class="name">두근두근 언박싱 시작</span>
+              </li>
+              <li>
+                <span class="label">잔여 0회</span>
+                <span class="name">언박싱 완료</span>
+              </li>
+              <li>
+                <span class="label">잔여 10회</span>
+                <span class="name">언박싱 기간 만료</span>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div class="refund-valid-info">
+              <p class="tit">언박싱 상품 정보</p>
+              <p class="con">상품 구매 후 언박싱 한 상품을 언박싱 기간내 수령 방법을 선택하지 않을 경우언박싱 유효기간 마지막날 익일 오전 10시 언박싱한 상품 가격의 10% 제외 후 마일리지로 자동 적립 됩니다.</p>
             </div>
           </li>
         </ul>
-        <div class="inquiry-area">취소문의 : 1522-7044</div>
-        <span class="btn-base tp4 mt20"><a href="#">전체 구매 취소</a></span>
+        
+        <div class="inquiry-area">언박싱한 상품이 없습니다.</div>
+        <ul class="tbl-list" id="unboxing" style="display: none;">
+          <li class="head">
+            <div class="s-inner">
+              <div></div>
+              <div>상품명</div>
+              <div>언박싱 날짜</div>
+              <div></div>
+            </div>
+          </li>
+          <li>
+            <div class="s-inner">
+              <div class="num">5</div>
+              <div class="tit">스타벅스 아메리카노</div>
+              <div class="date">2025-11-01 <br />11:22:22</div>
+              <div><a href="#" class="btn-view">보기</a></div>
+            </div>
+            <div class="s-info" id="sample1" style="display: none;">
+              <div class="tit">수령 방법 선택</div>
+              <ul class="s-info-list">
+                <li>
+                  <span class="btn-base tp1 reverse xxs"><a href="#">상품받기</a></span>
+                  <span class="s-text">휴대폰번호로 MMS상품이 발송 됩니다.</span>
+                </li>
+                <li>
+                  <span class="btn-base tp1 reverse xxs"><a href="#">마일리지전환</a></span>
+                  <span class="s-text">1,050 원이 마일리지로 바로 적립 됩니다.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="s-info" id="sample2" style="display: none;">
+              <div class="tit">수령 방법 선택</div>
+              <div class="s-info-txt">
+                <p>언박싱번호 : U0000001<br />
+                  수령 방법 : 상품받기 또는 마일리지전환<br />
+                  수령 날짜 : 2025-11-02 12:00:00<br />
+                  mms 수신번호 : 010-6643-2544<br />
+                  쿠폰상태 : 쿠폰상태 출력<br />
+                  마일리지전환 : 4,050 원 (상품금액 4,500 원의 10% 제외)</p>
+                <div class="btn-base-wrap right">
+                  <span class="btn-base tp1 reverse xxs"><a href="#">재발송</a></span>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="s-inner">
+              <div class="num">4</div>
+              <div class="tit">스타벅스 아메리카노</div>
+              <div class="date">2025-11-01 <br />11:22:22</div>
+              <div><a href="#" class="btn-view">보기</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="s-inner">
+              <div class="num">3</div>
+              <div class="tit">스타벅스</div>
+              <div class="date">2025-11-01 <br />11:22:22</div>
+              <div><a href="#" class="btn-view">보기</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="s-inner">
+              <div class="num">2</div>
+              <div class="tit">스타벅스 아메리카노 스타벅스 아메리카노 스타벅스 아메리카노 스타벅스 아메리카노</div>
+              <div class="date">2025-11-01 <br />11:22:22</div>
+              <div><a href="#" class="btn-view">보기</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="s-inner">
+              <div class="num">1</div>
+              <div class="tit">스타벅스 아메리카노</div>
+              <div class="date">2025-11-01 <br />11:22:22</div>
+              <div><a href="#" class="btn-view">보기</a></div>
+            </div>
+          </li>
+        </ul>
       </div><!-- .content-wrap -->
     </div><!-- #container -->
 
@@ -255,16 +363,22 @@
 
 
     var Qsample = $.urlParam('sample');
+    var Qtype = $.urlParam('type');
     var Qpopup = $.urlParam('popup');
-    if (Qsample || Qpopup) {
+    if (Qsample || Qpopup || Qtype) {
       setTimeout(() => {
         if (Qsample === 'menu') {
           $('.fm-wrap li.menu a').click();
         } else if (Qsample == 'search') {
           $('.m-btn-search').click();
-        } else if (Qsample == 'nodata') {
-          $('.order-result#isData').hide();
-          $('.no-data').show();
+        } else if (Qsample == 'unboxing') {
+          $('.inquiry-area').hide();
+          $('#unboxing').show();
+          $('#sample1').show();
+          if (Qtype == '2') {
+            $('#sample2').show();
+            $('#sample1').hide();
+          }
         }
         if (Qpopup == 'today') {
           if ($.cookie('popupToday') != 'hidden') {
