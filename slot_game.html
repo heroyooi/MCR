@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Made Coupon</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="h-inner hide-750">
+        <div class="h-left">
+          <h1><a href="#">Made Coupon</a></h1>
+          <ul id="gnb">
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">상품권교환소</a></li>
+            <li><a href="#">마일리지충전소</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .h-left -->
+        <div class="h-right hide-750">
+          <div class="search-form">
+            <input type="text" placeholder="상품명, 브랜드 검색" />
+            <a href="#" class="btn-search">검색</a>
+          </div>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
+        </div><!-- .h-right -->
+      </div><!-- .h-inner -->
+      <div class="h-inner only-mobile show-750 flex">
+        <a href="#" class="m-btn-back">뒤로 가기</a>
+        <h2 class="sub-tit">두근두근 언박싱</h2>
+        <a href="#" class="m-btn-home">홈</a>
+      </div>
+    </div><!-- #header -->
+      
+    <div id="container">
+      <div class="content-wrap">
+        <h2 class="con-tit hide-750">두근두근 언박싱</h2>
+        <div class="slot-machine-area">
+          <div class="slot-machine">
+            <div class="slot-window">
+              <ul class="slot-track" id="slot-track"></ul>
+            </div>
+          </div><!-- .slot-machine -->
+          <span class="particle" data-aos="fade-down" data-aos-duration="1500"><img src="/img/promotion/bg_particle.png" alt=""></span>
+
+          <button id="start-btn">🎰 랜덤 뽑기 시작</button>
+          <p id="chances">잔여 14회</p>
+        </div><!-- .slot-machine-area -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div id="footer">
+      <div class="f-inner">
+        <ul class="menu">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <div class="address-area">
+          <dl class="address">
+            <dt>메이드쿠폰 사업자 정보</dt>
+            <dd>
+              <ul>
+                <li>
+                  <span class="label">회사명</span>
+                  <span class="value">㈜엔버</span>
+                </li>
+                <li>
+                  <span class="label">대표이사</span>
+                  <span class="value">이광용</span>
+                </li>
+                <li>
+                  <span class="label">사업자등록번호</span>
+                  <span class="value">465 88 00127</span>
+                </li>
+                <li>
+                  <span class="label">통신판매업</span>
+                  <span class="value">제 2016 서울광진 1141 호</span>
+                </li>
+                <li>
+                  <span class="label">개인정보관리책임자</span>
+                  <span class="value">전준상</span>
+                </li>
+                <li>
+                  <span class="label">주소</span>
+                  <span class="value">서울 강남구 봉은사로 47 길 12 진현빌딩 2 동 401 호</span>
+                </li>
+              </ul>
+              <p class="copy">Copyright ⓒ 메이드쿠폰 MadeCoupon All RightsReserved</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div><!-- #footer -->
+
+    <div class="fm-wrap">
+      <ul>
+        <li class="menu"><a href="#"></a></li>
+        <li class="home"><a href="#"></a></li>
+        <li class="my"><a href="#"></a></li>
+        <li class="gift"><a href="#"></a></li>
+      </ul>
+    </div><!-- .fm-wrap -->
+
+    <button class="btn-top">위로 가기</button>
+
+    <div class="menu-dimm"></div>
+    <div class="menu-wrap">
+      <div class="m-header">
+        <h1>메이드쿠폰 메뉴</h1>
+        <a class="btn-close" href="#">닫기</a>
+      </div>
+      <div class="m-container">
+        <ul>
+          <li class="menu-1"><a href="#"><span>선물하기</span></a></li>
+          <li class="menu-2"><a href="#"><span>상품권 보관소</span></a></li>
+          <li class="menu-3"><a href="#"><span>상품권 지갑</span></a></li>
+          <li class="menu-4"><a href="#"><span>마일리지 충전소</span></a></li>
+          <li class="menu-5"><a href="#"><span>마일리지 선물하기</span></a></li>
+          <li class="menu-6"><a href="#"><span>마이페이지</span></a></li>
+          <li class="menu-7"><a href="#"><span>공지사항</span></a></li>
+          <li class="menu-8"><a href="#"><span>1:1 문의</span></a></li>
+          <li class="menu-9"><a href="#"><span>이벤트</span></a></li>
+        </ul>
+      </div>
+    </div><!-- .menu-wrap -->
+  </div><!-- #wrapper -->
+
+  <script>
+    var Qsample = $.urlParam('sample');
+    if (Qsample) {
+      setTimeout(() => {
+        if (Qsample === 'menu') {
+          $('.fm-wrap li.menu a').click();
+        } else if (Qsample === 'disabled') {
+          $('.mileage-refund-area .refund-total .r-top .price em').text(0);
+          $('.mileage-refund-area .refund-total .r-detail li .price em').text(0);
+          $('.fix-btn-area.multi .btn-base').addClass('disabled');
+        }
+      }, 250);
+    }
+
+    let remainingChances = 14;
+    const slotHeight = 140;
+    const spinRounds = 3;
+
+    // 사용할 브랜드 이미지 리스트
+    const brands = [
+      'img/promotion/sample_gift_1.png',
+      'img/promotion/sample_gift_2.png',
+      'img/promotion/sample_gift_3.png',
+      'img/promotion/sample_gift_4.png',
+      'img/promotion/sample_gift_5.png',
+      'img/promotion/sample_gift_6.png',
+    ];
+
+    // ✅ 설정 옵션
+    const config = {
+      direction: 'up',   // 'up' 또는 'down'
+      mode: 'random',    // 'random' 또는 'fixed'
+      fixedIndex: 2      // mode가 'fixed'일 때 당첨 인덱스
+    };
+
+    // 슬롯 아이템 채우기
+    const $track = $('#slot-track');
+    $track.empty();
+    const repeatCount = 10;
+    for (let i = 0; i < brands.length * repeatCount; i++) {
+      const img = brands[i % brands.length];
+      $track.append(`<li><img src="${img}" alt="brand" /></li>`);
+    }
+
+    $('#start-btn').on('click', function () {
+      if (remainingChances <= 0) {
+        alert('뽑기 횟수가 모두 소진되었습니다.');
+        return;
+      }
+
+      remainingChances--;
+      $('#chances').text(`잔여 ${remainingChances}회`);
+
+      const totalItems = $('#slot-track li').length;
+      const baseIndex = config.mode === 'fixed'
+        ? config.fixedIndex
+        : Math.floor(Math.random() * brands.length);
+      const stopIndex = (brands.length * spinRounds) + baseIndex;
+      const targetY = config.direction === 'up'
+        ? -1 * stopIndex * slotHeight
+        : stopIndex * slotHeight;
+
+      $track.css({
+        transform: 'translateY(0)',
+        transition: 'none'
+      });
+
+      setTimeout(() => {
+        $track.css({
+          transform: `translateY(${targetY}px)`,
+          transition: 'transform 2s cubic-bezier(0.33, 1, 0.68, 1)'
+        });
+      }, 50);
+
+      setTimeout(() => {
+        const selectedIndex = baseIndex % brands.length;
+        console.log(`🎯 당첨:${brands[selectedIndex]}, ${baseIndex+1}번째 상품`);
+      }, 2100);
+    });
+  </script>
+</body>
+</html>
