@@ -14,7 +14,7 @@
   <script src="js/swiper.js"></script>
   <script src="js/ui.js"></script>
 </head>
-<body>
+<body class="bg_green">
   <div id="wrapper">
     <div id="header">
       <div class="h-inner hide-750">
@@ -53,9 +53,21 @@
             </div>
           </div><!-- .slot-machine -->
           <span class="particle" data-aos="fade-down" data-aos-duration="1500"><img src="/img/promotion/bg_particle.png" alt=""></span>
-
-          <button id="start-btn">🎰 랜덤 뽑기 시작</button>
-          <p id="chances">잔여 14회</p>
+          
+          <ul class="event-info-list">
+            <li class="on" id="start-btn">
+              <span class="label">잔여 <em class="count">14</em>회</span>
+              <span class="name">두근두근 언박싱 시작</span>
+            </li>
+            <li>
+              <span class="label">잔여 0회</span>
+              <span class="name">언박싱 완료</span>
+            </li>
+            <li>
+              <span class="label">잔여 10회</span>
+              <span class="name">언박싱 기간 만료</span>
+            </li>
+          </ul>
         </div><!-- .slot-machine-area -->
       </div><!-- .content-wrap -->
     </div><!-- #container -->
@@ -136,34 +148,61 @@
         </ul>
       </div>
     </div><!-- .menu-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-winner" data-width="348">
+      <div class="popup-inner">
+        <a href="#" class="btn-close b-mfp-close">닫기</a>
+        <span class="fanfare"><img src="img/common/ic_fanfare.svg" alt=""></span>
+        <div class="con-wrap">
+          <p class="tit">당첨 축하합니다!</p>
+          <p class="name">스타벅스아메리카노상품명아메리카노상품명아메리카노상품명</p>
+          <p class="price">정가 10,000원</p>
+          <div class="gift-area">
+            <!-- <img src="img/promotion/sample_gift_1.png" alt=""> -->
+          </div>
+          <div class="btn-base-wrap center">
+            <span class="btn-base tp1 green"><a href="#">언박싱상품보기</a></span>
+          </div>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
   </div><!-- #wrapper -->
 
   <script>
-    var Qsample = $.urlParam('sample');
-    if (Qsample) {
-      setTimeout(() => {
-        if (Qsample === 'menu') {
-          $('.fm-wrap li.menu a').click();
-        } else if (Qsample === 'disabled') {
-          $('.mileage-refund-area .refund-total .r-top .price em').text(0);
-          $('.mileage-refund-area .refund-total .r-detail li .price em').text(0);
-          $('.fix-btn-area.multi .btn-base').addClass('disabled');
-        }
-      }, 250);
-    }
-
     let remainingChances = 14;
     const slotHeight = 140;
     const spinRounds = 3;
 
     // 사용할 브랜드 이미지 리스트
     const brands = [
-      'img/promotion/sample_gift_1.png',
-      'img/promotion/sample_gift_2.png',
-      'img/promotion/sample_gift_3.png',
-      'img/promotion/sample_gift_4.png',
-      'img/promotion/sample_gift_5.png',
-      'img/promotion/sample_gift_6.png',
+      {
+        img: 'img/promotion/sample_gift_1.png',
+        alt: '스타벅스아메리카노',
+      },
+      {
+        img: 'img/promotion/sample_gift_2.png',
+        alt: '베스킨라빈스',
+      },
+      {
+        img: 'img/promotion/sample_gift_3.png',
+        alt: '파리바게뜨 5,000원 쿠폰',
+      },
+      {
+        img: 'img/promotion/sample_gift_4.png',
+        alt: '메이드쿠폰 5,000원 쿠폰',
+      },
+      {
+        img: 'img/promotion/sample_gift_5.png',
+        alt: 'CU 편의점 3,000원 쿠폰',
+      },
+      {
+        img: 'img/promotion/sample_gift_6.png',
+        alt: '파리바게뜨 상품권 파리바게뜨 상품권 파리바게뜨 상품권 파리바게뜨 상품권',
+      },
     ];
 
     // ✅ 설정 옵션
@@ -178,8 +217,9 @@
     $track.empty();
     const repeatCount = 10;
     for (let i = 0; i < brands.length * repeatCount; i++) {
-      const img = brands[i % brands.length];
-      $track.append(`<li><img src="${img}" alt="brand" /></li>`);
+      const img = brands[i % brands.length].img;
+      const alt = brands[i % brands.length].alt;
+      $track.append(`<li><img src="${img}" alt="${alt}" /></li>`);
     }
 
     $('#start-btn').on('click', function () {
@@ -188,8 +228,10 @@
         return;
       }
 
+      $('.popup-wrap#popup-winner .con-wrap .gift-area').empty();
+
       remainingChances--;
-      $('#chances').text(`잔여 ${remainingChances}회`);
+      $('#start-btn .count').text(remainingChances);
 
       const totalItems = $('#slot-track li').length;
       const baseIndex = config.mode === 'fixed'
@@ -214,9 +256,24 @@
 
       setTimeout(() => {
         const selectedIndex = baseIndex % brands.length;
-        console.log(`🎯 당첨:${brands[selectedIndex]}, ${baseIndex+1}번째 상품`);
+        $('.popup-wrap#popup-winner .con-wrap .name').text(brands[selectedIndex].alt);
+        $('.popup-wrap#popup-winner .con-wrap .gift-area').append(`<img src=${brands[selectedIndex].img} alt=${brands[selectedIndex].alt} />`);
+        $.magnificPopup.open(getOptions('#popup-winner'));
       }, 2100);
     });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    if (Qsample || Qpopup) {
+      setTimeout(() => {
+        if (Qsample === 'menu') {
+          $('.fm-wrap li.menu a').click();
+        }
+        if (Qpopup === 'winner') {
+          $.magnificPopup.open(getOptions('#popup-winner'));
+        }
+      }, 250);
+    }
   </script>
 </body>
 </html>

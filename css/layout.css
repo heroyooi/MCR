@@ -2,6 +2,9 @@
 
 body{width:100%;background-color:#fff;overflow-x:hidden;}
 body.bg{background-color:#F2F9FF;}
+body.bg_green{background-color:#B5FADC;}
+body.bg_green .con-tit{border-color:#D7FFF1;}
+
 #wrapper{margin:0 auto;min-height:100vh;/*max-width:1080px;*/position:relative;}
 /* #wrapper::before, #wrapper::after{content:'';display:block;width:100%;height:100%;position:absolute;top:0;z-index:9999;}
 #wrapper::before{left:-100%;}
