@@ -768,6 +768,26 @@ cursor:pointer;
 background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 103, 0.20) 100%), var(--Key, #26C48C);}
 .slot-machine-area .event-info-list > li.on .name{font-size:20px;color:#ffffff;}
 
+/* 권한설정 */
+.setting-list{margin-top:30px;padding-top:40px;border-top:1px solid #ebebeb;}
+.setting-list > li{margin-top:50px;}
+.setting-list > li:first-child{margin-top:0;}
+.setting-list > li .label{font-size:14px;font-weight:500;color:#72767a;display:block;margin-bottom:20px;}
+.setting-list > li ul li{margin-top:20px;}
+.setting-list > li ul li:first-child{margin-top:0;}
+.setting-list > li dl{display:flex;gap:0 20px;}
+.setting-list > li dt{width:40px;height:40px;border-radius:20px;background-color:#F2F9FF;background-repeat:no-repeat;background-position:50% 50%;}
+.setting-list > li dt.phone{background-image:url('/img/permission/ic_phone.svg');}
+.setting-list > li dt.address{background-image:url('/img/permission/ic_address.svg');}
+.setting-list > li dt.notice{background-image:url('/img/permission/ic_bell.svg');}
+.setting-list > li dd .tit{font-size:16px;font-weight:600;color:#333;line-height:1.2;}
+.setting-list > li dd .con{font-size:12px;font-weight:500;color:#72767a;line-height:1.6;}
+
+.setting-info{padding-top:40px;border-top:1px solid #ebebeb;margin-top:40px;}
+.setting-info > li{font-size:12px;font-weight:500;line-height:1.6;color:#72767a;margin-top:20px;display:flex;gap:0 5px;}
+.setting-info > li:first-child{margin-top:0;}
+.setting-info > li::before{content:'';display:inline-block;width:3px;height:3px;border-radius:2px;background-color: #72767a;top:7px;position: relative;}
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
