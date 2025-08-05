@@ -10,6 +10,7 @@
 .btn-base.tp1.green.reverse > *{border:1px solid #26C48C;color:#26C48C;background-color:#fff;}
 .btn-base.tp1.gray > *{background-color:#bbb;}
 .btn-base.tp1.gray.reverse > *{border:1px solid #bbb;color:#333;background-color:#fff;}
+.btn-base.tp1.white > *{background-color:#ffffff;color:#bbb;}
 
 .btn-base.tp1.disabled > *{pointer-events:none;background-color:#EBEBEB;color:#bbb;}
 .btn-base.tp1.green.reverse.disabled > *{border-color:#ebebeb;color:#d9d9d9;}

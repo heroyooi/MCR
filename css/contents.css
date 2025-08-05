@@ -788,6 +788,11 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
 .setting-info > li:first-child{margin-top:0;}
 .setting-info > li::before{content:'';display:inline-block;width:3px;height:3px;border-radius:2px;background-color: #72767a;top:7px;position: relative;}
 
+/* 알림 허용 */
+.notification-area .tit{font-size:22px;font-weight:600;line-height:1.4;color:#333;text-align:center;}
+.notification-area .tit::before{content:'';width:56px;height:67px;background:url('/img/permission/ic_bell_new.svg') 50% 50% no-repeat;display:block;margin:0 auto 30px;}
+.notification-area .list{}
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
