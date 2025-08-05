@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Made Coupon</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="h-inner hide-750">
+        <div class="h-left">
+          <h1><a href="#">Made Coupon</a></h1>
+          <ul id="gnb">
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">상품권교환소</a></li>
+            <li><a href="#">마일리지충전소</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .h-left -->
+        <div class="h-right hide-750">
+          <div class="search-form">
+            <input type="text" placeholder="상품명, 브랜드 검색" />
+            <a href="#" class="btn-search">검색</a>
+          </div>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
+        </div><!-- .h-right -->
+      </div><!-- .h-inner -->
+      <div class="h-inner only-mobile show-750 flex">
+        <a href="#" class="m-btn-back">뒤로 가기</a>
+        <h2 class="sub-tit">설정</h2>
+        <a href="#" class="m-btn-home">홈</a>
+      </div>
+    </div><!-- #header -->
+      
+    <div id="container">
+      <div class="content-wrap">
+        <h2 class="con-tit hide-750">설정</h2>
+        <div class="app-setting-area">
+          <div class="tit">
+            <span class="txt">알림 설정</span>
+            <div class="tip-area">
+              <button class="tip">!</button>
+              <div class="modal-wrap">
+                <p>알림이 오지않는 경우 <br /><strong>[설정 > 알림 > 메이드쿠폰]</strong> <br />알림 허용을 허용으로 변경해주세요.</p>
+                <a href="#" class="btn-close"></a>
+              </div>
+            </div>
+          </div>
+          <ul class="switch-list">
+            <li>
+              <div class="info">
+                <span class="tit">이벤트/혜택 알림 동의</span>
+                <span class="con">경품이벤트 및 할인 정보 등 정보성 메시지를 보내 드려요.</span>
+              </div>
+              <button class="btn-switch on"></button>
+            </li>
+          </ul>
+          
+          <div class="app-update-area">
+            <div class="tit">
+              <span class="txt">앱 업데이트</span>
+            </div>
+            <ul class="switch-list">
+              <li>
+                <div class="info">
+                  <span class="tit">현재 버전</span>
+                  <span class="con">최신 버전 4.1.7</span>
+                </div>
+                <span class="version">4.1.7</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-alert" data-width="343">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <p class="t-left">스마트폰 <strong class="green">설정 → 알림 → 메이드쿠폰 → <br />알림허용</strong>을 하셔야 푸시 알림을 받으실 수 있습니다.</p>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-close b-mfp-close">확인</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
+    <div class="toast-alarm">
+      <div class="tit-area">
+        <span class="tit">이벤트/혜택 알림 받기</span>
+        <span class="state cancel">거부</span>
+      </div>
+    </div>
+  </div><!-- #wrapper -->
+
+  <script>
+    $('.btn-switch').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+      } else {
+        $(this).removeClass('on');
+      }
+    });
+
+    $('.tip-area .tip').on('click', function(){
+      $(this).next('.modal-wrap').show();
+    });
+    $('.modal-wrap .btn-close').on('click', function(){
+      $(this).closest('.modal-wrap').hide();
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+
+    if (Qsample) {
+      setTimeout(() => {
+        if (Qsample == 'message') {
+          $('.tip-area .tip').click();
+        } else if(Qsample == 'toast1') {
+          // GUI.toastUI({text: '즐겨찾기에서 저장했어요!', type:'small'});
+        }
+      }, 250);
+    }
+    
+    if (Qpopup) {
+      setTimeout(() => {
+        if (Qpopup.indexOf('alert') != -1) {
+          $.magnificPopup.open(getOptions(`#popup-${Qpopup}`));
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>
