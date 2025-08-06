@@ -448,6 +448,34 @@ var GUI = window.GUI || (function(){
         $toast.data('hideTimeout', hideTimeout);
       }, 150);
     },
+
+    toastAlarmUI: function({ id }) {      
+      var $toast = $(id);
+
+      if (runToast) {
+        clearTimeout($toast.data('hideTimeout'));
+        $toast.stop().removeClass('on').css('display', 'none');
+        $toast.find('.txt').remove();
+      }
+
+      runToast = true;
+
+      $toast.css('display', 'block');
+
+      setTimeout(function () {
+        $toast.addClass('on');
+
+        const hideTimeout = setTimeout(function () {
+          $toast.removeClass('on');
+          setTimeout(function () {
+            $toast.stop().css('display', 'none');
+            runToast = false;
+          }, 500);
+        }, 2000);
+
+        $toast.data('hideTimeout', hideTimeout);
+      }, 150);
+    },
   }
 }());
 

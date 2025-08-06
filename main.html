@@ -33,11 +33,11 @@
             <a href="#" class="btn-search">검색</a>
           </div>
           <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
-          <a href="#" class="btn-alarm on">알림</a>
+          <a href="#" class="btn-alarm">알림</a>
           <a href="#" class="btn-mypage">마이페이지</a>
         </div><!-- .h-right -->
       </div><!-- .h-inner -->
-      <a href="#" class="m-btn-alarm on show-750">알림</a>
+      <a href="#" class="m-btn-alarm show-750">알림</a>
       <a href="#" class="m-btn-search show-750">검색</a>
       <div class="m-search-area">
         <div class="input-wrap">
@@ -744,6 +744,19 @@
         </ul>
       </div>
     </div>
+
+    <div class="popup-wrap z-anim mfp-hide popup-alert" id="popup-alert" data-width="343">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <p>로그인이 필요한 서비스입니다. <br />로그인 하시겠습니까?</p>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-close cancel b-mfp-close">취소</a>
+          <a href="#" class="btn-close b-mfp-close">확인</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+
   </div><!-- #wrapper -->
 
   <script>
@@ -820,13 +833,20 @@
       loop: true,
     });
 
-    var query = $.urlParam('sample');
-    if (query) {
+    var qsample = $.urlParam('sample');
+    var qpopup = $.urlParam('popup');
+    if (qsample || qpopup) {
       setTimeout(() => {
-        if (query === 'menu') {
+        if (qsample === 'menu') {
           $('.fm-wrap li.menu a').click();
-        } else if (query == 'search') {
+        } else if (qsample == 'search') {
           $('.m-btn-search').click();
+        } else if (qsample == 'on') {
+          $('.m-btn-alarm, .btn-alarm').addClass('on');
+        }
+
+        if (qpopup.indexOf('alert') != -1) {
+          $.magnificPopup.open(getOptions(`#popup-${qpopup}`));
         }
       }, 250);
     }

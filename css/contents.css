@@ -842,7 +842,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
   .product-top-area > .gift-detail .brand{font-size:16px;color:#333;}
   .product-top-area > .gift-detail .name{font-size:30px;line-height:1.4;margin-top:20px;}
   .product-top-area > .gift-detail .price{margin-top:50px;width:100%;justify-content: space-between;}
-.product-top-area >   .gift-detail .price .discount{font-size:26px;}
+  .product-top-area > .gift-detail .price .discount{font-size:26px;}
   .product-top-area > .gift-detail .price .current{font-size:26px;}
   .product-top-area > .gift-detail .price .before{font-size:16px;}
 
