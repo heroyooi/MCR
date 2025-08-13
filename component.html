@@ -42,9 +42,8 @@
     .ex_wrp .code-area{padding:20px;background-color:#eee;margin-top:30px;}
     .ex_wrp .code-area.ver_white{background-color:#fff;border:1px solid #ddd;}
 
-    /* 머신 개발 */
-    /* .ex_wrp .section {display: none;}
-    .ex_wrp .section#slot {display: block;} */
+    .brand-logo-area{display:flex;gap: 10px;margin-top: 30px;flex-wrap: wrap;}
+    .brand-logo-area:first-child{margin-top:0;}
   </style>
 </head>
 <body>
@@ -475,10 +474,43 @@
     </div>
   </div><!-- .slot-machine -->
   <span class="particle" data-aos="fade-down" data-aos-duration="1500"><img src="/img/promotion/bg_particle.png" alt=""></span>
-
-  <button id="start-btn">🎰 랜덤 뽑기 시작</button>
-  <p id="chances">잔여 14회</p>
+  
+  <ul class="event-info-list">
+    <li class="on" id="start-btn">
+      <span class="label">잔여 <em class="count">14</em>회</span>
+      <span class="name">두근두근 언박싱 시작</span>
+    </li>
+    <li>
+      <span class="label">잔여 0회</span>
+      <span class="name">언박싱 완료</span>
+    </li>
+    <li>
+      <span class="label">잔여 10회</span>
+      <span class="name">언박싱 기간 만료</span>
+    </li>
+  </ul>
 </div><!-- .slot-machine-area -->
+
+<div class="popup-wrap z-anim mfp-hide" id="popup-winner" data-width="348">
+  <div class="popup-inner">
+    <a href="#" class="btn-close b-mfp-close">닫기</a>
+    <span class="fanfare"><img src="img/common/ic_fanfare.svg" alt=""></span>
+    <div class="con-wrap">
+      <p class="tit">당첨 축하합니다!</p>
+      <p class="name">스타벅스아메리카노상품명아메리카노상품명아메리카노상품명</p>
+      <p class="price">정가 10,000원</p>
+      <div class="gift-area">
+        <!-- <img src="img/promotion/sample_gift_1.png" alt=""> -->
+      </div>
+      <div class="btn-base-wrap center">
+        <span class="btn-base tp1 green"><a href="#">언박싱상품보기</a></span>
+      </div>
+    </div><!-- .con-wrap -->
+    <div class="btn-wrap">
+      
+    </div>
+  </div><!-- .popup-inner -->
+</div><!-- .popup-wrap -->
 </div><!-- .code-area -->
 <style>
 
@@ -490,12 +522,30 @@ const spinRounds = 3;
 
 // 사용할 브랜드 이미지 리스트
 const brands = [
-  'img/promotion/sample_gift_1.png',
-  'img/promotion/sample_gift_2.png',
-  'img/promotion/sample_gift_3.png',
-  'img/promotion/sample_gift_4.png',
-  'img/promotion/sample_gift_5.png',
-  'img/promotion/sample_gift_6.png',
+  {
+    img: 'img/promotion/sample_gift_1.png',
+    alt: '스타벅스아메리카노',
+  },
+  {
+    img: 'img/promotion/sample_gift_2.png',
+    alt: '베스킨라빈스',
+  },
+  {
+    img: 'img/promotion/sample_gift_3.png',
+    alt: '파리바게뜨 5,000원 쿠폰',
+  },
+  {
+    img: 'img/promotion/sample_gift_4.png',
+    alt: '메이드쿠폰 5,000원 쿠폰',
+  },
+  {
+    img: 'img/promotion/sample_gift_5.png',
+    alt: 'CU 편의점 3,000원 쿠폰',
+  },
+  {
+    img: 'img/promotion/sample_gift_6.png',
+    alt: '파리바게뜨 상품권 파리바게뜨 상품권 파리바게뜨 상품권 파리바게뜨 상품권',
+  },
 ];
 
 // ✅ 설정 옵션
@@ -510,8 +560,9 @@ const $track = $('#slot-track');
 $track.empty();
 const repeatCount = 10;
 for (let i = 0; i < brands.length * repeatCount; i++) {
-  const img = brands[i % brands.length];
-  $track.append(`<li><img src="${img}" alt="brand" /></li>`);
+  const img = brands[i % brands.length].img;
+  const alt = brands[i % brands.length].alt;
+  $track.append(`<li><img src="${img}" alt="${alt}" /></li>`);
 }
 
 $('#start-btn').on('click', function () {
@@ -520,8 +571,10 @@ $('#start-btn').on('click', function () {
     return;
   }
 
+  $('.popup-wrap#popup-winner .con-wrap .gift-area').empty();
+
   remainingChances--;
-  $('#chances').text(`잔여 ${remainingChances}회`);
+  $('#start-btn .count').text(remainingChances);
 
   const totalItems = $('#slot-track li').length;
   const baseIndex = config.mode === 'fixed'
@@ -546,13 +599,103 @@ $('#start-btn').on('click', function () {
 
   setTimeout(() => {
     const selectedIndex = baseIndex % brands.length;
-    console.log(`🎯 당첨:${brands[selectedIndex]}, ${baseIndex+1}번째 상품`);
+    $('.popup-wrap#popup-winner .con-wrap .name').text(brands[selectedIndex].alt);
+    $('.popup-wrap#popup-winner .con-wrap .gift-area').append(`<img src=${brands[selectedIndex].img} alt=${brands[selectedIndex].alt} />`);
+    $.magnificPopup.open(getOptions('#popup-winner'));
   }, 2100);
 });
 </script>
 <pre class="language-html"></pre>
 <pre class="language-css"></pre>
 <pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
+
+
+      <div class="section" id="slot">
+        <h2>브랜드 로고</h2>
+        <div class="code-area">
+          <h3>140x140 <button>코드 보기</button></h3>
+<div class="code-box">
+  <div class="brand-logo-area">
+    <img src="img/file/cgv.png" alt="">
+    <img src="img/file/CU.png" alt="">
+    <img src="img/file/gs25.png" alt="">
+    <img src="img/file/megabox.png" alt="">
+    <img src="img/file/SOOP.png" alt="">
+    <img src="img/file/도미노피자.png" alt="">
+    <img src="img/file/롯데리아.png" alt="">
+    <img src="img/file/리안헤어.png" alt="">
+    <img src="img/file/메가커피.png" alt="">
+    <img src="img/file/메이드쿠폰.png" alt="">
+    <img src="img/file/미스터피자.png" alt="">
+    <img src="img/file/배달의민족.png" alt="">
+    <img src="img/file/베스킨라빈스.png" alt="">
+    <img src="img/file/세븐일레븐.png" alt="">
+    <img src="img/file/스타벅스.png" alt="">
+    <img src="img/file/정관장.png" alt="">
+    <img src="img/file/커피빈.png" alt="">
+    <img src="img/file/파리바게트.png" alt="">
+    <img src="img/file/플렉스티비.png" alt="">
+  </div>
+</div><!-- .code-area -->
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>70x70 사각형 <button>코드 보기</button></h3>
+<div class="code-box">
+  <div class="brand-logo-area">
+    <img src="img/file/cgv-1.png" alt="">
+    <img src="img/file/CU-1.png" alt="">
+    <img src="img/file/gs25-1.png" alt="">
+    <img src="img/file/megabox-1.png" alt="">
+    <img src="img/file/SOOP-1.png" alt="">
+    <img src="img/file/도미노피자-1.png" alt="">
+    <img src="img/file/롯데리아-1.png" alt="">
+    <img src="img/file/리안헤어-1.png" alt="">
+    <img src="img/file/메가커피-1.png" alt="">
+    <img src="img/file/메이드쿠폰-1.png" alt="">
+    <img src="img/file/미스터피자-1.png" alt="">
+    <img src="img/file/배달의민족-1.png" alt="">
+    <img src="img/file/베스킨라빈스-1.png" alt="">
+    <img src="img/file/세븐일레븐-1.png" alt="">
+    <img src="img/file/스타벅스-1.png" alt="">
+    <img src="img/file/정관장-1.png" alt="">
+    <img src="img/file/커피빈-1.png" alt="">
+    <img src="img/file/파리바게트-1.png" alt="">
+    <img src="img/file/플렉스티비-1.png" alt="">
+  </div>
+</div><!-- .code-area -->
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>70x70 원형 <button>코드 보기</button></h3>
+<div class="code-box">
+  <div class="brand-logo-area">
+    <img src="img/file/cgv-2.png" alt="">
+    <img src="img/file/CU-2.png" alt="">
+    <img src="img/file/gs25-2.png" alt="">
+    <img src="img/file/megabox-2.png" alt="">
+    <img src="img/file/SOOP-2.png" alt="">
+    <img src="img/file/도미노피자-2.png" alt="">
+    <img src="img/file/롯데리아-2.png" alt="">
+    <img src="img/file/리안헤어-2.png" alt="">
+    <img src="img/file/메가커피-2.png" alt="">
+    <img src="img/file/메이드쿠폰-2.png" alt="">
+    <img src="img/file/미스터피자-2.png" alt="">
+    <img src="img/file/배달의민족-2.png" alt="">
+    <img src="img/file/베스킨라빈스-2.png" alt="">
+    <img src="img/file/세븐일레븐-2.png" alt="">
+    <img src="img/file/스타벅스-2.png" alt="">
+    <img src="img/file/정관장-2.png" alt="">
+    <img src="img/file/커피빈-2.png" alt="">
+    <img src="img/file/파리바게트-2.png" alt="">
+    <img src="img/file/플렉스티비-2.png" alt="">
+  </div>
+</div><!-- .code-area -->
+<pre class="language-html"></pre>
         </div>
       </div><!-- .section -->
 
