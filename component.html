@@ -830,6 +830,18 @@ $('#start-btn').on('click', function () {
       // $(window).scrollTop(compSection.eq(14).position().top);
       compMenu.find('.btn-base a').click();
     }, 150);
+
+    $(document).ready(function () {
+      // 페이지 로드 시
+      if (window.location.hash) {
+        const target = $(window.location.hash);
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 50); // 0.5초 부드럽게 스크롤
+        }
+      }
+    });
   </script>
   <script src="js/prism.js"></script>
 </body>
