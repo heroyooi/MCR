@@ -535,6 +535,13 @@
         }
       }, 250);
     }
+
+    // 250907 수정
+    $('#header .btn-base-wrap .btn').on('click', function(e){
+      e.preventDefault();
+      $(this).addClass('on');
+      $(this).siblings('.on').removeClass('on');
+    });
   </script>
 </body>
 </html>

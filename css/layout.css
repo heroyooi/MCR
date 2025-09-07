@@ -286,3 +286,7 @@ body.bg_green .con-tit{border-color:#D7FFF1;}
   #wrapper.ver_promotion{padding-bottom:0;}
   #container.ver_promotion{min-height:calc(100vh);}
 }
+
+/* 250907 수정 */
+#header .h-left.renew{gap:0 30px;}
+#header .h-left.renew #gnb{gap:0 15px;}
