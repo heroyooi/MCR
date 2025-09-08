@@ -43,18 +43,18 @@
         <a href="#" class="m-btn-home">홈</a>
       </div>
     </div><!-- #header -->
-    <div class="top-modal-wrap">
+    <div class="top-modal-wrap ver_pc"><!-- 250907 수정 -->
       <div class="top-btn-area">
         <a href="" class="btn-close"></a>
       </div>
       <ul class="brand-list-area">
         <li>
-          <p class="cate-tit">카테고리명</p>
+          <p class="cate-tit">커피/음료</p>
           <ul class="brand-list">
             <li>
               <a href="#">
                 <dl> 
-                  <dt class="product-thumb"></dt>
+                  <dt class="product-thumb" style="background:#FFFFFF url('https://dev.madecoupon.com:8443/upload_img/brand/img_06eece57-0d73-4c5c-ac53-e1db3c7bc46e.png') 50% 50% no-repeat; background-size: cover;"></dt><!-- 250907 수정 -->
                   <dd class="product-info">브랜드명</dd>
                 </dl>
               </a>
@@ -62,39 +62,7 @@
             <li>
               <a href="#">
                 <dl> 
-                  <dt class="product-thumb"></dt>
-                  <dd class="product-info">브랜드명</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <dl> 
-                  <dt class="product-thumb"></dt>
-                  <dd class="product-info">브랜드명</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <dl> 
-                  <dt class="product-thumb"></dt>
-                  <dd class="product-info">브랜드명</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <dl> 
-                  <dt class="product-thumb"></dt>
-                  <dd class="product-info">브랜드명</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <dl> 
-                  <dt class="product-thumb"></dt>
+                  <dt class="product-thumb" style="background:#FFFFFF url('https://dev.madecoupon.com:8443/upload_img/brand/img_f0fce683-5713-48f3-a264-596fb367236f.png') 50% 50% no-repeat; background-size: cover;"></dt><!-- 250907 수정 -->
                   <dd class="product-info">브랜드명</dd>
                 </dl>
               </a>
@@ -102,12 +70,12 @@
           </ul>
         </li>
         <li>
-          <p class="cate-tit">카테고리명</p>
+          <p class="cate-tit">외식</p>
           <ul class="brand-list">
             <li>
               <a href="#">
                 <dl> 
-                  <dt class="product-thumb"></dt>
+                  <dt class="product-thumb" style="background:#FFFFFF url('https://dev.madecoupon.com:8443/upload_img/brand/img_f25deed0-743e-4fc1-9df3-ccda69fda257.png') 50% 50% no-repeat; background-size: cover;"></dt><!-- 250907 수정 -->
                   <dd class="product-info">브랜드명</dd>
                 </dl>
               </a>
@@ -773,10 +741,19 @@
       e.preventDefault();
       $('#header .h-inner.only-mobile .evt-tit').removeClass('on');
       $('.top-modal-dimm, .top-modal-wrap').hide();
+      
+      // 250907 수정
+      $('body').css('overflow', '');
     });
     $('.top-modal-dimm').on('click', function(){
       $('#header .h-inner.only-mobile .evt-tit').removeClass('on');
       $('.top-modal-dimm, .top-modal-wrap').hide();
+    });
+
+    // 250907 수정
+    $('.brand-swiper.swiper-container.ver_square .swiper-slide.ver_more dt').on('click', function(){
+      $('body').css('overflow', 'hidden');
+      $('.top-modal-dimm, .top-modal-wrap').show();
     });
 
     var Qsample = $.urlParam('sample');

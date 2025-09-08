@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>Made Coupon</title>
+  <link rel="stylesheet" href="css/pretendard.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="h-inner hide-750">
+        <div class="h-left">
+          <h1><a href="#">Made Coupon</a></h1>
+          <ul id="gnb">
+            <li><a href="#">선물하기</a></li>
+            <li><a href="#">상품권교환소</a></li>
+            <li><a href="#">마일리지충전소</a></li>
+            <li><a href="#">이벤트</a></li>
+          </ul>
+        </div><!-- .h-left -->
+        <div class="h-right hide-750">
+          <div class="search-form">
+            <input type="text" placeholder="상품명, 브랜드 검색" />
+            <a href="#" class="btn-search">검색</a>
+          </div>
+          <a href="#" class="btn-join" style="display: none;">로그인/회원가입</a>
+          <a href="#" class="btn-mypage">마이페이지</a>
+        </div><!-- .h-right -->
+      </div><!-- .h-inner -->
+      <div class="h-inner only-mobile show-750 flex">
+        <a href="#" class="m-btn-back">뒤로 가기</a>
+        <h2 class="sub-tit">검색 상품</h2>
+        <a href="#" class="m-btn-home">홈</a>
+      </div>
+    </div><!-- #header -->
+    <div class="top-modal-wrap green">
+      <ul class="cate-list">
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_1.svg" alt=""></dt>
+              <dd>미용 · 건강</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_2.svg" alt=""></dt>
+              <dd>상품권</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_3.svg" alt=""></dt>
+              <dd>제과 · 제빵</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_4.svg" alt=""></dt>
+              <dd>추천상품</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_5.svg" alt=""></dt>
+              <dd>커피 · 음료</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_6.svg" alt=""></dt>
+              <dd>편의점</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_7.svg" alt=""></dt>
+              <dd>피자 · 치킨</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_8.svg" alt=""></dt>
+              <dd>외식</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_9.svg" alt=""></dt>
+              <dd>아프리카TV</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_10.svg" alt=""></dt>
+              <dd>일반</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_11.svg" alt=""></dt>
+              <dd>컬쳐 · 레저</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_12.svg" alt=""></dt>
+              <dd>체험권</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_13.svg" alt=""></dt>
+              <dd>아쿠아리움</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_14.svg" alt=""></dt>
+              <dd>워터파크</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_15.svg" alt=""></dt>
+              <dd>테마파크</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <dl>
+              <dt><img src="img/gift/category_16.svg" alt=""></dt>
+              <dd>여행</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
+    </div><!-- .top-modal-wrap -->
+    <div class="top-modal-dimm"></div>
+      
+    <div id="container" class="ver_tab">
+      <div class="tab-top show-750">
+        <ul class="tab-base">
+          <li class="on"><a href="#">선물하기 (총4개)</a></li>
+          <li><a href="#">구독서비스 (총5개)</a></li>
+        </ul>
+      </div><!-- .tab-top -->
+      <div class="search-top only-mobile show-750 flex relative">
+        <span class="result">총 <em>3,000</em>개</span>
+        <div class="filter-area">
+          <span class="label">최신순</span>
+          <ul class="list">
+            <li class="on"><a href="">최신순</a></li>
+            <li><a href="">낮은 가격순</a></li>
+            <li><a href="">높은 가격순</a></li>
+            <li><a href="">할인율</a></li>
+          </ul>
+        </div>
+      </div><!-- .search-top -->
+      <div class="search-dimm"></div>
+      <div class="content-wrap">
+        <h2 class="con-tit hide-750"><span class="evt-tit">검색 상품</span></h2>
+        <ul class="tab-base hide-750">
+          <li class="on"><a href="#">선물하기 (총4개)</a></li>
+          <li><a href="#">구독서비스 (총5개)</a></li>
+        </ul>
+        <div class="search-top hide-750">
+          <span class="result"><em>3,000</em>개의 검색 결과</span>
+          <div class="filter-area">
+            <span class="label">최신순</span>
+            <ul class="list">
+              <li class="on"><a href="">최신순</a></li>
+              <li><a href="">낮은 가격순</a></li>
+              <li><a href="">높은 가격순</a></li>
+              <li><a href="">할인율</a></li>
+            </ul>
+          </div>
+        </div><!-- .search-top -->
+
+        <div class="search-result" id="isData">
+          <ul class="product-list ver_slot">
+            <li>
+              <a href="#">
+                <dl> 
+                  <dt class="product-thumb">
+                    <div class="product-frame">
+                      <!-- <img src="img/mock/product_g1.png" alt="" /> -->
+                    </div>
+                  </dt>
+                  <dd class="product-info">
+                    <div class="discount-area">
+                      <span class="label">최소보장</span>
+                      <span class="discount">30%</span>
+                    </div>
+                    <span class="brand">스타벅스 아메리카노</span>
+                    <span class="name">스타벅스아메리카노 x 30개 보장 구독서비스</span>
+                    <div class="price">
+                      <span class="before">10,000원</span>
+                      <span class="current">10,000원</span>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl> 
+                  <dt class="product-thumb">
+                    <div class="product-frame">
+                        <img src="img/mock/subscribe_product.jpg" alt="" />
+                    </div>
+                    <div class="side_item"><img src="img/mock/subscribe_side.png" alt=""></div>
+                  </dt> 
+                  <dd class="product-info">
+                    <div class="discount-area">
+                      <span class="label">최소보장</span>
+                      <span class="discount">30%</span>
+                    </div>
+                    <span class="brand">스타벅스 아메리카노</span>
+                    <span class="name">스타벅스아메리카노 x 30개 보장 구독서비스</span>
+                    <div class="price">
+                      <span class="before">10,000원</span>
+                      <span class="current">10,000원</span>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl> 
+                  <dt class="product-thumb">
+                    <div class="product-frame">
+                      <img src="img/mock/product_g1.png" alt="" />
+                    </div>
+                  </dt>
+                  <dd class="product-info">
+                    <div class="discount-area">
+                      <span class="label">최소보장</span>
+                      <span class="discount">30%</span>
+                    </div>
+                    <span class="brand">스타벅스 아메리카노</span>
+                    <span class="name">스타벅스아메리카노 x 30개 보장 구독서비스</span>
+                    <div class="price">
+                      <span class="before">10,000원</span>
+                      <span class="current">10,000원</span>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl> 
+                  <dt class="product-thumb">
+                    <div class="product-frame">
+                      <img src="img/mock/subscribe_product.jpg" alt="" />
+                      <span class="dimm-txt">판매 완료</span>
+                    </div>
+                  </dt> 
+                  <dd class="product-info">
+                    <div class="discount-area">
+                      <span class="label">최소보장</span>
+                      <span class="discount">30%</span>
+                    </div>
+                    <span class="brand">스타벅스 아메리카노</span>
+                    <span class="name">스타벅스아메리카노 x 30개 보장 구독서비스</span>
+                    <div class="price">
+                      <span class="before">10,000원</span>
+                      <span class="current">10,000원</span>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl> 
+                  <dt class="product-thumb">
+                    <div class="product-frame">
+                      <img src="img/mock/product_g1.png" alt="" />
+                    </div>
+                  </dt>
+                  <dd class="product-info">
+                    <div class="discount-area">
+                      <span class="label">최소보장</span>
+                      <span class="discount">30%</span>
+                    </div>
+                    <span class="brand">스타벅스 아메리카노</span>
+                    <span class="name">스타벅스아메리카노 x 30개 보장 구독서비스</span>
+                    <div class="price">
+                      <span class="before">10,000원</span>
+                      <span class="current">10,000원</span>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl> 
+                  <dt class="product-thumb">
+                    <div class="product-frame">
+                      <img src="img/mock/subscribe_product.jpg" alt="" />
+                    </div>
+                  </dt> 
+                  <dd class="product-info">
+                    <div class="discount-area">
+                      <span class="label">최소보장</span>
+                      <span class="discount">30%</span>
+                    </div>
+                    <span class="brand">스타벅스 아메리카노</span>
+                    <span class="name">스타벅스아메리카노 x 30개 보장 구독서비스</span>
+                    <div class="price">
+                      <span class="before">10,000원</span>
+                      <span class="current">10,000원</span>
+                    </div>
+                  </dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+        </div><!-- .search-result -->
+        <div class="no-data" style="display: none;">
+          <p><span class="keyword">스타벅스</span>에 대한 <br />검색 결과가 없습니다.</p>
+        </div>
+
+        <span class="search-paging"><em class="current">30</em> / 3,000</span>
+        
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+
+    <div id="footer">
+      <div class="f-inner">
+        <ul class="menu">
+          <li><a href="">회사소개</a></li>
+          <li><a href="">이용약관</a></li>
+          <li><a href="">개인정보처리방침</a></li>
+          <li><a href="">고객센터</a></li>
+        </ul>
+        <div class="address-area">
+          <dl class="address">
+            <dt>메이드쿠폰 사업자 정보</dt>
+            <dd>
+              <ul>
+                <li>
+                  <span class="label">회사명</span>
+                  <span class="value">㈜엔버</span>
+                </li>
+                <li>
+                  <span class="label">대표이사</span>
+                  <span class="value">이광용</span>
+                </li>
+                <li>
+                  <span class="label">사업자등록번호</span>
+                  <span class="value">465 88 00127</span>
+                </li>
+                <li>
+                  <span class="label">통신판매업</span>
+                  <span class="value">제 2016 서울광진 1141 호</span>
+                </li>
+                <li>
+                  <span class="label">개인정보관리책임자</span>
+                  <span class="value">전준상</span>
+                </li>
+                <li>
+                  <span class="label">주소</span>
+                  <span class="value">서울 강남구 봉은사로 47 길 12 진현빌딩 2 동 401 호</span>
+                </li>
+              </ul>
+              <p class="copy">Copyright ⓒ 메이드쿠폰 MadeCoupon All RightsReserved</p>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div><!-- #footer -->
+
+    <div class="fm-wrap">
+      <ul>
+        <li class="menu"><a href="#"></a></li>
+        <li class="home"><a href="#"></a></li>
+        <li class="my"><a href="#"></a></li>
+        <li class="gift"><a href="#"></a></li>
+      </ul>
+    </div><!-- .fm-wrap -->
+
+    <button class="btn-top">위로 가기</button>
+
+    <div class="menu-dimm"></div>
+    <div class="menu-wrap">
+      <div class="m-header">
+        <h1>메이드쿠폰 메뉴</h1>
+        <a class="btn-close" href="#">닫기</a>
+      </div>
+      <div class="m-container">
+        <ul>
+          <li class="menu-1"><a href="#"><span>선물하기</span></a></li>
+          <li class="menu-2"><a href="#"><span>상품권 보관소</span></a></li>
+          <li class="menu-3"><a href="#"><span>상품권 지갑</span></a></li>
+          <li class="menu-4"><a href="#"><span>마일리지 충전소</span></a></li>
+          <li class="menu-5"><a href="#"><span>마일리지 선물하기</span></a></li>
+          <li class="menu-6"><a href="#"><span>마이페이지</span></a></li>
+          <li class="menu-7"><a href="#"><span>공지사항</span></a></li>
+          <li class="menu-8"><a href="#"><span>1:1 문의</span></a></li>
+          <li class="menu-9"><a href="#"><span>이벤트</span></a></li>
+        </ul>
+      </div>
+    </div><!-- .menu-wrap -->
+
+    <div class="popup-wrap z-anim mfp-hide" id="popup-today" data-width="448">
+      <div class="popup-inner">
+        <div class="con-wrap">
+          <div class="popup-swiper swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+              <div class="swiper-slide"><a href="#"><img src="https://via.placeholder.com/448x485" alt=""></a></div>
+            </div>
+            <span class="swiper-pagination"></span>
+          </div>
+        </div><!-- .con-wrap -->
+        <div class="btn-wrap">
+          <a href="#" class="btn-today">오늘 하루 그만 보기</a>
+          <a href="#" class="btn-close b-mfp-close">닫기</a>
+        </div>
+      </div><!-- .popup-inner -->
+    </div><!-- .popup-wrap -->
+  </div><!-- #wrapper -->
+
+  <script>
+    if ($.cookie('popupToday') == 'hidden') {
+			$('#popup-today').remove();
+		}
+    $("#popup-today .btn-today").on("click",function(e){
+			e.preventDefault();
+			$.cookie('popupToday', 'hidden', {expires : 1});
+			$.magnificPopup.close();
+		});
+
+    var popupSwiper = new Swiper('.popup-swiper', {
+      pagination: {
+        el: '.popup-swiper.swiper-container .swiper-pagination',
+        type: 'fraction',
+      },
+      autoplay: {
+        delay: 3000,
+      },
+      loop: true,
+    });
+
+    var brandSwiper = new Swiper('.brand-swiper', {
+      slidesPerView: 'auto',
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
+    });
+
+    $('#header .h-inner.only-mobile .evt-tit').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).addClass('on');
+        $('.top-modal-dimm, .top-modal-wrap').show();
+      } else {
+        $(this).removeClass('on');
+        $('.top-modal-dimm, .top-modal-wrap').hide();
+      }
+    });
+    $('.top-modal-dimm').on('click', function(){
+      $('#header .h-inner.only-mobile .evt-tit').removeClass('on');
+      $('.top-modal-dimm, .top-modal-wrap').hide();
+    });
+
+    var Qsample = $.urlParam('sample');
+    var Qpopup = $.urlParam('popup');
+    if (Qsample || Qpopup) {
+      setTimeout(() => {
+        if (Qsample === 'menu') {
+          $('.fm-wrap li.menu a').click();
+        } else if (Qsample == 'brandMenu') {
+          $('#header .h-inner.only-mobile .evt-tit').click();
+        } else if (Qsample == 'nodata') {
+          $('.search-result#isData').hide();
+          $('.search-top .result em').text(0);
+          $('.no-data').show();
+        }
+        if (Qpopup == 'today') {
+          if ($.cookie('popupToday') != 'hidden') {
+            $.magnificPopup.open(getOptions('#popup-today'));
+            popupSwiper.update();
+          }
+        }
+      }, 250);
+    }
+  </script>
+</body>
+</html>
