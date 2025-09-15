@@ -756,6 +756,13 @@
       $('.top-modal-dimm, .top-modal-wrap').show();
     });
 
+    $('.brand-swiper.swiper-container.ver_square .swiper-slide').on('click', function(){
+      if (!$(this).hasClass('on')) {
+        $(this).siblings('.on').removeClass('on');
+        $(this).addClass('on');
+      }
+    })
+
     var Qsample = $.urlParam('sample');
     var Qpopup = $.urlParam('popup');
     if (Qsample || Qpopup) {
