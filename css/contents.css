@@ -91,7 +91,7 @@
 .main-banner-area > a.type-1{background-color: #D0E8FF;}
 .main-banner-area > a.type-2{background-color: #B5FADC;}
 .main-banner-area > a .con-area span{display:block;}
-.main-banner-area > a .con-area .label{font-size:18px;font-weight:600;}
+.main-banner-area > a .con-area .label{font-size:18px;font-weight:600;line-height:1.2;}
 .main-banner-area > a .con-area .con{font-size:14px;font-weight:500;color:#72767a;margin-top:5px;}
 
 .main-product-area .tit{font-size:22px;font-weight:600;margin-bottom:16px;}
@@ -844,6 +844,19 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
 .join-btn-area > li.naver a{background-color: #00C63B;color:#fff;}
 .join-btn-area > li a .s-logo{position: absolute;left:20px;top:20px;}
 
+.main-recently.product-box.ver_renew{padding-top:20px;padding-bottom:90px;}
+.main-recently.product-box.ver_renew .tab-base li a{font-size:18px;color:#111;padding-top:0;padding-bottom:20px;display:block;height:auto;}
+.main-recently.product-box.ver_renew .tab-base > li.on > a::after{background-color:#4289f0;}
+.main-recently.product-box.ver_renew .product-list > li{width:calc(50% - 9px);}
+.main-recently.product-box.ver_renew .product-list > li dl dt{width:160px;padding:0 0 160px 0;}
+.main-recently.product-box.ver_renew .swiper-pagination{text-align:left;left:30px;bottom:40px;}
+.main-recently.product-box.ver_renew .product-info .brand{font-size:16px;}
+.main-recently.product-box.ver_renew .product-info .name{font-size:22px;}
+.main-recently.product-box.ver_renew .product-info .price .discount, .main-recently.product-box.ver_renew .product-info .price .current{font-size:22px;}
+.main-recently.product-box.ver_renew .product-info .price{display:block;margin-top:30px;}
+.main-recently.product-box.ver_renew .product-info .price .before{font-size:18px;display:block;margin-top:10px;}
+.main-recently.product-box.ver_renew .btn-more-renew{position: absolute;right:30px;bottom:30px;display:inline-block;font-size:16px;color:#72767a;padding:12px 30px;border-radius:20px;background-color: #f5f5f5;font-weight:500;}
+
 @media screen and (max-width: 1080px) {
   .top-visual{width:100%;height:auto;left:0;margin-left:0;}
   .search-result .product-list > li{width:calc(33.33% - 14px);}
@@ -854,6 +867,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
 @media screen and (max-width: 950px) {
   #header #gnb{display:none;}
   .product-list > li{width:calc(50% - 9px);}
+  .main-banner-area > a{padding:25px 20px;}
 }
 
 @media screen and (min-width: 751px) {
@@ -902,7 +916,11 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
   .main-banner-area > a{padding:15px;display:block;}
   .main-banner-area > a .con-area .label{font-size:16px;}
   .main-banner-area > a .con-area .con{font-size:12px;}
-  .main-banner-area > a .bg{display:block;margin-top:8px;text-align:right;}
+  .main-banner-area > a .bg{display:block;/*margin-top:8px;*/text-align:right;}
+  .main-banner-area{gap:10px;flex-wrap:wrap;}
+  .main-banner-area > a{width:calc(50% - 5px);}
+  .main-banner-area > a br{display:none;}
+  
   .main-banner-area > a .bg img{width:30px;}
   .main-promo-area .product-bg{border-radius:8px 8px 0 0;}
   .main-promo-area .product-box{border-radius:0 0 8px 8px;}
@@ -976,4 +994,15 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
   .slot-ad-area .slot-ad{width:313px;margin:0 auto;}
 
   .join-btn-area{bottom: 0;}
+
+  .main-recently.product-box.ver_renew{padding-top:10px;padding-bottom:60px;}
+  .main-recently.product-box.ver_renew .tab-base li a{padding-bottom:10px;font-size:14px;}
+  .main-recently.product-box.ver_renew .product-info .brand{font-size:14px;}
+  .main-recently.product-box.ver_renew .product-info .name{font-size:16px;}
+  .main-recently.product-box.ver_renew .product-info .price{margin-top:10px;}
+  .main-recently.product-box.ver_renew .product-info .price .discount, .main-recently.product-box.ver_renew .product-info .price .current{font-size:16px;}
+  .main-recently.product-box.ver_renew .product-info .price .before{font-size:12px;margin-top:5px;}
+  .main-recently.product-box.ver_renew .swiper-pagination{left:20px;bottom:30px;}
+  .main-recently.product-box.ver_renew .btn-more-renew{padding:6px 15px;font-size:14px;right:20px;bottom:20px;}
+
 }
