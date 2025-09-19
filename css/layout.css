@@ -211,7 +211,7 @@ body.bg_green .con-tit{border-color:#D7FFF1;}
   .top-modal-wrap:not(.ver_pc), /* 250907 수정 */
   .top-modal-dimm{display:none !important;}
   .tab-dimm{display:none !important;}
-  .top-modal-wrap.ver_pc{top:80px;max-width:1080px;transform:translate(-50%);left:50%;}
+  .top-modal-wrap.ver_pc{top:80px;max-width:540px;transform:translate(-50%);left:50%;margin-left:-270px;}
 }
 
 @media screen and (max-width: 750px) {
