@@ -920,6 +920,8 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(35, 141, 
   .main-banner-area{gap:10px;flex-wrap:wrap;}
   .main-banner-area > a{width:calc(50% - 5px);}
   .main-banner-area > a br{display:none;}
+  .main-banner-area > a.type-1.mo-reverse{background-color: #B5FADC;}
+  .main-banner-area > a.type-2.mo-reverse{background-color: #D0E8FF;}
   
   .main-banner-area > a .bg img{width:30px;}
   .main-promo-area .product-bg{border-radius:8px 8px 0 0;}
