@@ -38,11 +38,20 @@
 .search-result .product-list > li dl dd .sender .s-label{color:#bbb;}
 .search-result .product-list > li dl dd .sender .s-name{color:#26c48c;}
 
-.product-top-area > .gift-detail .gift-thumb{border:1px solid #ebebeb;border-radius:8px;display:inline-block;overflow:hidden;width:77px;flex-shrink:0;position:relative;background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;padding:0 0 75px 0;}
-.product-top-area > .gift-detail .exchange{font-size:16px;color:#72767a;font-weight:600;margin-top:20px;}
-.product-top-area > .gift-detail .barcode-area{text-align:center;padding:67px 0;border-top:1px solid #EBEBEB;margin-top:37px;}
-.product-top-area > .gift-detail .barcode-area span{display:block;}
-.product-top-area > .gift-detail .barcode-area .number{margin-top:15px;font-size:14px;color:#333;}
+.product-top-area.type-2{border:6px solid #26c48c;gap:0;position: relative;}
+.product-top-area.end::after{content:'';display:block;width:100%;height:100%;background-color: #333;opacity:0.8;position: absolute;left:0;top:0;}
+
+.product-top-area.type-2 .product-detail-area{width:395px;}
+.product-top-area.type-2 .product-frame{width:100%;}
+.product-top-area.type-2 .gift-detail{padding:30px 50px;min-width:0;flex: 1 1 auto;}
+.product-top-area.type-2 .gift-detail .gift-thumb-area{display:flex;gap:30px;}
+.product-top-area.type-2 .gift-detail .gift-thumb{border:1px solid #ebebeb;border-radius:8px;display:inline-block;overflow:hidden;width:120px;height:120px;flex-shrink:0;position:relative;background:#F5F5F5 url(../img/common/ic_thumb.svg) 50% 50% no-repeat;padding:0 0 118px 0;}
+.product-top-area.type-2 .gift-detail .gift-info{min-width:0;display:flex;flex-direction: column;justify-content: center;}
+.product-top-area.type-2 .gift-detail .name{margin-top:0;text-overflow: ellipsis;white-space: nowrap;overflow:hidden;display:block;width:100%;}
+.product-top-area.type-2 .gift-detail .exchange{font-size:16px;color:#72767a;font-weight:600;margin-top:20px;}
+.product-top-area.type-2 .gift-detail .barcode-area{text-align:center;padding:57px 0 0;border-top:1px solid #EBEBEB;margin-top:27px;}
+.product-top-area.type-2 .gift-detail .barcode-area span{display:block;}
+.product-top-area.type-2 .gift-detail .barcode-area .number{margin-top:15px;font-size:14px;color:#333;}
 
 .gift-detail .name.line-2{display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;overflow: hidden;white-space:initial;}
 .content-wrap .con-tit-area{position: relative;border-bottom:1px solid #72767A;margin-bottom:40px;}
@@ -91,6 +100,16 @@ background: var(--Key, #26C48C);color:#fff;}
 .btn-more-area .btn-base{max-width:150px;}
 .btn-more-area .btn-base a{font-size:14px;font-weight:500;line-height:1.4;display:block;padding:12px 20px;border-radius: 50px;border: 1px solid #EBEBEB;background: #FFF;box-shadow: 4px 4px 7px 0 rgba(0, 0, 0, 0.04);color:#72767a;}
 
+@media screen and (max-width: 1024px) {
+  .product-top-area.type-2 .product-detail-area{width:300px;}
+  .product-top-area.type-2 .gift-detail{padding:20px 40px;}
+  .product-top-area.type-2 .gift-detail .gift-thumb-area{gap:20px;}
+  .product-top-area.type-2 .gift-detail .gift-thumb{width:90px;height:90px;padding-bottom:88px;}
+  .product-top-area.type-2 .gift-detail .name{font-size:24px;}
+  .product-top-area.type-2 .gift-detail .exchange{font-size:14px;margin-top:10px;}
+  .product-top-area.type-2 .gift-detail .barcode-area{padding-top:30px;margin-top:20px;}
+}
+
 @media screen and (max-width: 750px) {
   .menu-list > li.mypage-n3 > a > span::before{background-image:url(../img/mypage/ic_mypage_new_03.svg);}
   .menu-list > li.mypage-n4 > a > span::before{background-image:url(../img/mypage/ic_mypage_new_04.svg);background-size:cover;}
@@ -98,4 +117,11 @@ background: var(--Key, #26C48C);color:#fff;}
   .content-wrap.ver_event{padding:0;}
   .btn-more-area{margin-top:26px;}
   .btn-more-area .btn-base{max-width:initial;}
+
+  .product-top-area.type-2 .product-detail-area{width:100%;padding:0;}
+  .product-top-area.type-2 .product-detail-area img{width:100%;}
+  .product-top-area.type-2 .gift-detail .gift-thumb{width:60px;height:60px;padding-bottom:58px;}
+  .product-top-area.type-2 .gift-detail .name{font-size:16px;}
+  .product-top-area.type-2 .gift-detail .exchange{font-size:14px;margin-top:2px;}
+  .product-top-area.type-2 .gift-detail .barcode-area{padding:20px 0;margin-top:16px;}
 }

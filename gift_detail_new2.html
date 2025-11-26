@@ -49,20 +49,25 @@
           <h2 class="con-tit">받은선물</h2>
           <a href="#" class="btn-list">목록</a>
         </div>
-        <div class="product-top-area">
+        <div class="product-top-area type-2">
           <div class="product-detail-area" style="display: flex; justify-content: center; align-items: center;">
             <div class="product-frame"><img src="/img/detail/sample.png" alt=""></div>
           </div>
           <div class="gift-detail">
-            <div class="gift-thumb"></div>
-            <span class="name line-2">스타벅스아메리카노 x 30개 보장 구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스구독서비스</span>
-            <div class="exchange">교환처 : 스타벅스</div>
+            <div class="gift-thumb-area">
+              <div class="gift-thumb"></div>
+              <div class="gift-info">
+                <span class="name">떠먹는 아이스박스+떠먹는 아이스박스+떠먹는 아이스박스+떠먹는 아이스박스+떠먹는 아이스박스</span>
+                <div class="exchange">교환처 : 스타벅스</div>
+              </div>
+            </div>
+            
             <div class="barcode-area">
               <span class="barcode"><img src="/img/detail/barcode.png" alt=""></span>
               <span class="number">9999 1111 2222 1111</span>
             </div>
           </div><!-- .gift-detail -->
-        </div>
+        </div><!-- .product-top-area -->
         <div class="gift-line show-750"></div>
         <div class="gift-tab-area">
           <ul class="tab-base">
@@ -268,6 +273,9 @@
           $('.fm-wrap li.menu a').click();
         } else if (Qtab == '2') {
           $(`[href="#tab${Qtab}"]`).click();
+        }
+        if (Qsample == 'end') {
+          $('.product-top-area').addClass('end');
         }
       }, 250);
     }
