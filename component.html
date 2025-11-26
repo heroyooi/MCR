@@ -44,6 +44,8 @@
 
     .brand-logo-area{display:flex;gap: 10px;margin-top: 30px;flex-wrap: wrap;}
     .brand-logo-area:first-child{margin-top:0;}
+    .bnr-logo-area{display:flex;gap: 10px;margin-top: 30px;flex-wrap: wrap;}
+    .bnr-area h4{margin:30px 0 10px;font-size:16px;font-weight: 600;}
   </style>
 </head>
 <body>
@@ -692,6 +694,21 @@ $('#start-btn').on('click', function () {
   <img src="img/file/플렉스티비-2.png" alt="">
 </div>
 </div><!-- .code-area -->
+
+
+        <div class="code-area">
+          <h3>배너 모음 <button>코드 보기</button></h3>
+<div class="code-box"><div class="bnr-area">
+  <h4>메인 배너 PC</h4>
+  <img src="img/file/bn_mainbanner.png" alt="">
+  <h4>메인 배너 MO</h4>
+  <img src="img/file/bn_mainbanner_mo.png" alt="">
+  <h4>서브 배너</h4>
+  <img src="img/file/bn_subbanner.png" alt="">
+  <h4>이벤트 배너</h4>
+  <img src="img/file/bn_evtbanner.png" alt="">
+</div>
+</div><!-- .code-area -->
 <pre class="language-html"></pre>
         </div>
       </div><!-- .section -->
@@ -842,6 +859,15 @@ $('#start-btn').on('click', function () {
         }
       }
     });
+
+    var Qsample = $.urlParam('sample');
+    if (Qsample) {
+      setTimeout(() => {
+        if (Qsample === 'banner') {
+          $('html, body').animate({ scrollTop: $('.bnr-area').offset().top - 50 }, 500);
+        }
+      }, 250);
+    }
   </script>
   <script src="js/prism.js"></script>
 </body>
