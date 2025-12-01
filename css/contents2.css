@@ -18,9 +18,9 @@
 .result-list > li .result-item.total .label{color:#333;font-weight:500;}
 .result-list > li .result-item .result.black{color:#333;}
 .result-list > li .mileage-info{margin:16px 0 10px;text-align:center;}
-.result-list > li .mileage-info span{display:block;position: relative;}
+.result-list > li .mileage-info span{display:block;position: relative;text-align:right;}
 .result-list > li .mileage-info span input{position: absolute;display:none;}
-.result-list > li .mileage-info span label{font-size:12px;color:#72767a;font-weight:600;display:flex;align-items: center;justify-content: flex-end;gap:0 5px;background-color: #fff;padding:4px 10px;border-radius:4px;}
+.result-list > li .mileage-info span label{font-size:12px;color:#72767a;font-weight:600;display:inline-flex;align-items: center;justify-content: flex-end;gap:0 5px;background-color: #fff;padding:4px 10px;border-radius:4px;}
 .result-list > li .mileage-info span label em{font-style:normal;font-weight:inherit;position: relative;top:1px;}
 .result-list > li .mileage-info span label::before{content:'';display:block;background:url('/img/gift/ic_checkbox.svg') 50% 50% no-repeat;width:20px;height:20px;}
 .result-list > li .mileage-info span input:checked + label{background-color: #4289F0;color:#fff;}
@@ -120,7 +120,8 @@ background: var(--Key, #26C48C);color:#fff;}
 .evt-full-content .evt-warning li{font-size:clamp(16px,3.1vmin,26px);position: relative;padding-left:clamp(17px,3.3vmin,28px);position: relative;color:#555;font-weight:500;margin-top:clamp(17px,3.5vmin,30px);line-height:1.2;}
 .evt-full-content .evt-warning li::before{content:'';display:block;width:5px;height:5px;background-color: #555;border-radius:50%;position: absolute;left:7px;top:13px;}
 
-.refund-valid-info.ver-import .tit{flex-wrap:wrap;word-break: break-all;}
+.refund-valid-info.ver-import .tit{word-break: break-all;display:block;}
+.refund-valid-info.ver-import .tit::before{display:inline-block;vertical-align:middle;margin-right:3px;position: relative;top:-2px;}
 .refund-valid-info.ver-import .tit .import{color:red;}
 .refund-valid-info.ver-import .tit *{flex-shrink: 0;}
 
